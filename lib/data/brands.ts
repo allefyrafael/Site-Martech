@@ -1,0 +1,48 @@
+export const brandsData = [
+  {
+    name: "SAMSUNG",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/samsung-removebg-preview-dn01wDPHGwVEjtAt2eXsKAvXwPp6Gl.png",
+    color: "from-blue-600 to-blue-400",
+    bgColor: "bg-blue-50",
+    hoverColor: "hover:bg-blue-100",
+    borderColor: "border-blue-200",
+    description: "90% dos modelos SAMSUNG",
+  },
+  {
+    name: "APPLE",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Apple-removebg-preview-uVnDIPVP4cnHtQEXbPfug3XwA6S6b5.png",
+    color: "from-gray-400 to-gray-200",
+    bgColor: "bg-gray-50",
+    hoverColor: "hover:bg-gray-100",
+    borderColor: "border-gray-200",
+    description: "90% dos modelos APPLE",
+  },
+  {
+    name: "MOTOROLA",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Motorola-removebg-preview-LSEyPkOMq7xLLzoPfYCRzQVaJBCwvw.png",
+    color: "from-red-600 to-red-400",
+    bgColor: "bg-red-50",
+    hoverColor: "hover:bg-red-100",
+    borderColor: "border-red-200",
+    description: "90% dos modelos MOTOROLA",
+  },
+  {
+    name: "XIAOMI",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Xiaomi-removebg-preview-CzgS1rKVMswzAY2hhAKd5d9RmXNxh0.png",
+    color: "from-orange-500 to-orange-300",
+    bgColor: "bg-orange-50",
+    hoverColor: "hover:bg-orange-100",
+    borderColor: "border-orange-200",
+    description: "90% dos modelos XIAOMI",
+  },
+  {
+    name: "REALME",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Realme-S9reRx671qXQ4xG42LUyXh9gpJ2cp5.webp",
+    color: "from-yellow-500 to-yellow-300",
+    bgColor: "bg-yellow-50",
+    hoverColor: "hover:bg-yellow-100",
+    borderColor: "border-yellow-200",
+    description: "TUDO DIRETO NA FONTE SEM ATRAVESSADORES",
+  },
+]
+
