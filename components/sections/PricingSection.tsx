@@ -47,12 +47,41 @@ export default function PricingSection({
 
   // Modify the handleButtonClick function to restore the original routing functionality
   const handleButtonClick = () => {
-    window.open("https://go.hotmart.com/F87621340K", "_blank")
+    if (courseType === "frp") {
+      // URLs for FRP course
+      if (selectedPlan === "completo") {
+        window.open(
+          "https://pay.hotmart.com/I92740095I?sck=HOTMART_MEM_CA&off=kzkum1js&offDiscount=cna-30.00-dtz8oi2y&hotfeature=32&_gl=1*1p23c5q*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTc0MzIzNi4xMy4xLjE3NDE3NDM0OTUuNjAuMC4w&bid=1741743498370",
+          "_blank",
+        )
+      } else {
+        window.open(
+          "https://pay.hotmart.com/W95189620X?sck=HOTMART_MEM_CA&off=wretdivk&offDiscount=cna-60.00-3anuljqq&hotfeature=32&_gl=1*106tirz*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0MTc0MzA1Mi4yNS4xLjE3NDE3NDM2NDMuMTguMC4w&bid=1741743646011",
+          "_blank",
+        )
+      }
+    } else if (courseType === "mdm") {
+      // URLs for MDM course
+      if (selectedPlan === "completo") {
+        window.open(
+          "https://pay.hotmart.com/U94589271J?sck=HOTMART_MEM_CA&off=9nq1zfj8&offDiscount=cna-30.00-ysg574mf&hotfeature=32&_gl=1*1skhmp6*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTc0MzIzNi4xMy4xLjE3NDE3NDMyNzIuMjQuMC4w",
+          "_blank",
+        )
+      } else {
+        window.open(
+          "https://pay.hotmart.com/I94355959M?sck=HOTMART_MEM_CA&off=6d6cocrz&offDiscount=cna-60.00-u0vgxl3s&hotfeature=32",
+          "_blank",
+        )
+      }
+    } else {
+      // Default URL for MDM Advanced or other courses
+      window.open("https://go.hotmart.com/F87621340K", "_blank")
+    }
   }
 
   return (
     <section
-      id="precos"
+      id="pricing"
       className="py-12 md:py-16 bg-gradient-to-b from-martech-black to-martech-darkgray relative overflow-hidden"
     >
       {/* Animated background elements */}
@@ -238,22 +267,42 @@ export default function PricingSection({
                     </div>
                   ) : (
                     <>
-                      <TabsList className="grid w-full grid-cols-2 mb-3 md:mb-6">
+                      <TabsList className="grid w-full grid-cols-2 mb-3 md:mb-6 bg-black/20 p-1 rounded-xl">
                         <TabsTrigger
                           value="completo"
-                          className="data-[state=active]:bg-martech-yellow data-[state=active]:text-black text-xs md:text-sm"
+                          className={`${
+                            courseType === "frp"
+                              ? "data-[state=active]:bg-green-500"
+                              : courseType === "mdm-avancado"
+                                ? "data-[state=active]:bg-purple-600"
+                                : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-martech-orange data-[state=active]:to-amber-500"
+                          } data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300`}
                         >
-                          Plano Completo
+                          Acesso Completo
                         </TabsTrigger>
                         <TabsTrigger
                           value="basico"
-                          className="data-[state=active]:bg-martech-yellow data-[state=active]:text-black text-xs md:text-sm"
+                          className={`${
+                            courseType === "frp"
+                              ? "data-[state=active]:bg-green-500"
+                              : courseType === "mdm-avancado"
+                                ? "data-[state=active]:bg-purple-600"
+                                : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-martech-orange data-[state=active]:to-amber-500"
+                          } data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300`}
                         >
-                          Plano Básico
+                          Acesso Básico
                         </TabsTrigger>
                       </TabsList>
-                      <TabsContent value="completo" className="space-y-4">
-                        <div className="bg-gradient-to-r from-martech-blue/10 to-martech-blue/5 rounded-xl p-3 md:p-4 border border-martech-blue/20">
+                      <TabsContent value="completo" className="space-y-4 mt-0">
+                        <div
+                          className={`bg-gradient-to-r ${
+                            courseType === "frp"
+                              ? "from-green-500/10 to-green-500/5 border-green-500/20"
+                              : courseType === "mdm-avancado"
+                                ? "from-purple-600/10 to-purple-600/5 border-purple-500/20"
+                                : "from-martech-blue/10 to-martech-blue/5 border-martech-blue/20"
+                          } rounded-xl p-3 md:p-4 border`}
+                        >
                           <div className="flex justify-between items-center">
                             <div>
                               <p className="text-white font-medium text-sm md:text-base">ACESSO COMPLETO</p>
@@ -263,8 +312,16 @@ export default function PricingSection({
                           </div>
                         </div>
                       </TabsContent>
-                      <TabsContent value="basico" className="space-y-4">
-                        <div className="bg-gradient-to-r from-martech-blue/10 to-martech-blue/5 rounded-xl p-3 md:p-4 border border-martech-blue/20">
+                      <TabsContent value="basico" className="space-y-4 mt-0">
+                        <div
+                          className={`bg-gradient-to-r ${
+                            courseType === "frp"
+                              ? "from-green-500/10 to-green-500/5 border-green-500/20"
+                              : courseType === "mdm-avancado"
+                                ? "from-purple-600/10 to-purple-600/5 border-purple-500/20"
+                                : "from-martech-blue/10 to-martech-blue/5 border-martech-blue/20"
+                          } rounded-xl p-3 md:p-4 border`}
+                        >
                           <div className="flex justify-between items-center">
                             <div>
                               <p className="text-white font-medium text-sm md:text-base">ACESSO BÁSICO</p>

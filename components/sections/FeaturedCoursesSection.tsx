@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card"
 import { ChevronRight, Clock, Users, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { useState } from "react"
 
 export default function FeaturedCoursesSection() {
   return (
@@ -174,6 +174,14 @@ function CourseCard({
   singlePlan = false,
   plans,
 }) {
+  // Use state to track the active plan
+  const [activePlan, setActivePlan] = useState(0)
+
+  // Function to handle plan selection
+  const handlePlanSelect = (index) => {
+    setActivePlan(index)
+  }
+
   return (
     <Card
       className={`bg-gradient-to-b from-martech-darkgray to-black ${borderColor} text-white overflow-hidden group ${shadowColor} transition-all duration-300 flex flex-col h-full`}
@@ -200,28 +208,37 @@ function CourseCard({
           <p className="text-gray-300 text-xs sm:text-sm h-16 sm:h-20 mb-2">{description}</p>
         </div>
 
-        <Tabs defaultValue="plan0" className="w-full flex-grow">
-          {/* Tabs de planos */}
-          <TabsList className={`grid w-full grid-cols-${singlePlan ? "1" : "2"} bg-martech-darkgray`}>
+        {/* Custom plan selector */}
+        <div className="w-full flex-grow">
+          {/* Custom tabs */}
+          <div className="flex w-full mb-3 rounded-lg overflow-hidden border border-gray-700/30">
             {plans.map((plan, index) => (
-              <TabsTrigger
+              <button
                 key={index}
-                value={`plan${index}`}
-                className={`data-[state=active]:${badge.color.includes("gradient") ? badge.color : badge.color} data-[state=active]:text-white text-xs px-2 py-0.5 sm:text-sm truncate h-8`}
+                onClick={() => handlePlanSelect(index)}
+                className={`flex-1 py-2 px-1 text-xs sm:text-sm transition-all duration-300 ${
+                  index === 0 ? "rounded-l-lg" : index === plans.length - 1 ? "rounded-r-lg" : ""
+                } ${
+                  activePlan === index
+                    ? badge.color.includes("gradient")
+                      ? badge.color
+                      : badge.color
+                    : "bg-transparent hover:bg-gray-800"
+                } ${activePlan === index ? "text-white" : "text-gray-400"}`}
               >
                 {plan.name}
-              </TabsTrigger>
+              </button>
             ))}
-          </TabsList>
+          </div>
 
-          {/* Conteúdo das tabs - altura fixa para evitar movimentação */}
+          {/* Content area */}
           <div className="relative h-[200px]">
             {plans.map((plan, index) => (
-              <TabsContent
+              <div
                 key={index}
-                value={`plan${index}`}
-                className="absolute inset-0 mt-4"
-                style={{ visibility: "visible", pointerEvents: "auto" }}
+                className={`absolute inset-0 transition-opacity duration-300 ${
+                  activePlan === index ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+                }`}
               >
                 <div className="flex flex-col h-full">
                   {/* Features section with fixed height */}
@@ -297,10 +314,10 @@ function CourseCard({
                     </div>
                   </div>
                 </div>
-              </TabsContent>
+              </div>
             ))}
           </div>
-        </Tabs>
+        </div>
       </div>
     </Card>
   )

@@ -124,12 +124,12 @@ export default function Footer() {
                 </div>
                 <div>
                   <a
-                    href="mailto:marcos.prossiga@gmail.com?subject=Contato%20via%20Site%20Martech"
+                    href="mailto:suporte@martechteam.com?subject=Contato%20via%20Site%20Martech"
                     className="text-gray-300 hover:text-martech-yellow text-sm transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    marcos.prossiga@gmail.com
+                    suporte@martechteam.com
                   </a>
                   <p className="text-gray-400 text-xs">Suporte 24/7</p>
                 </div>

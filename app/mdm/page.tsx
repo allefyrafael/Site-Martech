@@ -27,6 +27,7 @@ function ScrollToSection() {
         return
       }
 
+      // Simple approach that was working before
       const element = document.getElementById(section)
       if (element) {
         // Add a small delay to ensure the page is fully loaded

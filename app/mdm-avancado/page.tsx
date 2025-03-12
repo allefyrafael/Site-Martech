@@ -1,5 +1,6 @@
 "use client"
 
+import HeroSection from "@/components/sections/HeroSection"
 import MDMAdvancedSection from "@/components/sections/MDMAdvancedSection"
 import BrandsSection from "@/components/sections/BrandsSection"
 import FeaturesSection from "@/components/sections/FeaturesSection"
@@ -10,7 +11,6 @@ import FAQSection from "@/components/sections/FAQSection"
 import ContactSection from "@/components/sections/ContactSection"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
-import { CourseHeroBackground } from "@/components/sections/HeroSection"
 import { useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 
@@ -27,6 +27,7 @@ function ScrollToSection() {
         return
       }
 
+      // Simple approach that was working before
       const element = document.getElementById(section)
       if (element) {
         // Add a small delay to ensure the page is fully loaded
@@ -50,11 +51,11 @@ export default function MDMAdvancedCoursePage() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section usando o novo componente reutilizável */}
-        <CourseHeroBackground
+        {/* Hero Section */}
+        <HeroSection
           title="MDM DO BÁSICO AO <span class='text-purple-400'>AVANÇADO</span>"
           description="Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC, UFS e microsoldagem."
-          badgeText="CURSO PREMIUM"
+          badge="CURSO PREMIUM"
           videoUrl="https://player.vimeo.com/video/1064525054?h=e05849844a&autoplay=1&loop=1&muted=1"
           videoTitle="APRESENTAÇÃO CURSO MDM AVANÇADO"
           features={[
@@ -63,11 +64,11 @@ export default function MDMAdvancedCoursePage() {
             "Comunidade VIP exclusiva",
             "3 bônus especiais inclusos",
           ]}
+          page="course"
+          backgroundVariant="course"
           primaryColor="rgba(147,51,234,0.15)" // Roxo para MDM Avançado
           secondaryColor="rgba(79,70,229,0.12)"
           tertiaryColor="rgba(255,255,0,0.1)"
-          ctaText="Quero garantir 20% de desconto"
-          ctaLink="#pricing"
         />
 
         {/* MDM Avançado Section */}

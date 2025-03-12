@@ -6,13 +6,13 @@ export default function TechSphere() {
     <div className="tech-sphere">
       {/* Orbiting circles with smoother animation and reduced size */}
       <div className="tech-sphere-orbit tech-sphere-orbit-1">
-        <div className="tech-sphere-circle tech-sphere-circle-1"></div>
+        <div className="tech-sphere-circle tech-sphere-circle-1 sm:w-[85%] sm:h-[85%] w-[75%] h-[75%]"></div>
       </div>
       <div className="tech-sphere-orbit tech-sphere-orbit-2">
-        <div className="tech-sphere-circle tech-sphere-circle-2"></div>
+        <div className="tech-sphere-circle tech-sphere-circle-2 sm:w-[75%] sm:h-[75%] w-[65%] h-[65%]"></div>
       </div>
       <div className="tech-sphere-orbit tech-sphere-orbit-3">
-        <div className="tech-sphere-circle tech-sphere-circle-3"></div>
+        <div className="tech-sphere-circle tech-sphere-circle-3 sm:w-[90%] sm:h-[90%] w-[80%] h-[80%]"></div>
       </div>
 
       {/* Orbiting dots with smoother animation and trails */}
@@ -171,7 +171,7 @@ export default function TechSphere() {
         </div>
       </div>
 
-      <div className="tech-sphere-icon tech-sphere-icon-3">
+      <div className="tech-sphere-icon tech-sphere-icon-3" style={{ bottom: "20%", left: "-5.5rem" }}>
         <div className="flex items-center">
           <div className="w-3 h-3 rounded-full bg-green-500 mr-1.5"></div>
           <div className="text-green-400 font-bold">SCREEN LOCK</div>

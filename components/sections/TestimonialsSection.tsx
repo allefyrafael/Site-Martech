@@ -1,6 +1,6 @@
-import { Star } from "lucide-react";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 export default function TestimonialsSection() {
   const testimonials = [
@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
       role: "Aluno",
       initial: "G",
     },
-  ];
+  ]
 
   return (
     <section id="depoimentos" className="py-16 bg-martech-black bg-martech-gradient relative">
@@ -39,25 +39,33 @@ export default function TestimonialsSection() {
           <p className="text-gray-300">Mais de 2.000 alunos capacitados em reparos de software de celulares</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-martech-card border-martech-blue text-white min-h-[400px] flex flex-col">
-              <div className="p-6 flex flex-col h-full">
-                <div className="flex justify-center gap-1">
+            <Card
+              key={testimonial.id}
+              className="bg-martech-card border-martech-blue text-white h-[320px] flex flex-col"
+            >
+              <div className="p-4 flex flex-col h-[300px]">
+                {/* Stars section - fixed at top */}
+                <div className="flex justify-center gap-1 mb-4">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="h-5 w-5 fill-martech-yellow text-martech-yellow" />
                   ))}
                 </div>
-                <p className="text-gray-300 italic max-w-prose text-center mx-auto my-4 flex-1 overflow-hidden">
-                  {testimonial.text}
-                </p>
-                <div className="flex items-center justify-center gap-3 mt-auto">
-                  <div className="h-12 w-12 rounded-full bg-martech-darkgray border border-martech-blue flex items-center justify-center">
+
+                {/* Testimonial text - scrollable */}
+                <div className="flex-1 overflow-y-auto mb-4 px-1">
+                  <p className="text-gray-300 italic max-w-prose text-center">{testimonial.text}</p>
+                </div>
+
+                {/* User info section - fixed at bottom */}
+                <div className="flex items-center justify-center gap-3 pt-3 border-t border-martech-blue/20 h-[60px]">
+                  <div className="h-10 w-10 rounded-full bg-martech-darkgray border border-martech-blue flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-bold">{testimonial.initial}</span>
                   </div>
                   <div className="text-center">
-                    <p className="font-bold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
+                    <p className="font-bold text-white text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-gray-400">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
@@ -69,6 +77,6 @@ export default function TestimonialsSection() {
       {/* Transição suave inferior */}
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-martech-darkgray to-transparent"></div>
     </section>
-  );
+  )
 }
 

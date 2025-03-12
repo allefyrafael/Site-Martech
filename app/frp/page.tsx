@@ -1,5 +1,6 @@
 "use client"
 
+import HeroSection from "@/components/sections/HeroSection"
 import FRPSection from "@/components/sections/FRPSection"
 import BrandsSection from "@/components/sections/BrandsSection"
 import FeaturesSection from "@/components/sections/FeaturesSection"
@@ -10,7 +11,6 @@ import FAQSection from "@/components/sections/FAQSection"
 import ContactSection from "@/components/sections/ContactSection"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
-import { CourseHeroBackground } from "@/components/sections/HeroSection"
 import { useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 
@@ -27,6 +27,7 @@ function ScrollToSection() {
         return
       }
 
+      // Simple approach that was working before
       const element = document.getElementById(section)
       if (element) {
         // Add a small delay to ensure the page is fully loaded
@@ -50,11 +51,11 @@ export default function FRPCoursePage() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section usando o novo componente reutilizável */}
-        <CourseHeroBackground
+        {/* Hero Section */}
+        <HeroSection
           title="CURSO DE FRP E ICLOUD <span class='text-green-400'>MAIS COMPLETO</span> DO BRASIL"
           description="Aprenda a utilizar as melhores ferramentas físicas e digitais para desbloqueios, com acesso direto aos servidores mais efetivos do mundo."
-          badgeText="CURSO 100% ATUALIZADO"
+          badge="CURSO 100% ATUALIZADO"
           videoUrl="https://player.vimeo.com/video/1064525027?h=1abefc6443&autoplay=1&loop=1&muted=1"
           videoTitle="APRESENTAÇÃO CURSO FRP E ICLOUD"
           features={[
@@ -63,11 +64,11 @@ export default function FRPCoursePage() {
             "Comunidade VIP exclusiva",
             "3 bônus especiais inclusos",
           ]}
+          page="course"
+          backgroundVariant="course"
           primaryColor="rgba(34,197,94,0.15)" // Verde para FRP
           secondaryColor="rgba(255,127,0,0.12)"
           tertiaryColor="rgba(255,255,0,0.1)"
-          ctaText="Quero me inscrever agora"
-          ctaLink="#pricing"
         />
 
         {/* FRP Section */}
