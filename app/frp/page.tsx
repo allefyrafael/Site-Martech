@@ -43,7 +43,7 @@ function ScrollToSection() {
 
 export default function FRPCoursePage() {
   return (
-    <div className="flex min-h-screen flex-col" key="frp-page">
+    <div className="flex min-h-screen flex-col" key="MartechTeam-frp">
       {/* Add the scroll handler */}
       <ScrollToSection />
 

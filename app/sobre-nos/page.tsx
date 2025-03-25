@@ -50,7 +50,7 @@ function ScrollToSection() {
 
 export default function SobreNosPage() {
   return (
-    <div className="flex min-h-screen flex-col" key="sobre-nos-page">
+    <div className="flex min-h-screen flex-col" key="MartechTeam-sobre-nos">
       {/* Add the scroll handler */}
       <ScrollToSection />
 

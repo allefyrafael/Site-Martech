@@ -43,7 +43,7 @@ function ScrollToSection() {
 
 export default function MDMCoursePage() {
   return (
-    <div className="flex min-h-screen flex-col" key="mdm-page">
+    <div className="flex min-h-screen flex-col" key="MartechTeam-mdm">
       {/* Add the scroll handler */}
       <ScrollToSection />
 

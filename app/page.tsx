@@ -32,7 +32,7 @@ function ScrollToSection() {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col" key="home-page">
+    <div className="flex min-h-screen flex-col" key="MartechTeam-home">
       {/* Add the scroll handler */}
       <ScrollToSection />
 

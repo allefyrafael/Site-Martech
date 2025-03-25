@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 interface CTAButtonsProps {
   page: "home" | "mdm" | "course"
@@ -80,13 +81,14 @@ export default function CTAButtons({ page }: CTAButtonsProps) {
               <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </Button>
-          <Button
-            variant="outline"
-            className="border-martech-blue text-martech-blue hover:bg-martech-blue hover:text-white transition-all duration-300 px-6 py-3 rounded-xl text-base w-full sm:w-auto"
-            onClick={() => scrollToSection("sobre")}
-          >
-            Sobre nós
-          </Button>
+          <Link href="/sobre-nos">
+            <Button
+              variant="outline"
+              className="border-martech-blue text-martech-blue hover:bg-martech-blue hover:text-white transition-all duration-300 px-6 py-3 rounded-xl text-base w-full sm:w-auto"
+            >
+              Sobre nós
+            </Button>
+          </Link>
         </>
       )}
     </div>
