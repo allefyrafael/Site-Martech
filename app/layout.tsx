@@ -12,51 +12,69 @@ import "../styles/hero-section.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
+// Comprehensive favicon configuration for cross-browser compatibility
 export const metadata: Metadata = {
-  title: "Martech Cursos de Software",
+  title: "Martech Team - Cursos de Software",
   description: "Cursos de software para celulares - Especialistas em MDM, FRP e iCloud",
-  generator: "MartechTeam",
+  generator: "Martech Team",
   icons: {
+    // Basic favicon - most important for cross-browser compatibility
     icon: [
-      {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
-        sizes: "any",
-      },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png" },
     ],
-    apple: [
-      {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
-        sizes: "180x180",
-        type: "image/jpeg",
-      },
-    ],
-    shortcut: [
-      {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
-      },
-    ],
+    // Apple Touch Icon
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
+    // Shortcut icon
+    shortcut: [{ url: "/favicon.ico" }],
+    // Other icons for various browsers and devices
     other: [
       {
         rel: "icon",
-        type: "image/jpeg",
+        type: "image/png",
         sizes: "16x16",
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
+        url: "/favicon.png",
       },
       {
         rel: "icon",
-        type: "image/jpeg",
+        type: "image/png",
         sizes: "32x32",
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
+        url: "/favicon.png",
       },
       {
         rel: "icon",
-        type: "image/jpeg",
+        type: "image/png",
         sizes: "192x192",
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
+        url: "/favicon.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        url: "/favicon.png",
       },
     ],
   },
-  manifest: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/site.webmanifest",
+  // Web app manifest
+  manifest: "/site.webmanifest",
+  // Open Graph image for social sharing
+  openGraph: {
+    images: [
+      {
+        url: "/favicon.png",
+        width: 512,
+        height: 512,
+        alt: "Martech Team - Cursos de Software",
+      },
+    ],
+    siteName: "Martech Team",
+  },
+  // Twitter card image
+  twitter: {
+    card: "summary",
+    images: ["/favicon.png"],
+    site: "@MartechTeam",
+  },
 }
 
 export default function RootLayout({
@@ -70,10 +88,12 @@ export default function RootLayout({
         {/* Additional meta tags for better SEO and device compatibility */}
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <meta
-          name="msapplication-TileImage"
-          content="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ms-icon-144x144.png"
-        />
+        <meta name="msapplication-TileImage" content="/favicon.png" />
+
+        {/* Legacy favicon link for maximum compatibility */}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+
         <noscript>
           <img
             height="1"

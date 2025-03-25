@@ -1,16 +1,16 @@
 {
-  "name": "Martech Cursos de Software",
-  "short_name": "MartechTeam",
+  "name": "Martech Team - Cursos de Software",
+  "short_name": "Martech Team",
   "icons": [
     {
-      "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
+      "src": "/favicon.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
-      "src": "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Imagem%20do%20WhatsApp%20de%202025-02-15%20%C3%A0%28s%29%2015.49.18_bbd04fea.jpg-xWUYbgk2gnUNA3USSav9poS4bVhbUm.jpeg",
+      "src": "/favicon.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ],
   "theme_color": "#000000",
