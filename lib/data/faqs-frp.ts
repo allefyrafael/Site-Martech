@@ -36,4 +36,3 @@ export const faqsFRP = [
       "Sim! Após concluir a grade curricular do treinamento, você receberá seu certificado digital de conclusão do curso, comprovando sua especialização em desbloqueios FRP e iCloud, validando seus conhecimentos para o mercado.",
   },
 ]
-

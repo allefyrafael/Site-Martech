@@ -21,4 +21,3 @@ export const testimonials = [
     role: "Técnico em Celulares",
   },
 ]
-

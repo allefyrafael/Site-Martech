@@ -38,4 +38,3 @@ export const features = [
     items: ["Suporte até Dez/2025", "Atualizações gratuitas", "Troca de experiências"],
   },
 ]
-

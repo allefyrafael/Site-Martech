@@ -94,4 +94,3 @@ export default function CTAButtons({ page }: CTAButtonsProps) {
     </div>
   )
 }
-

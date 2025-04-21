@@ -144,7 +144,7 @@ export default function Header() {
         <Button
           variant="ghost"
           size="icon"
-          className="md:hidden"
+          className="md:hidden transition-colors duration-300 hover:bg-martech-blue/20 hover:text-martech-blue focus:bg-martech-blue/10 focus:text-martech-blue"
           onClick={(e) => {
             e.stopPropagation() // Prevent event bubbling
             setMobileMenuOpen((prevState) => !prevState) // Toggle using function form
@@ -253,4 +253,3 @@ export default function Header() {
     </header>
   )
 }
-

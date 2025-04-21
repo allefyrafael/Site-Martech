@@ -508,4 +508,3 @@ export default function FeaturesSection({ courseType = "mdm" }: FeaturesSectionP
     </section>
   )
 }
-

@@ -1,4 +1,5 @@
-import { Badge } from "@/components/ui/badge"
+import React from 'react';
+import { Badge } from "@/components/ui/badge";
 
 export default function MDMAdvancedSection() {
   return (
@@ -274,34 +275,210 @@ export default function MDMAdvancedSection() {
                       <span className="text-gray-300 text-sm ml-1">em cursos de software</span>
                     </div>
                   </div>
-                  <div className="flex items-center justify-center gap-4 mb-4">
-                    <div className="bg-black/40 px-4 py-2 rounded-lg border border-purple-500/30">
-                      <span className="text-gray-400 text-sm">De</span>
-                      <span className="text-gray-300 text-sm line-through ml-1">R$ 1.000,00</span>
+
+                  <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Plano 5 anos */}
+                    <div className="bg-gradient-to-br from-black/80 to-purple-950/10 rounded-xl border border-purple-500/40 overflow-hidden transform transition-all duration-300 hover:shadow-[0_0_25px_rgba(147,51,234,0.4)] hover:-translate-y-1 group">
+                      {/* Header do plano */}
+                      <div className="bg-gradient-to-r from-purple-800/40 to-purple-600/20 p-4 border-b border-purple-500/30">
+                        <div className="flex justify-between items-center">
+                          <h6 className="text-white font-bold text-lg">Acesso Completo</h6>
+                          <div className="bg-purple-600 text-white font-bold px-2 py-1 rounded-lg flex items-center justify-center transform rotate-3 shadow-lg">
+                            <span className="text-sm">-20%</span>
+                          </div>
+                        </div>
+                        <p className="text-gray-400 text-sm mt-1">Recomendado para profissionais</p>
+                      </div>
+
+                      {/* Conteúdo do plano */}
+                      <div className="p-5">
+                        {/* Preço */}
+                        <div className="flex items-end gap-2 mb-4">
+                          <div className="text-3xl font-bold text-purple-400">R$ 800,00</div>
+                          <div className="text-gray-400 text-sm line-through mb-1">R$ 1.000,00</div>
+                        </div>
+
+                        {/* Características */}
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Acesso por <span className="text-white font-semibold">5 anos completos</span>
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Suporte VIP até <span className="text-white font-semibold">Dezembro 2025</span>
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Acesso a <span className="text-white font-semibold">todos os módulos</span> do curso
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-purple-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Atualizações <span className="text-white font-semibold">gratuitas</span> durante o período
+                            </span>
+                          </li>
+                        </ul>
+
+                        {/* Botão */}
+                        <div className="relative group/btn">
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg opacity-70 blur-sm group-hover/btn:opacity-100 transition-all duration-300"></div>
+                          <a
+                            href="https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*16p4nre*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NTI3MzU3My4zLjEuMTc0NTI3MzYzNi42MC4wLjA.&bid=1745273639953"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative w-full bg-black py-3 rounded-lg text-white font-bold border border-purple-500/50 group-hover/btn:border-purple-500 transition-all duration-300 inline-block text-center"
+                          >
+                            Quero este plano
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-2xl font-bold text-purple-400">Por R$ 800,00</div>
-                    <div className="bg-purple-600 text-white font-bold px-2 py-1 rounded-lg flex items-center justify-center transform rotate-3 shadow-lg">
-                      <span className="text-sm">-20%</span>
+
+                    {/* Plano 1 ano */}
+                    <div className="bg-gradient-to-br from-black/80 to-indigo-950/10 rounded-xl border border-indigo-500/40 overflow-hidden transform transition-all duration-300 hover:shadow-[0_0_25px_rgba(99,102,241,0.4)] hover:-translate-y-1 group">
+                      {/* Header do plano */}
+                      <div className="bg-gradient-to-r from-indigo-800/40 to-indigo-600/20 p-4 border-b border-indigo-500/30">
+                        <div className="flex justify-between items-center">
+                          <h6 className="text-white font-bold text-lg">Acesso Básico</h6>
+                          <div className="bg-indigo-600 text-white font-bold px-2 py-1 rounded-lg flex items-center justify-center transform rotate-3 shadow-lg">
+                            <span className="text-sm">-50%</span>
+                          </div>
+                        </div>
+                        <p className="text-gray-400 text-sm mt-1">Ideal para iniciantes</p>
+                      </div>
+
+                      {/* Conteúdo do plano */}
+                      <div className="p-5">
+                        {/* Preço */}
+                        <div className="flex items-end gap-2 mb-4">
+                          <div className="text-3xl font-bold text-indigo-400">R$ 500,00</div>
+                          <div className="text-gray-400 text-sm line-through mb-1">R$ 1.000,00</div>
+                        </div>
+
+                        {/* Características */}
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Acesso por <span className="text-white font-semibold">1 ano completo</span>
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Suporte por <span className="text-white font-semibold">2 meses</span>
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Acesso a <span className="text-white font-semibold">todos os módulos</span> do curso
+                            </span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-indigo-400 flex-shrink-0 mt-0.5"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span className="text-gray-300">
+                              Atualizações durante o <span className="text-white font-semibold">período de acesso</span>
+                            </span>
+                          </li>
+                        </ul>
+
+                        {/* Botão */}
+                        <div className="relative group/btn">
+                          <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-lg opacity-70 blur-sm group-hover/btn:opacity-100 transition-all duration-300"></div>
+                          <a
+                            href="https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*8n3x6z*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NTI3MzU3My4zLjAuMTc0NTI3MzU3My42MC4wLjA.&bid=1745273588333"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative w-full bg-black py-3 rounded-lg text-white font-bold border border-indigo-500/50 group-hover/btn:border-indigo-500 transition-all duration-300 inline-block text-center"
+                          >
+                            Quero este plano
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div className="inline-block relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full opacity-75 blur group-hover:opacity-100 transition-all duration-300 animate-pulse"></div>
-                    <button className="relative bg-black px-8 py-3 rounded-full text-white font-bold border border-purple-500/50 group-hover:border-purple-500 transition-all duration-300">
-                      Quero garantir 20% de desconto
-                      <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-4/5 -translate-x-1/2 transition-all duration-300"></span>
-                    </button>
-                  </div>
+
+                  <p className="text-center text-gray-400 text-sm mt-4">
+                    Mais de 30 módulos detalhados + lives semanais + atualizações constantes
+                  </p>
                 </div>
               </div>
-
-              <p className="text-center text-gray-400 text-sm mt-4">
-                Mais de 30 módulos detalhados + lives semanais + atualizações constantes
-              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

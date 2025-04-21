@@ -109,7 +109,7 @@ export default function FeaturedCoursesSection() {
             ctaColor="from-purple-600 to-indigo-600 hover:from-indigo-600 hover:to-purple-600 text-white"
             shadowColor="hover:shadow-[0_0_25px_rgba(147,51,234,0.4)]"
             imageOpacity="opacity-70"
-            singlePlan={true}
+            singlePlan={false}
             plans={[
               {
                 name: "Acesso Completo",
@@ -117,7 +117,17 @@ export default function FeaturedCoursesSection() {
                 originalPrice: "1.000,00",
                 features: ["5 anos de acesso", "Suporte até dezembro de 2025", "Acesso a todos os módulos"],
                 learnMoreLink: "/mdm-avancado",
-                buyLink: "https://pay.hotmart.com/P92848631P?off=ixvzw9oj", // Link específico para MDM Avançado
+                buyLink:
+                  "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318",
+              },
+              {
+                name: "Acesso Básico",
+                price: "500,00",
+                originalPrice: "1.000,00",
+                features: ["1 ano de acesso", "2 meses de suporte", "Acesso a todos os módulos"],
+                learnMoreLink: "/mdm-avancado",
+                buyLink:
+                  "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788",
               },
             ]}
           />
@@ -292,8 +302,10 @@ function CourseCard({
                                     plan.name === "Acesso Completo"
                                   ? "https://pay.hotmart.com/I92740095I?sck=HOTMART_MEM_CA&off=kzkum1js&offDiscount=cna-30.00-dtz8oi2y&hotfeature=32&_gl=1*1kw2nd7*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY1MDIxMy41Ny4wLjA.&bid=1741650216222"
                                   : title === "MDM DO BÁSICO AO AVANÇADO" && plan.name === "Acesso Completo"
-                                    ? "https://go.hotmart.com/F87621340K"
-                                    : plan.buyLink
+                                    ? "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318"
+                                    : title === "MDM DO BÁSICO AO AVANÇADO" && plan.name === "Acesso Básico"
+                                      ? "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788"
+                                      : plan.buyLink
                         }
                         className="block"
                         target="_blank"
@@ -322,4 +334,3 @@ function CourseCard({
     </Card>
   )
 }
-

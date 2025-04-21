@@ -38,4 +38,3 @@ export const featuresFRP = [
     items: ["Suporte até Dez/2025", "Atualizações gratuitas", "Troca de experiências"],
   },
 ]
-

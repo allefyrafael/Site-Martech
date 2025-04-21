@@ -45,4 +45,3 @@ export const brandsData = [
     description: "TUDO DIRETO NA FONTE SEM ATRAVESSADORES",
   },
 ]
-

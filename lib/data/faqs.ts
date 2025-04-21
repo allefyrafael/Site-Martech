@@ -36,4 +36,3 @@ export const faqs = [
       "Sim! Após concluir a grade curricular do treinamento, você receberá seu certificado digital de conclusão do curso, comprovando sua especialização em remoção de MDM e validando seus conhecimentos para o mercado.",
   },
 ]
-

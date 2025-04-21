@@ -12,4 +12,3 @@ export const bonusesFRP = [
     items: ["Como utilizar de modo profissional.", "Configurações avançadas para melhor desempenho."],
   },
 ]
-

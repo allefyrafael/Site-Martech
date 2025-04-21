@@ -104,4 +104,3 @@ function InstagramIcon() {
     </svg>
   )
 }
-

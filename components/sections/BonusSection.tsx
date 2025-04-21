@@ -137,4 +137,3 @@ export default function BonusSection({ courseType = "mdm" }: BonusSectionProps) 
     </section>
   )
 }
-

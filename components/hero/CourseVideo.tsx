@@ -84,4 +84,3 @@ export default function CourseVideo({ videoUrl, videoTitle }: CourseVideoProps) 
     </div>
   )
 }
-

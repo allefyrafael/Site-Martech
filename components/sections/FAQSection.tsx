@@ -131,4 +131,3 @@ export default function FAQSection({ courseType = "mdm" }: FAQSectionProps) {
     </section>
   )
 }
-

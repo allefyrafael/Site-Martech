@@ -70,4 +70,3 @@ export default function SobreNosPage() {
     </div>
   )
 }
-
