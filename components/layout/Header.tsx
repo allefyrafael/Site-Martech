@@ -84,7 +84,10 @@ export default function Header() {
           <div className="relative group">
             <button
               className="courses-button flex items-center gap-1 text-gray-300 hover:text-white transition-colors focus:outline-none"
-              onClick={() => setCoursesOpen(!coursesOpen)}
+              onClick={(e) => {
+                e.stopPropagation()
+                setCoursesOpen(!coursesOpen)
+              }}
             >
               Cursos
               <ChevronDown
@@ -104,6 +107,10 @@ export default function Header() {
                 <Link
                   href="/mdm"
                   className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setCoursesOpen(false)
+                  }}
                 >
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full bg-martech-blue mr-2"></div>
@@ -114,6 +121,10 @@ export default function Header() {
                 <Link
                   href="/frp"
                   className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setCoursesOpen(false)
+                  }}
                 >
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
@@ -124,6 +135,10 @@ export default function Header() {
                 <Link
                   href="/mdm-avancado"
                   className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setCoursesOpen(false)
+                  }}
                 >
                   <div className="flex items-center">
                     <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
@@ -155,12 +170,7 @@ export default function Header() {
         </Button>
 
         {/* CTA Button - Desktop Only */}
-        <Link
-          href="https://sso.hotmart.com/login?service=https%3A%2F%2Fsso.hotmart.com%2Foauth2.0%2FcallbackAuthorize%3Fclient_id%3Db432cdd3-eb60-46bd-892b-5b450a65153e%26redirect_uri%3Dhttps%253A%252F%252Fhotmart.com%252Fen%252Fclub%252Fmartech-cursos-de-software-ead%252Fauth%252Flogin%26response_type%3Dcode%26response_mode%3Dquery%26client_name%3DCasOAuthClient"
-          className="hidden md:block"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="/#nossos-cursos" className="hidden md:block">
           <Button className="bg-martech-blue hover:bg-blue-700">Acessar Cursos</Button>
         </Link>
       </div>
@@ -243,7 +253,7 @@ export default function Header() {
 
             {/* Mobile CTA Button */}
             <div className="pt-2 px-4">
-              <Link href="/mdm" className="block w-full" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/#nossos-cursos" className="block w-full" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="bg-martech-blue hover:bg-blue-700 w-full">Acessar Cursos</Button>
               </Link>
             </div>

@@ -261,119 +261,121 @@ export default function PricingSection({
                 </div>
 
                 {/* Payment options tabs - simplified for mobile */}
-                {courseType === "mdm-avancado" ? (
-                  <Tabs
-                    defaultValue="completo"
-                    className="w-full mb-4 md:mb-8"
-                    onValueChange={(value) => setSelectedPlan(value as "completo" | "basico")}
-                  >
-                    <TabsList className="grid w-full grid-cols-2 mb-3 md:mb-6 bg-black/20 p-1 rounded-xl">
-                      <TabsTrigger
-                        value="completo"
-                        className="data-[state=active]:bg-purple-600 data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300"
-                      >
-                        Acesso 5 Anos
-                      </TabsTrigger>
-                      <TabsTrigger
-                        value="basico"
-                        className="data-[state=active]:bg-purple-600 data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300"
-                      >
-                        Acesso 1 Ano
-                      </TabsTrigger>
-                    </TabsList>
-                    <TabsContent value="completo" className="space-y-4 mt-0">
-                      <div className="bg-gradient-to-r from-purple-600/10 to-purple-600/5 border-purple-500/20 rounded-xl p-3 md:p-4 border">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="text-white font-medium text-sm md:text-base">ACESSO COMPLETO</p>
-                            <p className="text-gray-400 text-xs md:text-sm">5 anos de acesso + Suporte até 2025</p>
-                          </div>
-                          <p className="text-xl md:text-2xl font-bold text-purple-400">R$ 800,00</p>
-                        </div>
-                      </div>
-                    </TabsContent>
-                    <TabsContent value="basico" className="space-y-4 mt-0">
-                      <div className="bg-gradient-to-r from-purple-600/10 to-purple-600/5 border-purple-500/20 rounded-xl p-3 md:p-4 border">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="text-white font-medium text-sm md:text-base">ACESSO BÁSICO</p>
-                            <p className="text-gray-400 text-xs md:text-sm">1 ano de acesso + Suporte</p>
-                          </div>
-                          <p className="text-xl md:text-2xl font-bold text-purple-400">R$ 500,00</p>
-                        </div>
-                      </div>
-                    </TabsContent>
-                  </Tabs>
-                ) : (
-                  <>
-                    <TabsList className="grid w-full grid-cols-2 mb-3 md:mb-6 bg-black/20 p-1 rounded-xl">
-                      <TabsTrigger
-                        value="completo"
-                        className={`${
-                          courseType === "frp"
-                            ? "data-[state=active]:bg-green-500"
-                            : courseType === "mdm-avancado"
-                              ? "data-[state=active]:bg-purple-600"
-                              : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-martech-orange data-[state=active]:to-amber-500"
-                        } data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300`}
-                      >
-                        Acesso Completo
-                      </TabsTrigger>
-                      <TabsTrigger
-                        value="basico"
-                        className={`${
-                          courseType === "frp"
-                            ? "data-[state=active]:bg-green-500"
-                            : courseType === "mdm-avancado"
-                              ? "data-[state=active]:bg-purple-600"
-                              : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-martech-orange data-[state=active]:to-amber-500"
-                        } data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300`}
-                      >
-                        Acesso Básico
-                      </TabsTrigger>
-                    </TabsList>
-                    <TabsContent value="completo" className="space-y-4 mt-0">
-                      <div
-                        className={`bg-gradient-to-r ${
-                          courseType === "frp"
-                            ? "from-green-500/10 to-green-500/5 border-green-500/20"
-                            : courseType === "mdm-avancado"
-                              ? "from-purple-600/10 to-purple-600/5 border-purple-500/20"
-                              : "from-martech-blue/10 to-martech-blue/5 border-martech-blue/20"
-                        } rounded-xl p-3 md:p-4 border`}
-                      >
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="text-white font-medium text-sm md:text-base">ACESSO COMPLETO</p>
-                            <p className="text-gray-400 text-xs md:text-sm">5 anos de acesso + Suporte até 2025</p>
-                          </div>
-                          <p className="text-xl md:text-2xl font-bold text-martech-yellow">R$ {priceComplete}</p>
-                        </div>
-                      </div>
-                    </TabsContent>
-                    <TabsContent value="basico" className="space-y-4 mt-0">
-                      <div
-                        className={`bg-gradient-to-r ${
-                          courseType === "frp"
-                            ? "from-green-500/10 to-green-500/5 border-green-500/20"
-                            : courseType === "mdm-avancado"
-                              ? "from-purple-600/10 to-purple-600/5 border-purple-500/20"
-                              : "from-martech-blue/10 to-martech-blue/5 border-martech-blue/20"
-                        } rounded-xl p-3 md:p-4 border`}
-                      >
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="text-white font-medium text-sm md:text-base">ACESSO BÁSICO</p>
-                            <p className="text-gray-400 text-xs md:text-sm">1 ano de acesso + 2 meses de suporte</p>
-                          </div>
-                          <div className="text-right">
-                            <p className="text-xl md:text-2xl font-bold text-martech-yellow">R$ {priceBasic}</p>
+                <Tabs
+                  defaultValue="completo"
+                  className="w-full mb-4 md:mb-8"
+                  onValueChange={(value) => setSelectedPlan(value as "completo" | "basico")}
+                >
+                  {courseType === "mdm-avancado" ? (
+                    <>
+                      <TabsList className="grid w-full grid-cols-2 mb-3 md:mb-6 bg-black/20 p-1 rounded-xl">
+                        <TabsTrigger
+                          value="completo"
+                          className="data-[state=active]:bg-purple-600 data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300"
+                        >
+                          Acesso 5 Anos
+                        </TabsTrigger>
+                        <TabsTrigger
+                          value="basico"
+                          className="data-[state=active]:bg-purple-600 data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300"
+                        >
+                          Acesso 1 Ano
+                        </TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="completo" className="space-y-4 mt-0">
+                        <div className="bg-gradient-to-r from-purple-600/10 to-purple-600/5 border-purple-500/20 rounded-xl p-3 md:p-4 border">
+                          <div className="flex justify-between items-center">
+                            <div>
+                              <p className="text-white font-medium text-sm md:text-base">ACESSO COMPLETO</p>
+                              <p className="text-gray-400 text-xs md:text-sm">5 anos de acesso + Suporte até 2025</p>
+                            </div>
+                            <p className="text-xl md:text-2xl font-bold text-purple-400">R$ 800,00</p>
                           </div>
                         </div>
-                      </div>
-                    </TabsContent>
-                  </>
-                )}
+                      </TabsContent>
+                      <TabsContent value="basico" className="space-y-4 mt-0">
+                        <div className="bg-gradient-to-r from-purple-600/10 to-purple-600/5 border-purple-500/20 rounded-xl p-3 md:p-4 border">
+                          <div className="flex justify-between items-center">
+                            <div>
+                              <p className="text-white font-medium text-sm md:text-base">ACESSO BÁSICO</p>
+                              <p className="text-gray-400 text-xs md:text-sm">1 ano de acesso + Suporte</p>
+                            </div>
+                            <p className="text-xl md:text-2xl font-bold text-purple-400">R$ 500,00</p>
+                          </div>
+                        </div>
+                      </TabsContent>
+                    </>
+                  ) : (
+                    <>
+                      <TabsList className="grid w-full grid-cols-2 mb-3 md:mb-6 bg-black/20 p-1 rounded-xl">
+                        <TabsTrigger
+                          value="completo"
+                          className={`${
+                            courseType === "frp"
+                              ? "data-[state=active]:bg-green-500"
+                              : courseType === "mdm-avancado"
+                                ? "data-[state=active]:bg-purple-600"
+                                : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-martech-orange data-[state=active]:to-amber-500"
+                          } data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300`}
+                        >
+                          Acesso Completo
+                        </TabsTrigger>
+                        <TabsTrigger
+                          value="basico"
+                          className={`${
+                            courseType === "frp"
+                              ? "data-[state=active]:bg-green-500"
+                              : courseType === "mdm-avancado"
+                                ? "data-[state=active]:bg-purple-600"
+                                : "data-[state=active]:bg-gradient-to-r data-[state=active]:from-martech-orange data-[state=active]:to-amber-500"
+                          } data-[state=active]:text-white text-xs md:text-sm py-2 rounded-lg transition-all duration-300`}
+                        >
+                          Acesso Básico
+                        </TabsTrigger>
+                      </TabsList>
+                      <TabsContent value="completo" className="space-y-4 mt-0">
+                        <div
+                          className={`bg-gradient-to-r ${
+                            courseType === "frp"
+                              ? "from-green-500/10 to-green-500/5 border-green-500/20"
+                              : courseType === "mdm-avancado"
+                                ? "from-purple-600/10 to-purple-600/5 border-purple-500/20"
+                                : "from-martech-blue/10 to-martech-blue/5 border-martech-blue/20"
+                          } rounded-xl p-3 md:p-4 border`}
+                        >
+                          <div className="flex justify-between items-center">
+                            <div>
+                              <p className="text-white font-medium text-sm md:text-base">ACESSO COMPLETO</p>
+                              <p className="text-gray-400 text-xs md:text-sm">5 anos de acesso + Suporte até 2025</p>
+                            </div>
+                            <p className="text-xl md:text-2xl font-bold text-martech-yellow">R$ {priceComplete}</p>
+                          </div>
+                        </div>
+                      </TabsContent>
+                      <TabsContent value="basico" className="space-y-4 mt-0">
+                        <div
+                          className={`bg-gradient-to-r ${
+                            courseType === "frp"
+                              ? "from-green-500/10 to-green-500/5 border-green-500/20"
+                              : courseType === "mdm-avancado"
+                                ? "from-purple-600/10 to-purple-600/5 border-purple-500/20"
+                                : "from-martech-blue/10 to-martech-blue/5 border-martech-blue/20"
+                          } rounded-xl p-3 md:p-4 border`}
+                        >
+                          <div className="flex justify-between items-center">
+                            <div>
+                              <p className="text-white font-medium text-sm md:text-base">ACESSO BÁSICO</p>
+                              <p className="text-gray-400 text-xs md:text-sm">1 ano de acesso + 2 meses de suporte</p>
+                            </div>
+                            <div className="text-right">
+                              <p className="text-xl md:text-2xl font-bold text-martech-yellow">R$ {priceBasic}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </TabsContent>
+                    </>
+                  )}
+                </Tabs>
 
                 {/* CTA Button - adjusted for mobile */}
                 <Button
