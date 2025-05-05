@@ -40,7 +40,7 @@ export default function SocialConnectSection() {
               <SocialCard
                 platform="WhatsApp"
                 description="Atendimento Rápido"
-                url="https://wa.link/iz362r"
+                url="https://wa.link/u5r4ah"
                 icon={<WhatsAppIcon />}
               />
               <SocialCard

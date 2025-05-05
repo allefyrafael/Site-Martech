@@ -149,7 +149,7 @@ export default function FeaturedCoursesSection() {
               </div>
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-orange to-martech-yellow opacity-75 rounded-lg blur group-hover:opacity-100 transition duration-200"></div>
-                <a href="https://wa.link/iz362r" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.link/u5r4ah" target="_blank" rel="noopener noreferrer">
                   <Button className="relative bg-gradient-to-r from-martech-orange to-martech-yellow hover:from-martech-yellow hover:to-martech-orange text-black font-bold px-6 sm:px-8 py-3 sm:py-6 text-sm sm:text-base whitespace-nowrap w-full sm:w-auto shadow-lg transition-all duration-300 transform group-hover:-translate-y-0.5">
                     Falar com um consultor
                     <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />

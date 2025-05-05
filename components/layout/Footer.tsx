@@ -112,7 +112,7 @@ export default function Footer() {
                     }}
                     className="text-gray-300 hover:text-martech-yellow text-sm transition-colors cursor-pointer"
                   >
-                    (61) 99955-6921
+                    (61) 98574902
                   </button>
                   <p className="text-gray-400 text-xs">Seg-Sex, 9h-18h</p>
                 </div>
