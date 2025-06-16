@@ -1,21 +1,21 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"
 
 export default function MDMAdvancedSection() {
   return (
-    <section className="bg-gradient-to-b from-gray-800 to-black relative overflow-hidden">
+    <section className="bg-gradient-to-b from-martech-darkgray to-martech-black relative overflow-hidden">
       <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw]">
-        <div className="relative overflow-hidden bg-gradient-to-r from-black via-gray-800 to-black p-8 md:p-10 shadow-[0_0_35px_rgba(147,51,234,0.3)] border-y border-purple-500/30 transform transition-all duration-300 hover:shadow-[0_0_50px_rgba(147,51,234,0.5)]">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-yellow-400 to-orange-500"></div>
+        <div className="relative overflow-hidden bg-gradient-to-r from-martech-black via-martech-darkgray to-martech-black p-8 md:p-10 shadow-[0_0_35px_rgba(147,51,234,0.3)] border-y border-purple-500/30 transform transition-all duration-300 hover:shadow-[0_0_50px_rgba(147,51,234,0.5)]">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-600 via-martech-yellow to-martech-orange"></div>
           <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-orange-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-martech-orange/20 rounded-full blur-3xl"></div>
 
           <div className="relative z-10 max-w-7xl mx-auto">
             <div className="flex items-center justify-center mb-8">
               <div className="h-1 w-16 bg-purple-500 rounded-full"></div>
-              <h3 className="mx-4 text-3xl font-extrabold text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-white to-yellow-400">
+              <h3 className="mx-4 text-3xl font-extrabold text-white bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-white to-martech-yellow">
                 MDM DO BÁSICO AO AVANÇADO
               </h3>
-              <div className="h-1 w-16 bg-yellow-400 rounded-full"></div>
+              <div className="h-1 w-16 bg-martech-yellow rounded-full"></div>
             </div>
 
             <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-4xl mx-auto text-center">
@@ -30,12 +30,12 @@ export default function MDMAdvancedSection() {
                   <span className="mr-1">💎</span> PREMIUM
                 </span>
               </Badge>
-              <Badge className="bg-gradient-to-r from-yellow-400 to-amber-500 text-black px-4 py-2 text-base shadow-lg transform transition-transform hover:scale-105">
+              <Badge className="bg-gradient-to-r from-martech-yellow to-amber-500 text-black px-4 py-2 text-base shadow-lg transform transition-transform hover:scale-105">
                 <span className="flex items-center">
                   <span className="mr-1">🔧</span> EMMC & UFS
                 </span>
               </Badge>
-              <Badge className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 text-base shadow-lg transform transition-transform hover:scale-105">
+              <Badge className="bg-gradient-to-r from-martech-blue to-blue-700 text-white px-4 py-2 text-base shadow-lg transform transition-transform hover:scale-105">
                 <span className="flex items-center">
                   <span className="mr-1">🔬</span> MICROSOLDAGEM
                 </span>
@@ -479,5 +479,5 @@ export default function MDMAdvancedSection() {
         </div>
       </div>
     </section>
-  );
-}
+  )
+} 

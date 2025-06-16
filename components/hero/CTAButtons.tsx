@@ -24,6 +24,12 @@ export default function CTAButtons({ page }: CTAButtonsProps) {
           behavior: "smooth",
         })
       }, 100)
+    } else {
+      // If element doesn't exist on current page, try to navigate to the page with the section
+      const currentPath = window.location.pathname
+      if (!currentPath.includes("curso-vip") && (sectionId === "conteudo-do-curso" || sectionId === "precos")) {
+        window.location.href = `/curso-vip?section=${sectionId}`
+      }
     }
   }
 
@@ -33,7 +39,7 @@ export default function CTAButtons({ page }: CTAButtonsProps) {
         <>
           <Button
             className="bg-gradient-to-r from-martech-orange to-martech-yellow hover:from-martech-yellow hover:to-martech-orange text-black font-bold px-6 py-3 rounded-xl text-base transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,127,0,0.4)]"
-            onClick={() => scrollToSection("pricing")}
+            onClick={() => scrollToSection("precos")}
           >
             <span className="relative z-10 flex items-center">
               Quero me inscrever agora
@@ -44,8 +50,7 @@ export default function CTAButtons({ page }: CTAButtonsProps) {
             variant="outline"
             className="border-martech-orange text-martech-orange hover:bg-martech-orange hover:text-black transition-all duration-300 px-6 py-3 rounded-xl text-base w-full sm:w-auto"
             onClick={() => {
-              // Try to find the course content section by common IDs
-              scrollToSection("cursos")
+              scrollToSection("conteudo-do-curso")
             }}
           >
             Ver grade completa

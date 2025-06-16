@@ -146,6 +146,20 @@ export default function Header() {
                   </div>
                   <ChevronRight className="h-4 w-4 text-purple-500" />
                 </Link>
+                <Link
+                  href="/curso-vip"
+                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    setCoursesOpen(false)
+                  }}
+                >
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
+                    CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)
+                  </div>
+                  <ChevronRight className="h-4 w-4 text-yellow-500" />
+                </Link>
               </div>
             </div>
           </div>
@@ -170,7 +184,7 @@ export default function Header() {
         </Button>
 
         {/* CTA Button - Desktop Only */}
-        <Link href="/#nossos-cursos" className="hidden md:block">
+        <Link href="" className="hidden md:block">
           <Button className="bg-martech-blue hover:bg-blue-700">Acessar Cursos</Button>
         </Link>
       </div>
@@ -239,6 +253,17 @@ export default function Header() {
                     MDM do básico ao avançado
                   </div>
                   <ChevronRight className="h-4 w-4 text-purple-500" />
+                </Link>
+                <Link
+                  href="/curso-vip"
+                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center">
+                    <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
+                    CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)
+                  </div>
+                  <ChevronRight className="h-4 w-4 text-yellow-500" />
                 </Link>
               </div>
             </div>

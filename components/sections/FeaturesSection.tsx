@@ -1,4 +1,4 @@
-import { CheckCircle } from "lucide-react"
+import { CheckCircle, BookOpen, Users, Shield, Smartphone, Zap, Server, PenToolIcon as Tool } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { features } from "@/lib/data/features"
@@ -6,6 +6,30 @@ import { featuresFRP } from "@/lib/data/features-frp"
 
 interface FeaturesSectionProps {
   courseType?: "mdm" | "frp"
+}
+
+// Função para renderizar o ícone correto baseado na string
+const renderIcon = (iconName: string) => {
+  const iconProps = { className: "h-6 w-6 text-black" }
+  
+  switch (iconName) {
+    case "BookOpen":
+      return <BookOpen {...iconProps} />
+    case "Smartphone":
+      return <Smartphone {...iconProps} />
+    case "Shield":
+      return <Shield {...iconProps} />
+    case "Server":
+      return <Server {...iconProps} />
+    case "Zap":
+      return <Zap {...iconProps} />
+    case "Users":
+      return <Users {...iconProps} />
+    case "Tool":
+      return <Tool {...iconProps} />
+    default:
+      return <BookOpen {...iconProps} />
+  }
 }
 
 export default function FeaturesSection({ courseType = "mdm" }: FeaturesSectionProps) {
@@ -50,7 +74,7 @@ export default function FeaturesSection({ courseType = "mdm" }: FeaturesSectionP
                 {/* Icon section */}
                 <div className="mb-4 sm:mb-6 flex-shrink-0">
                   <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-gradient-to-r from-martech-orange to-martech-yellow flex items-center justify-center">
-                    {card.icon}
+                    {renderIcon(card.icon)}
                   </div>
                 </div>
 
@@ -78,7 +102,7 @@ export default function FeaturesSection({ courseType = "mdm" }: FeaturesSectionP
                         </li>
                       ))}
                       {/* Add additional tools for MDM Advanced course */}
-                      {window.location.pathname === "/mdm-avancado" && card.title === "Ferramentas Profissionais" && (
+                      {typeof window !== 'undefined' && window.location.pathname === "/mdm-avancado" && card.title === "Ferramentas Profissionais" && (
                         <>
                           <li className="flex items-start gap-2">
                             <CheckCircle className="text-green-500 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0 mt-0.5" />

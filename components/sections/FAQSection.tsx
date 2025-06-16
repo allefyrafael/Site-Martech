@@ -4,7 +4,7 @@ import { faqs } from "@/lib/data/faqs"
 import { faqsFRP } from "@/lib/data/faqs-frp"
 
 interface FAQSectionProps {
-  courseType?: "mdm" | "frp" | "mdm-avancado"
+  courseType?: "mdm" | "frp" | "mdm-avancado" | "curso-vip"
 }
 
 export default function FAQSection({ courseType = "mdm" }: FAQSectionProps) {
@@ -18,36 +18,42 @@ export default function FAQSection({ courseType = "mdm" }: FAQSectionProps) {
   const getBorderColor = () => {
     if (courseType === "frp") return "border-green-500/30"
     if (courseType === "mdm-avancado") return "border-purple-500/30"
+    if (courseType === "curso-vip") return "border-amber-500/30"
     return "border-martech-blue/30"
   }
 
   const getShadowColor = () => {
     if (courseType === "frp") return "hover:shadow-[0_0_15px_rgba(34,197,94,0.3)]"
     if (courseType === "mdm-avancado") return "hover:shadow-[0_0_15px_rgba(147,51,234,0.3)]"
+    if (courseType === "curso-vip") return "hover:shadow-[0_0_15px_rgba(245,158,11,0.3)]"
     return "hover:shadow-[0_0_15px_rgba(0,160,233,0.3)]"
   }
 
   const getCircleColor = () => {
     if (courseType === "frp") return "bg-green-500"
     if (courseType === "mdm-avancado") return "bg-purple-500"
+    if (courseType === "curso-vip") return "bg-amber-500"
     return "bg-martech-blue"
   }
 
   const getTextHoverColor = () => {
     if (courseType === "frp") return "group-open:text-green-400"
     if (courseType === "mdm-avancado") return "group-open:text-purple-400"
+    if (courseType === "curso-vip") return "group-open:text-amber-400"
     return "group-open:text-martech-yellow"
   }
 
   const getIconColor = () => {
     if (courseType === "frp") return "text-green-400"
     if (courseType === "mdm-avancado") return "text-purple-400"
+    if (courseType === "curso-vip") return "text-amber-400"
     return "text-martech-yellow"
   }
 
   const getBorderTopColor = () => {
     if (courseType === "frp") return "border-green-500/20"
     if (courseType === "mdm-avancado") return "border-purple-500/20"
+    if (courseType === "curso-vip") return "border-amber-500/20"
     return "border-martech-blue/20"
   }
 

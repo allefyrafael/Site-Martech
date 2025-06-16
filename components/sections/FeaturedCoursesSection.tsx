@@ -101,7 +101,7 @@ export default function FeaturedCoursesSection() {
             description="Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC, UFS e microsoldagem."
             imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MDM%20B%20a%20A-AY9BspbxjLfwz1SGaNF50fKDmNMBc8.webp"
             imageAlt="MDM do Básico ao Avançado"
-            badge={{ text: "EM BREVE", color: "bg-gradient-to-r from-purple-600 to-indigo-600" }}
+            badge={{ text: "VIP", color: "bg-gradient-to-r from-amber-500 to-yellow-500" }}
             borderColor="border-purple-500/50"
             accentColor="text-purple-400"
             iconColor="text-purple-400"
@@ -114,20 +114,57 @@ export default function FeaturedCoursesSection() {
               {
                 name: "Acesso Completo",
                 price: "800,00",
-                originalPrice: "1.000,00",
+                originalPrice: "700,00",
                 features: ["5 anos de acesso", "Suporte até dezembro de 2025", "Acesso a todos os módulos"],
                 learnMoreLink: "/mdm-avancado",
                 buyLink:
-                  "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318",
+                  "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318",
               },
               {
                 name: "Acesso Básico",
                 price: "500,00",
-                originalPrice: "1.000,00",
+                originalPrice: "700,00",
                 features: ["1 ano de acesso", "2 meses de suporte", "Acesso a todos os módulos"],
                 learnMoreLink: "/mdm-avancado",
                 buyLink:
-                  "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788",
+                  "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788",
+              },
+            ]}
+          />
+
+          {/* Card 4: CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC) */}
+          <CourseCard
+            title="CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)"
+            description="Aprenda absolutamente tudo sobre remoções FRP, Screen Lock, Servidores, Unlock Tool e iCloud com procedimentos via JTAG & EMMC."
+            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/600X600martEch2-MZu5cQ2SAzZ9oBfuK0xIDddhwWjPSM.webp"
+            imageAlt="Curso VIP JTAG & EMMC"
+            badge={{ text: "VIP", color: "bg-gradient-to-r from-amber-500 to-yellow-500" }}
+            borderColor="border-amber-500/50"
+            accentColor="text-amber-400"
+            iconColor="text-amber-400"
+            buttonColor="border-amber-500 text-amber-400 hover:bg-amber-600"
+            ctaColor="from-amber-500 to-yellow-500 hover:from-yellow-500 hover:to-amber-500 text-black font-bold"
+            shadowColor="hover:shadow-[0_0_25px_rgba(245,158,11,0.4)]"
+            imageOpacity="opacity-90"
+            singlePlan={false}
+            plans={[
+              {
+                name: "Acesso Premium",
+                price: "490,00",
+                originalPrice: "700,00",
+                features: ["5 anos de acesso", "Suporte VIP até dezembro de 2025", "Lives semanais exclusivas"],
+                learnMoreLink: "/curso-vip",
+                buyLink:
+                  "https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32&_gl=1*13okbs*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODY3MC42MC4wLjA.&bid=1746138701905",
+              },
+              {
+                name: "Acesso Standard",
+                price: "280,00",
+                originalPrice: "700,00",
+                features: ["1 ano de acesso", "3 meses de suporte VIP", "Acesso a todos os módulos"],
+                learnMoreLink: "/curso-vip",
+                buyLink:
+                  "https://pay.hotmart.com/H99211424I?sck=HOTMART_MEM_CA&off=wl2bqj0f&offDiscount=cna-50.00-3g2khe20&hotfeature=32&_gl=1*1ne1gm7*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&bid=1746138670487",
               },
             ]}
           />
@@ -192,6 +229,8 @@ function CourseCard({
     setActivePlan(index)
   }
 
+  // Verificar se é o curso VIP
+
   return (
     <Card
       className={`bg-gradient-to-b from-martech-darkgray to-black ${borderColor} text-white overflow-hidden group ${shadowColor} transition-all duration-300 flex flex-col h-full`}
@@ -218,7 +257,9 @@ function CourseCard({
           <p className="text-gray-300 text-xs sm:text-sm h-16 sm:h-20 mb-2">{description}</p>
         </div>
 
-        {/* Custom plan selector */}
+        {/* Conteúdo condicional: mostrar planos para cursos normais, mostrar mensagem de "em breve" para o curso VIP */}
+
+        {/* Todos os cursos agora mostram os planos disponíveis */}
         <div className="w-full flex-grow">
           {/* Custom tabs */}
           <div className="flex w-full mb-3 rounded-lg overflow-hidden border border-gray-700/30">
@@ -230,9 +271,11 @@ function CourseCard({
                   index === 0 ? "rounded-l-lg" : index === plans.length - 1 ? "rounded-r-lg" : ""
                 } ${
                   activePlan === index
-                    ? badge.color.includes("gradient")
-                      ? badge.color
-                      : badge.color
+                    ? title === "MDM DO BÁSICO AO AVANÇADO"
+                      ? "bg-gradient-to-r from-purple-600 to-indigo-600"
+                      : badge.color.includes("gradient")
+                        ? badge.color
+                        : badge.color
                     : "bg-transparent hover:bg-gray-800"
                 } ${activePlan === index ? "text-white" : "text-gray-400"}`}
               >
@@ -295,17 +338,23 @@ function CourseCard({
                           title === "CURSO MDM NÍVEL 1" && plan.name === "Acesso Básico"
                             ? "https://pay.hotmart.com/I94355959M?sck=HOTMART_MEM_CA&off=6d6cocrz&offDiscount=cna-60.00-u0vgxl3s&hotfeature=32&_gl=1*171596c*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY0OTA5MS40My4wLjA.&bid=1741649097579"
                             : title === "CURSO MDM NÍVEL 1" && plan.name === "Acesso Completo"
-                              ? "https://pay.hotmart.com/U94589271J?sck=HOTMART_MEM_CA&off=9nq1zfj8&offDiscount=cna-30.00-ysg574mf&hotfeature=32&_gl=1*iruucb*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY0OTE2Mi42MC4wLjA.&bid=1741649164793"
+                              ? "https://pay.hotmart.com/U94589271J?sck=HOTMART_MEM_CA&off=9nq1zfj8&offDiscount=cna-30.00-ysg574mf&hotfeature=32&_gl=1*iruucb*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS.4LjEuMTc0MTY0OTE2Mi42MC4wLjA.&bid=1741649164793"
                               : title === "CURSO DE REMOÇÃO DE ICLOUD E FRP ANDROID" && plan.name === "Acesso Básico"
                                 ? "https://pay.hotmart.com/W95189620X?sck=HOTMART_MEM_CA&off=wretdivk&offDiscount=cna-60.00-3anuljqq&hotfeature=32&_gl=1*jv4vma*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0MTY0OTA1NC4xNy4xLjE3NDE2NDk3OTUuNDYuMC4w&bid=1741649815251"
                                 : title === "CURSO DE REMOÇÃO DE ICLOUD E FRP ANDROID" &&
                                     plan.name === "Acesso Completo"
                                   ? "https://pay.hotmart.com/I92740095I?sck=HOTMART_MEM_CA&off=kzkum1js&offDiscount=cna-30.00-dtz8oi2y&hotfeature=32&_gl=1*1kw2nd7*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY1MDIxMy41Ny4wLjA.&bid=1741650216222"
                                   : title === "MDM DO BÁSICO AO AVANÇADO" && plan.name === "Acesso Completo"
-                                    ? "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318"
+                                    ? "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318"
                                     : title === "MDM DO BÁSICO AO AVANÇADO" && plan.name === "Acesso Básico"
-                                      ? "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS4xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788"
-                                      : plan.buyLink
+                                      ? "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788"
+                                      : title === "CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)" &&
+                                          plan.name === "Acesso Premium"
+                                        ? "https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32&_gl=1*13okbs*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODY3MC42MC4wLjA.&bid=1746138701905"
+                                        : title === "CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)" &&
+                                            plan.name === "Acesso Standard"
+                                          ? "https://pay.hotmart.com/H99211424I?sck=HOTMART_MEM_CA&off=wl2bqj0f&offDiscount=cna-50.00-3g2khe20&hotfeature=32&_gl=1*1ne1gm7*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&bid=1746138670487"
+                                          : plan.buyLink
                         }
                         className="block"
                         target="_blank"
@@ -313,10 +362,12 @@ function CourseCard({
                       >
                         <Button
                           className={`bg-gradient-to-r ${
-                            // Special case for MDM basic course
+                            // Special case for MDM basic course and MDM Advanced course
                             title === "CURSO MDM NÍVEL 1"
                               ? "from-martech-blue to-blue-700 hover:from-blue-700 hover:to-martech-blue text-white"
-                              : ctaColor
+                              : title === "MDM DO BÁSICO AO AVANÇADO"
+                                ? "from-purple-600 to-indigo-600 hover:from-indigo-600 hover:to-purple-600 text-white"
+                                : ctaColor
                           } font-bold text-xs h-9 w-full`}
                         >
                           Comprar
