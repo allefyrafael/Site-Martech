@@ -16,6 +16,7 @@ import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, ArrowRight } from "lucide-react"
+import ResponsivePricingSection from "@/components/sections/ResponsivePricingSection"
 
 // Component to handle scrolling to sections
 function ScrollToSection() {
@@ -43,6 +44,62 @@ function ScrollToSection() {
 
   return null
 }
+
+// Dados dos planos para FRP
+const frpPlans = [
+  {
+    id: "premium",
+    title: "FRP PREMIUM",
+    subtitle: "MÁXIMO DESEMPENHO",
+    price: "R$ 297,00",
+    originalPrice: "R$ 997,00",
+    savings: "ECONOMIA DE R$ 700,00",
+    isPremium: true,
+    features: [
+      "🔓 Curso FRP Completo (15+ horas)",
+      "🛠️ Ferramentas de Bypass Premium",
+      "📱 Métodos para Todos os Modelos",
+      "🎯 Scripts Automatizados",
+      "📞 Suporte Técnico Prioritário",
+      "💡 Casos Reais de Desbloqueio",
+      "🎓 Certificado de Conclusão",
+      "♾️ Acesso Vitalício",
+      "🆕 Atualizações Gratuitas"
+    ],
+    buttonText: "QUERO O ACESSO PREMIUM",
+    buttonUrl: "https://pay.kiwify.com.br/frp-premium",
+    accentColor: "green",
+    gradientFrom: "from-green-600",
+    gradientTo: "to-green-400"
+  },
+  {
+    id: "standard",
+    title: "FRP STANDARD",
+    subtitle: "ESSENCIAL",
+    price: "R$ 147,00",
+    originalPrice: "R$ 597,00",
+    savings: "ECONOMIA DE R$ 450,00",
+    isPremium: false,
+    features: [
+      "🔓 Curso FRP Completo (15+ horas)",
+      "🛠️ Ferramentas de Bypass Básicas",
+      "📱 Métodos para Modelos Populares",
+      "🎓 Certificado de Conclusão",
+      "♾️ Acesso Vitalício"
+    ],
+    disabledFeatures: [
+      "🎯 Scripts Automatizados",
+      "📞 Suporte Técnico Prioritário",
+      "💡 Casos Reais de Desbloqueio",
+      "🆕 Atualizações Gratuitas"
+    ],
+    buttonText: "QUERO O ACESSO STANDARD",
+    buttonUrl: "https://pay.kiwify.com.br/frp-standard",
+    accentColor: "gray",
+    gradientFrom: "from-gray-600",
+    gradientTo: "to-gray-400"
+  }
+]
 
 export default function FRPCoursePage() {
   const [countdown, setCountdown] = useState({
@@ -185,7 +242,7 @@ export default function FRPCoursePage() {
                     className="block w-full"
                   >
                     <Button className="w-full bg-gradient-to-r from-green-500 to-green-400 hover:from-green-400 hover:to-green-500 text-black font-bold py-3 text-lg">
-                      QUERO O ACESSO PREMIUM
+                      QUERO PREMIUM
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </a>
@@ -242,7 +299,7 @@ export default function FRPCoursePage() {
                     className="block w-full"
                   >
                     <Button className="w-full bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-bold py-3 text-lg">
-                      QUERO O ACESSO STANDARD
+                      QUERO STANDARD
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </a>
@@ -351,7 +408,7 @@ export default function FRPCoursePage() {
         </section>
 
         {/* Preços */}
-        <PricingSection courseType="frp" />
+        <ResponsivePricingSection courseType="frp" plans={frpPlans} />
 
         {/* FAQ */}
         <FAQSection courseType="frp" />

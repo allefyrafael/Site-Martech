@@ -529,7 +529,7 @@ export default function CursoVIPPage() {
                     <p className="text-gray-400 text-sm">
                       De <span className="line-through">R$ 5.000,00</span> por apenas:
                     </p>
-                    <div className="text-4xl font-bold text-yellow-400 mb-2">R$ 490,00</div>
+                    <div className="text-4xl font-bold text-yellow-400 mb-2">R$ 800,00</div>
                     <Badge className="bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">
                       Economia de R$ 4.510,00
                     </Badge>
@@ -586,7 +586,7 @@ export default function CursoVIPPage() {
                     <p className="text-gray-400 text-sm">
                       De <span className="line-through">R$ 5.000,00</span> por apenas:
                     </p>
-                    <div className="text-4xl font-bold text-gray-300 mb-2">R$ 280,00</div>
+                    <div className="text-4xl font-bold text-gray-300 mb-2">R$ 490,00</div>
                     <Badge className="bg-gray-500/20 text-gray-400 border border-gray-500/30">
                       Economia de R$ 4.720,00
                     </Badge>
@@ -709,7 +709,7 @@ export default function CursoVIPPage() {
                   <p className="text-gray-400 text-sm">
                     De <span className="line-through">R$ 5.000,00</span> por apenas:
                   </p>
-                  <div className="text-4xl font-bold text-white">R$ 490,00</div>
+                  <div className="text-4xl font-bold text-white">R$ 800,00</div>
                 </div>
                 <a
                   href="https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32"

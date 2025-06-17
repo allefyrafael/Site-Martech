@@ -16,6 +16,7 @@ import { useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, ArrowRight } from "lucide-react"
+import ResponsivePricingSection from "@/components/sections/ResponsivePricingSection"
 
 // Component to handle scrolling to sections
 function ScrollToSection() {
@@ -43,6 +44,64 @@ function ScrollToSection() {
 
   return null
 }
+
+// Dados dos planos para MDM
+const mdmPlans = [
+  {
+    id: "premium",
+    title: "MDM PREMIUM",
+    subtitle: "TUDO QUE VOCÊ PRECISA",
+    price: "R$ 397,00",
+    originalPrice: "R$ 1.497,00",
+    savings: "ECONOMIA DE R$ 1.100,00",
+    isPremium: true,
+    features: [
+      "📱 Curso MDM Completo (20+ horas de conteúdo)",
+      "📊 Planilhas de Gestão Premium",
+      "🎯 Scripts de Automação Avançados",
+      "📈 Templates de Relatórios Executivos",
+      "🔧 Ferramentas de Troubleshooting",
+      "💡 Casos de Uso Práticos do Mercado",
+      "📞 Suporte Técnico Prioritário",
+      "🎓 Certificado de Conclusão",
+      "♾️ Acesso Vitalício ao Conteúdo",
+      "🆕 Atualizações Gratuitas"
+    ],
+    buttonText: "QUERO O ACESSO PREMIUM",
+    buttonUrl: "https://pay.kiwify.com.br/hIQCXSN",
+    accentColor: "blue",
+    gradientFrom: "from-blue-600",
+    gradientTo: "to-blue-400"
+  },
+  {
+    id: "standard",
+    title: "MDM STANDARD",
+    subtitle: "IDEAL PARA COMEÇAR",
+    price: "R$ 197,00",
+    originalPrice: "R$ 897,00",
+    savings: "ECONOMIA DE R$ 700,00",
+    isPremium: false,
+    features: [
+      "📱 Curso MDM Completo (20+ horas de conteúdo)",
+      "📊 Planilhas de Gestão Básicas",
+      "📈 Templates de Relatórios Essenciais",
+      "🎓 Certificado de Conclusão",
+      "♾️ Acesso Vitalício ao Conteúdo"
+    ],
+    disabledFeatures: [
+      "🎯 Scripts de Automação Avançados",
+      "🔧 Ferramentas de Troubleshooting",
+      "💡 Casos de Uso Práticos do Mercado",
+      "📞 Suporte Técnico Prioritário",
+      "🆕 Atualizações Gratuitas"
+    ],
+    buttonText: "QUERO O ACESSO STANDARD",
+    buttonUrl: "https://pay.kiwify.com.br/standard-mdm",
+    accentColor: "gray",
+    gradientFrom: "from-gray-600",
+    gradientTo: "to-gray-400"
+  }
+]
 
 export default function MDMCoursePage() {
   const [countdown, setCountdown] = useState({
@@ -181,7 +240,7 @@ export default function MDMCoursePage() {
                     className="block w-full"
                   >
                     <Button className="w-full bg-gradient-to-r from-martech-blue to-blue-500 hover:from-blue-500 hover:to-martech-blue text-white font-bold py-3 text-lg">
-                      QUERO O ACESSO PREMIUM
+                      QUERO PREMIUM
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </a>
@@ -238,7 +297,7 @@ export default function MDMCoursePage() {
                     className="block w-full"
                   >
                     <Button className="w-full bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-500 text-white font-bold py-3 text-lg">
-                      QUERO O ACESSO STANDARD
+                      QUERO STANDARD
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </a>
@@ -319,12 +378,8 @@ export default function MDMCoursePage() {
                 </div>
                 <a
                   href="https://pay.hotmart.com/U94589271J?sck=HOTMART_MEM_CA&off=9nq1zfj8&offDiscount=cna-30.00-ysg574mf&hotfeature=32&_gl=1*iruucb*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY0OTE2Mi42MC4wLjA.&bid=1741649164793"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative group"
-                >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-blue to-blue-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
-                  <Button className="relative bg-gradient-to-r from-martech-blue to-blue-500 hover:from-blue-500 hover:to-martech-blue text-white font-bold px-8 py-6 text-lg shadow-lg transition-all duration-300">
+                  >
+                  <Button className="bg-gradient-to-r from-martech-blue to-blue-500 hover:from-blue-500 hover:to-martech-blue text-white font-bold py-4 px-8 text-lg">
                     GARANTIR MINHA VAGA AGORA
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -347,7 +402,7 @@ export default function MDMCoursePage() {
         </section>
 
         {/* Preços */}
-        <PricingSection />
+        <ResponsivePricingSection courseType="mdm" plans={mdmPlans} />
 
         {/* FAQ */}
         <FAQSection />
