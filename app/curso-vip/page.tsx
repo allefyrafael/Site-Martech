@@ -586,9 +586,9 @@ export default function CursoVIPPage() {
                     <p className="text-gray-400 text-sm">
                       De <span className="line-through">R$ 5.000,00</span> por apenas:
                     </p>
-                    <div className="text-4xl font-bold text-gray-300 mb-2">R$ 490,00</div>
+                    <div className="text-4xl font-bold text-gray-300 mb-2">R$ 500,00</div>
                     <Badge className="bg-gray-500/20 text-gray-400 border border-gray-500/30">
-                      Economia de R$ 4.720,00
+                      Economia de R$ 4.500,00
                     </Badge>
                   </div>
 

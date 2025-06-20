@@ -150,8 +150,8 @@ export default function FeaturedCoursesSection() {
             plans={[
               {
                 name: "Acesso Premium",
-                price: "490,00",
-                originalPrice: "700,00",
+                price: "800,00",
+                originalPrice: "5000,00",
                 features: ["5 anos de acesso", "Suporte VIP até dezembro de 2025", "Lives semanais exclusivas"],
                 learnMoreLink: "/curso-vip",
                 buyLink:
@@ -159,8 +159,8 @@ export default function FeaturedCoursesSection() {
               },
               {
                 name: "Acesso Standard",
-                price: "280,00",
-                originalPrice: "700,00",
+                price: "500,00",
+                originalPrice: "4000,00",
                 features: ["1 ano de acesso", "3 meses de suporte VIP", "Acesso a todos os módulos"],
                 learnMoreLink: "/curso-vip",
                 buyLink:
