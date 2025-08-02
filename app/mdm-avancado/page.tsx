@@ -179,7 +179,7 @@ export default function MDMAdvancedCoursePage() {
                   </div>
 
                   <a
-                    href="https://pay.hotmart.com/I92740095I?sck=HOTMART_MEM_CA&off=kzkum1js&offDiscount=cna-30.00-dtz8oi2y&hotfeature=32&_gl=1*1p23c5q*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTc0MzIzNi4xMy4xLjE3NDE3NDM0OTUuNjAuMC4w&bid=1741743498370"
+                    href="https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full"
@@ -236,7 +236,7 @@ export default function MDMAdvancedCoursePage() {
                   </div>
 
                   <a
-                    href="https://pay.hotmart.com/W95189620X?sck=HOTMART_MEM_CA&off=wretdivk&offDiscount=cna-60.00-3anuljqq&hotfeature=32&_gl=1*106tirz*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0MTc0MzA1Mi4yNS4xLjE3NDE3NDM2NDMuMTguMC4w&bid=1741743646011"
+                    href="https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full"
