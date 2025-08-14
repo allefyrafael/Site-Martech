@@ -74,31 +74,33 @@ export default function TechUnionSolutionsPage() {
   // Helper function to check if element is visible
   const isElementVisible = (key: string) => visibleElements.has(key)
 
-  // Unmute on first user interaction
+  // Ensure video starts playing
   useEffect(() => {
     const video = videoRef.current
-    if (!video) return
+    if (video) {
+      video.muted = true
+      setIsMuted(true)
+      video.play().catch(() => {
+        console.log('Autoplay failed, will try on user interaction')
+      })
+    }
+  }, [])
 
-    let handled = false
-    const tryUnmute = () => {
-      if (handled) return
-      handled = true
-      try {
+  // Simple unmute on user interaction
+  useEffect(() => {
+    const handleInteraction = () => {
+      if (videoRef.current && isMuted) {
+        videoRef.current.muted = false
         setIsMuted(false)
-        video.muted = false
-        const maybe = video.play()
-        if (maybe && typeof (maybe as any).catch === 'function') {
-          ;(maybe as Promise<void>).catch(() => {})
-        }
-      } catch {}
-      remove()
+      }
     }
 
-    const events = ['click', 'touchend', 'pointerdown', 'keydown', 'scroll', 'wheel', 'touchmove']
-    const remove = () => events.forEach(evt => window.removeEventListener(evt as any, tryUnmute as any))
-    events.forEach(evt => window.addEventListener(evt as any, tryUnmute as any, { passive: true } as any))
-    return remove
-  }, [])
+    document.addEventListener('click', handleInteraction, { once: true })
+
+    return () => {
+      document.removeEventListener('click', handleInteraction)
+    }
+  }, [isMuted])
 
   // Scroll to pricing section
   const scrollToPricing = () => {
@@ -251,19 +253,18 @@ export default function TechUnionSolutionsPage() {
                   <div className="relative bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm hover:border-blue-400/50 hover:bg-blue-900/40 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-2">
                     {/* Video Container */}
                     <div className="relative rounded-xl overflow-hidden bg-black hover:scale-105 transition-all duration-500">
-                      <video
-                        className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-all duration-700"
-                        autoPlay
-                        loop
-                        muted={isMuted}
-                        playsInline
-                        preload="auto"
-                        controls
-                        ref={videoRef}
-                        onPlay={() => setIsVideoPlaying(true)}
-                        onPause={() => setIsVideoPlaying(false)}
-                      >
-                        <source src="/videos/video-martech.mp4" type="video/mp4" />
+                                             <video
+                         className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-all duration-700"
+                         autoPlay
+                         loop
+                         muted={isMuted}
+                         playsInline
+                         preload="auto"
+                         controls
+                         ref={videoRef}
+
+                       >
+                                                 <source src="/videos/VídeoMartech.mp4" type="video/mp4" />
                         Seu navegador não suporta vídeos.
                       </video>
                       
@@ -278,14 +279,7 @@ export default function TechUnionSolutionsPage() {
                           </button>
                         </div>
                         
-                        {/* Play Button Overlay */}
-                        {!isVideoPlaying && (
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-16 h-16 bg-blue-500/80 rounded-full flex items-center justify-center hover:bg-blue-500 hover:scale-110 transition-all duration-300 cursor-pointer">
-                              <Play className="h-8 w-8 text-white ml-1" />
-                            </div>
-                          </div>
-                        )}
+
                       </div>
                     </div>
                     
