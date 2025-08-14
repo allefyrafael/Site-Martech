@@ -189,51 +189,51 @@ export default function TechUnionSolutionsPage() {
                     FERRAMENTA REVOLUCIONÁRIA
                   </Badge>
                   
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight hover:scale-105 transition-all duration-500">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight hover:scale-105 transition-all duration-500">
                     TECH UNION <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">SOLUTIONS</span>
                   </h1>
                   
-                  <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed hover:text-gray-200 transition-all duration-500">
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 sm:mb-8 leading-relaxed hover:text-gray-200 transition-all duration-500">
                     Aumente o faturamento da sua empresa com <span className="text-blue-400 font-semibold hover:text-blue-300 transition-colors duration-300">+1.700 soluções</span> de defeitos crônicos
                   </p>
 
                   {/* Benefícios Principais - Animados */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                    <div className="flex items-center justify-center gap-3 bg-gray-800/30 rounded-lg p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
-                      <Shield className="h-6 w-6 text-green-400 group-hover:scale-110 group-hover:text-green-300 transition-all duration-300" />
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Remoção de Vírus</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/30 rounded-lg p-3 sm:p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
+                      <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-green-400 group-hover:scale-110 group-hover:text-green-300 transition-all duration-300" />
+                      <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors duration-300">Remoção de Vírus</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 bg-gray-800/30 rounded-lg p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
-                      <Zap className="h-6 w-6 text-blue-400 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Diagnóstico Inteligente</span>
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/30 rounded-lg p-3 sm:p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
+                      <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-400 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
+                      <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors duration-300">Diagnóstico Inteligente</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 bg-gray-800/30 rounded-lg p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
-                      <BarChart3 className="h-6 w-6 text-purple-400 group-hover:scale-110 group-hover:text-purple-300 transition-all duration-300" />
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Sistema de Ordens</span>
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/30 rounded-lg p-3 sm:p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group sm:col-span-2 md:col-span-1">
+                      <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-purple-400 group-hover:scale-110 group-hover:text-purple-300 transition-all duration-300" />
+                      <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors duration-300">Sistema de Ordens de Serviço</span>
                     </div>
                   </div>
 
                   {/* CTA Principal - Animado */}
-                  <div className="flex justify-center lg:justify-start mb-8">
-                    <Button onClick={scrollToPricing} className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-12 py-6 text-xl shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse">
+                  <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
+                    <Button onClick={scrollToPricing} className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 text-sm sm:text-base md:text-lg lg:text-xl shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse w-full sm:w-auto whitespace-normal break-words">
                       QUERO AUMENTAR MEU FATURAMENTO
-                      <ArrowRight className="ml-2 h-6 w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
                     </Button>
                   </div>
 
                   {/* Trust Indicators - Animados */}
-                  <div className="flex items-center justify-center lg:justify-start gap-8 text-gray-400">
+                  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 md:gap-8 text-gray-400">
                     <div className="flex items-center gap-2 hover:text-white transition-all duration-300 hover:scale-105 group">
-                      <Shield className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-sm">100% Seguro</span>
+                      <Shield className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs sm:text-sm">100% Seguro</span>
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-all duration-300 hover:scale-105 group">
-                      <Download className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-sm">Download Imediato</span>
+                      <Download className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs sm:text-sm">Download Imediato</span>
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-all duration-300 hover:scale-105 group">
-                      <Users className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-sm">+500 Técnicos</span>
+                      <Users className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs sm:text-sm">7136 Técnicos</span>
                     </div>
                   </div>
                 </div>
@@ -248,11 +248,11 @@ export default function TechUnionSolutionsPage() {
                   }`}
                   style={{transitionDelay: '0.3s'}}
                 >
-                  <div className="relative bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-2xl p-8 backdrop-blur-sm hover:border-blue-400/50 hover:bg-blue-900/40 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-2">
+                  <div className="relative bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-2xl p-4 sm:p-6 md:p-8 backdrop-blur-sm hover:border-blue-400/50 hover:bg-blue-900/40 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-2">
                     {/* Video Container */}
                     <div className="relative rounded-xl overflow-hidden bg-black hover:scale-105 transition-all duration-500">
                       <video
-                        className="w-full h-64 object-cover hover:scale-110 transition-all duration-700"
+                        className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-all duration-700"
                         autoPlay
                         loop
                         muted={isMuted}
@@ -263,7 +263,7 @@ export default function TechUnionSolutionsPage() {
                         onPlay={() => setIsVideoPlaying(true)}
                         onPause={() => setIsVideoPlaying(false)}
                       >
-                        <source src="/videos/VídeoMartech.mp4" type="video/mp4" />
+                        <source src="/videos/video-martech.mp4" type="video/mp4" />
                         Seu navegador não suporta vídeos.
                       </video>
                       
@@ -290,21 +290,21 @@ export default function TechUnionSolutionsPage() {
                     </div>
                     
                     {/* Video Info */}
-                    <div className="mt-6 text-center">
-                      <h3 className="text-2xl font-bold text-white mb-4 hover:text-blue-300 transition-colors duration-300">Tech Union Solutions</h3>
+                    <div className="mt-4 sm:mt-6 text-center">
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 hover:text-blue-300 transition-colors duration-300">Tech Union Solutions</h3>
                       
-                      <div className="space-y-3 text-left">
-                        <div className="flex items-center gap-3 hover:bg-gray-800/30 p-2 rounded-lg transition-all duration-300 group">
-                          <div className="w-3 h-3 bg-green-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Sistema Ativo</span>
+                      <div className="space-y-2 sm:space-y-3 text-left">
+                        <div className="flex items-center gap-2 sm:gap-3 hover:bg-gray-800/30 p-2 rounded-lg transition-all duration-300 group">
+                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                          <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors duration-300">Sistema Ativo</span>
                         </div>
-                        <div className="flex items-center gap-3 hover:bg-gray-800/30 p-2 rounded-lg transition-all duration-300 group">
-                          <div className="w-3 h-3 bg-blue-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-300">1.700+ Soluções</span>
+                        <div className="flex items-center gap-2 sm:gap-3 hover:bg-gray-800/30 p-2 rounded-lg transition-all duration-300 group">
+                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                          <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors duration-300">1.700+ Soluções</span>
                         </div>
-                        <div className="flex items-center gap-3 hover:bg-gray-800/30 p-2 rounded-lg transition-all duration-300 group">
-                          <div className="w-3 h-3 bg-purple-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
-                          <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Atualizações Automáticas</span>
+                        <div className="flex items-center gap-2 sm:gap-3 hover:bg-gray-800/30 p-2 rounded-lg transition-all duration-300 group">
+                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-purple-400 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                          <span className="text-xs sm:text-sm text-gray-300 group-hover:text-white transition-colors duration-300">Atualizações Automáticas</span>
                         </div>
                       </div>
                     </div>
@@ -320,23 +320,23 @@ export default function TechUnionSolutionsPage() {
           <div className="container relative z-10">
             <div 
               ref={(el) => sectionRefs.current['features-header'] = el}
-              className={`text-center max-w-3xl mx-auto mb-16 transition-all duration-1000 ${
+              className={`text-center max-w-3xl mx-auto mb-12 sm:mb-16 transition-all duration-1000 ${
                 isElementVisible('features-header') 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 hover:scale-105 transition-all duration-500">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 hover:scale-105 transition-all duration-500">
                 Tudo que você precisa para <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">revolucionar</span> sua assistência técnica
               </h2>
-              <p className="text-xl text-gray-300 hover:text-gray-200 transition-colors duration-500">
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 hover:text-gray-200 transition-colors duration-500">
                 Ferramentas exclusivas que aumentam sua produção diária e faturamento
               </p>
             </div>
 
             <div 
               ref={(el) => sectionRefs.current['features-grid'] = el}
-              className={`grid md:grid-cols-3 gap-8 max-w-5xl mx-auto transition-all duration-1000 ${
+              className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto transition-all duration-1000 ${
                 isElementVisible('features-grid') 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-20'
@@ -372,12 +372,12 @@ export default function TechUnionSolutionsPage() {
                   }`}
                   style={{transitionDelay: `${0.5 + index * 0.2}s`}}
                 >
-                  <div className="p-8">
-                    <div className={`w-20 h-20 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg`}>
-                      <feature.icon className="h-10 w-10 text-white group-hover:scale-110 transition-transform duration-300" />
+                  <div className="p-6 sm:p-8">
+                    <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 sm:mb-6 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg`}>
+                      <feature.icon className="h-8 w-8 sm:h-10 sm:w-10 text-white group-hover:scale-110 transition-transform duration-300" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">{feature.title}</h3>
-                    <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-blue-300 transition-colors duration-300">{feature.title}</h3>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
                   </div>
                 </Card>
               ))}
@@ -388,7 +388,7 @@ export default function TechUnionSolutionsPage() {
         {/* Benefits Section - Com Animações */}
         <section className="py-20 bg-black relative">
           <div className="container relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-6xl mx-auto">
               {/* Left Column - Benefits */}
               <div 
                 ref={(el) => sectionRefs.current['benefits-left'] = el}
@@ -398,11 +398,11 @@ export default function TechUnionSolutionsPage() {
                     : 'opacity-0 -translate-x-20'
                 }`}
               >
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 hover:scale-105 transition-all duration-500">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 hover:scale-105 transition-all duration-500">
                   Aumente seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 animate-gradient">faturamento</span> e <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">produção</span>
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {[
                     {
                       icon: TrendingUp,
@@ -425,19 +425,19 @@ export default function TechUnionSolutionsPage() {
                   ].map((benefit, index) => (
                     <div 
                       key={index} 
-                      className={`flex gap-4 hover:bg-gray-800/30 p-4 rounded-lg transition-all duration-500 hover:scale-105 hover:-translate-y-1 group ${
+                      className={`flex gap-3 sm:gap-4 hover:bg-gray-800/30 p-3 sm:p-4 rounded-lg transition-all duration-500 hover:scale-105 hover:-translate-y-1 group ${
                         isElementVisible('benefits-left') 
                           ? 'opacity-100 translate-y-0' 
                           : 'opacity-0 translate-y-10'
                       }`}
                       style={{transitionDelay: `${0.3 + index * 0.2}s`}}
                     >
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-gray-800 to-gray-700 flex items-center justify-center flex-shrink-0 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
-                        <benefit.icon className={`h-6 w-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-r from-gray-800 to-gray-700 flex items-center justify-center flex-shrink-0 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
+                        <benefit.icon className={`h-5 w-5 sm:h-6 sm:w-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">{benefit.title}</h3>
-                        <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{benefit.description}</p>
+                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-1 sm:mb-2 group-hover:text-blue-300 transition-colors duration-300">{benefit.title}</h3>
+                        <p className="text-sm sm:text-base text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{benefit.description}</p>
                       </div>
                     </div>
                   ))}
@@ -447,16 +447,16 @@ export default function TechUnionSolutionsPage() {
               {/* Right Column - Stats Animados */}
               <div 
                 ref={(el) => sectionRefs.current['benefits-right'] = el}
-                className={`bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 hover:bg-gray-800/40 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-2 hover:scale-105 ${
+                className={`bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 hover:bg-gray-800/40 transition-all duration-700 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-2 hover:scale-105 ${
                   isElementVisible('benefits-right') 
                     ? 'opacity-100 translate-x-0 scale-100' 
                     : 'opacity-0 translate-x-20 scale-95'
                 }`}
                 style={{transitionDelay: '0.5s'}}
               >
-                <h3 className="text-2xl font-bold text-white mb-8 text-center hover:text-blue-300 transition-colors duration-300">Resultados Comprovados</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8 text-center hover:text-blue-300 transition-colors duration-300">Resultados Comprovados</h3>
                 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6">
                   {[
                     { number: "70%", label: "Redução no tempo", icon: Clock },
                     { number: "3x", label: "Mais clientes", icon: Users },
@@ -472,11 +472,11 @@ export default function TechUnionSolutionsPage() {
                       }`}
                       style={{transitionDelay: `${0.7 + index * 0.1}s`}}
                     >
-                      <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
-                        <stat.icon className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-300" />
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
+                        <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white group-hover:scale-110 transition-transform duration-300" />
                       </div>
-                      <div className="text-3xl font-bold text-white mb-2 animate-count-up group-hover:text-blue-300 transition-colors duration-300">{stat.number}</div>
-                      <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors duration-300">{stat.label}</p>
+                      <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2 animate-count-up group-hover:text-blue-300 transition-colors duration-300">{stat.number}</div>
+                      <p className="text-gray-300 text-xs sm:text-sm group-hover:text-gray-200 transition-colors duration-300">{stat.label}</p>
                     </div>
                   ))}
                 </div>
@@ -490,14 +490,14 @@ export default function TechUnionSolutionsPage() {
           <div className="container relative z-10">
             <div 
               ref={(el) => sectionRefs.current['pricing-header'] = el}
-              className={`text-center max-w-3xl mx-auto mb-12 transition-all duration-1000 ${
+              className={`text-center max-w-3xl mx-auto mb-8 sm:mb-12 transition-all duration-1000 ${
                 isElementVisible('pricing-header') 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-10'
               }`}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 hover:scale-105 transition-all duration-500">LICENÇA DE 1 ANO COM ACESSO COMPLETO</h2>
-              <p className="text-xl text-gray-300 hover:text-gray-200 transition-colors duration-500">Invista em sua produtividade e veja o retorno em poucos dias</p>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 hover:scale-105 transition-all duration-500">LICENÇA DE 1 ANO COM ACESSO COMPLETO</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 hover:text-gray-200 transition-colors duration-500">Invista em sua produtividade e veja o retorno em poucos dias</p>
             </div>
 
             <div 
@@ -510,23 +510,23 @@ export default function TechUnionSolutionsPage() {
               style={{transitionDelay: '0.3s'}}
             >
               <div className="bg-gradient-to-b from-blue-900/30 to-black border border-blue-500/30 rounded-xl overflow-hidden transform transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(59,130,246,0.4)] hover:border-blue-400/50 hover:bg-blue-900/40">
-                <div className="bg-gradient-to-r from-blue-500 to-purple-500 py-6 px-8 hover:from-blue-600 hover:to-purple-600 transition-all duration-500">
-                  <h3 className="text-white font-bold text-center text-2xl">LICENÇA TECH UNION SOLUTIONS</h3>
+                <div className="bg-gradient-to-r from-blue-500 to-purple-500 py-4 sm:py-6 px-6 sm:px-8 hover:from-blue-600 hover:to-purple-600 transition-all duration-500">
+                  <h3 className="text-white font-bold text-center text-lg sm:text-xl md:text-2xl">LICENÇA TECH UNION SOLUTIONS</h3>
                 </div>
-                <div className="p-8">
-                  <div className="text-center mb-8">
-                    <p className="text-gray-400 text-lg mb-2 hover:text-gray-300 transition-colors duration-300">
+                <div className="p-6 sm:p-8">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <p className="text-gray-400 text-base sm:text-lg mb-2 hover:text-gray-300 transition-colors duration-300">
                       De <span className="line-through">R$ 497,00</span> por apenas:
                     </p>
-                    <div className="text-6xl font-bold text-blue-400 mb-2 hover:text-blue-300 transition-colors duration-300">R$ 147,00</div>
-                    <p className="text-gray-300 text-lg mb-2 hover:text-gray-200 transition-colors duration-300">ou 12x de R$ 15,20 no cartão</p>
-                    <Badge className="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-lg px-4 py-2 animate-bounce hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-blue-400 mb-2 hover:text-blue-300 transition-colors duration-300">R$ 147,00</div>
+                    <p className="text-gray-300 text-base sm:text-lg mb-2 hover:text-gray-200 transition-colors duration-300">ou 12x de R$ 15,20 no cartão</p>
+                    <Badge className="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-sm sm:text-lg px-3 sm:px-4 py-1 sm:py-2 animate-bounce hover:scale-105 transition-all duration-300 hover:shadow-lg">
                       Economia de R$ 350,00
                     </Badge>
                   </div>
 
                   {/* Benefícios Reduzidos */}
-                  <div className="space-y-4 mb-8">
+                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                     {[
                       "Licença de 1 ano com acesso completo",
                       "+1.700 soluções de defeitos documentadas",
@@ -542,16 +542,16 @@ export default function TechUnionSolutionsPage() {
                         }`}
                         style={{transitionDelay: `${0.5 + index * 0.1}s`}}
                       >
-                        <CheckCircle className="h-6 w-6 text-blue-500 mt-0.5 mr-3 flex-shrink-0 group-hover:scale-110 group-hover:text-blue-400 transition-all duration-300" />
-                        <span className="text-gray-300 text-lg group-hover:text-white transition-colors duration-300">{benefit}</span>
+                        <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-500 mt-0.5 mr-2 sm:mr-3 flex-shrink-0 group-hover:scale-110 group-hover:text-blue-400 transition-all duration-300" />
+                        <span className="text-sm sm:text-base md:text-lg text-gray-300 group-hover:text-white transition-colors duration-300">{benefit}</span>
                       </div>
                     ))}
                   </div>
 
                   <a href="https://hotm.art/043SP5" target="_blank" rel="noopener noreferrer" className="block w-full">
-                    <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-6 text-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse">
+                    <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-4 sm:py-6 text-sm sm:text-base md:text-lg lg:text-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse whitespace-normal break-words">
                       QUERO MINHA LICENÇA AGORA
-                      <ArrowRight className="ml-2 h-6 w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
                     </Button>
                   </a>
                 </div>
@@ -560,18 +560,18 @@ export default function TechUnionSolutionsPage() {
               {/* Garantia Simplificada */}
               <div 
                 ref={(el) => sectionRefs.current['pricing-guarantee'] = el}
-                className={`mt-8 max-w-3xl mx-auto bg-blue-900/20 border border-blue-500/30 rounded-xl p-6 text-center hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:bg-blue-900/30 ${
+                className={`mt-6 sm:mt-8 max-w-3xl mx-auto bg-blue-900/20 border border-blue-500/30 rounded-xl p-4 sm:p-6 text-center hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:bg-blue-900/30 ${
                   isElementVisible('pricing-guarantee') 
                     ? 'opacity-100 translate-y-0' 
                     : 'opacity-0 translate-y-10'
                 }`}
                 style={{transitionDelay: '0.8s'}}
               >
-                <div className="flex items-center justify-center gap-4 mb-4">
-                  <Shield className="h-8 w-8 text-blue-500 hover:scale-110 hover:text-blue-400 transition-all duration-300" />
-                  <h3 className="text-xl font-bold text-white hover:text-blue-300 transition-colors duration-300">Garantia de 30 dias</h3>
+                <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <Shield className="h-6 w-6 sm:h-8 sm:w-8 text-blue-500 hover:scale-110 hover:text-blue-400 transition-all duration-300" />
+                  <h3 className="text-lg sm:text-xl font-bold text-white hover:text-blue-300 transition-colors duration-300">Garantia de 30 dias</h3>
                 </div>
-                <p className="text-gray-300 hover:text-gray-200 transition-colors duration-300">
+                <p className="text-sm sm:text-base text-gray-300 hover:text-gray-200 transition-colors duration-300">
                   Se você não ficar satisfeito, devolvemos 100% do seu investimento.
                 </p>
               </div>
@@ -584,21 +584,21 @@ export default function TechUnionSolutionsPage() {
           <div className="container relative z-10">
             <div 
               ref={(el) => sectionRefs.current['final-cta'] = el}
-              className={`max-w-4xl mx-auto bg-gradient-to-b from-blue-900/30 to-black border border-blue-500/30 rounded-xl p-8 md:p-12 text-center hover:scale-105 hover:-translate-y-2 transition-all duration-700 hover:bg-blue-900/40 ${
+              className={`max-w-4xl mx-auto bg-gradient-to-b from-blue-900/30 to-black border border-blue-500/30 rounded-xl p-6 sm:p-8 md:p-12 text-center hover:scale-105 hover:-translate-y-2 transition-all duration-700 hover:bg-blue-900/40 ${
                 isElementVisible('final-cta') 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : 'opacity-0 translate-y-20 scale-95'
               }`}
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 hover:scale-105 transition-all duration-500">NÃO PERCA ESSA OPORTUNIDADE</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto hover:text-gray-200 transition-colors duration-500">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 hover:scale-105 transition-all duration-500">NÃO PERCA ESSA OPORTUNIDADE</h2>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto hover:text-gray-200 transition-colors duration-500">
                 Transforme sua assistência técnica e aumente seus ganhos
               </p>
 
               {/* Countdown Animado */}
-              <div className="mb-8">
-                <p className="text-gray-400 mb-4 text-lg hover:text-gray-300 transition-colors duration-300">Oferta encerra em:</p>
-                <div className="flex justify-center gap-4">
+              <div className="mb-6 sm:mb-8">
+                <p className="text-gray-400 mb-3 sm:mb-4 text-base sm:text-lg hover:text-gray-300 transition-colors duration-300">Oferta encerra em:</p>
+                <div className="flex justify-center gap-2 sm:gap-4">
                   {[
                     { value: countdown.days, label: "Dias" },
                     { value: countdown.hours, label: "Horas" },
@@ -607,38 +607,38 @@ export default function TechUnionSolutionsPage() {
                   ].map((item, index) => (
                     <div 
                       key={index} 
-                      className={`bg-blue-900/30 border border-blue-500/30 rounded-lg px-6 py-4 text-center hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:bg-blue-900/50 ${
+                      className={`bg-blue-900/30 border border-blue-500/30 rounded-lg px-3 sm:px-4 md:px-6 py-3 sm:py-4 text-center hover:scale-110 hover:-translate-y-2 transition-all duration-500 hover:bg-blue-900/50 ${
                         isElementVisible('final-cta') 
                           ? 'opacity-100 translate-y-0' 
                           : 'opacity-0 translate-y-10'
                       }`}
                       style={{transitionDelay: `${0.3 + index * 0.1}s`}}
                     >
-                      <span className="text-3xl font-bold text-blue-400 hover:text-blue-300 transition-colors duration-300">{item.value}</span>
-                      <p className="text-sm text-gray-400 hover:text-gray-300 transition-colors duration-300">{item.label}</p>
+                      <span className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400 hover:text-blue-300 transition-colors duration-300">{item.value}</span>
+                      <p className="text-xs sm:text-sm text-gray-400 hover:text-gray-300 transition-colors duration-300">{item.label}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* CTA Final */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-4 sm:mb-6">
                 <div className="text-center hover:scale-105 transition-all duration-500">
-                  <p className="text-gray-400 text-lg hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-400 text-sm sm:text-base md:text-lg hover:text-gray-300 transition-colors duration-300">
                     De <span className="line-through">R$ 497,00</span> por apenas:
                   </p>
-                  <div className="text-5xl font-bold text-white hover:text-blue-300 transition-colors duration-300">R$ 147,00</div>
-                  <p className="text-gray-300 text-lg hover:text-gray-200 transition-colors duration-300">ou 12x de R$ 15,20 no cartão</p>
+                  <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white hover:text-blue-300 transition-colors duration-300">R$ 147,00</div>
+                  <p className="text-gray-300 text-sm sm:text-base md:text-lg hover:text-gray-200 transition-colors duration-300">ou 12x de R$ 15,20 no cartão</p>
                 </div>
                 <a href="https://hotm.art/043SP5" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-12 py-8 text-xl shadow-lg transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse">
+                  <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 md:py-8 text-sm sm:text-base md:text-lg lg:text-xl shadow-lg transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse w-full sm:w-auto whitespace-normal break-words">
                     GARANTIR MINHA LICENÇA AGORA
-                    <ArrowRight className="ml-2 h-6 w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
                   </Button>
                 </a>
               </div>
 
-              <p className="text-gray-400 text-sm hover:text-gray-300 transition-colors duration-300">
+              <p className="text-gray-400 text-xs sm:text-sm hover:text-gray-300 transition-colors duration-300">
                 Pagamento 100% seguro • Acesso imediato • Suporte especializado
               </p>
             </div>

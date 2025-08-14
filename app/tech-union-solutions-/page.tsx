@@ -189,51 +189,51 @@ export default function TechUnionSolutionsPageVariant() {
                     FERRAMENTA REVOLUCIONÁRIA
                   </Badge>
                   
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight hover:scale-105 transition-all duration-500">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight hover:scale-105 transition-all duration-500">
                     TECH UNION <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">SOLUTIONS</span>
                   </h1>
                   
-                  <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed hover:text-gray-200 transition-all duration-500">
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 sm:mb-8 leading-relaxed hover:text-gray-200 transition-all duration-500">
                     Aumente o faturamento da sua empresa com <span className="text-blue-400 font-semibold hover:text-blue-300 transition-colors duration-300">+1.700 soluções</span> de defeitos crônicos
                   </p>
 
                   {/* Benefícios Principais - Animados */}
-                  <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
-                    <div className="flex items-center justify-center gap-3 bg-gray-800/30 rounded-lg p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
-                      <Shield className="h-6 w-6 text-green-400 group-hover:scale-110 group-hover:text-green-300 transition-all duration-300" />
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Remoção de Vírus</span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/30 rounded-lg p-3 sm:p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
+                      <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-green-400 group-hover:scale-110 group-hover:text-green-300 transition-all duration-300" />
+                      <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors duration-300">Remoção de Vírus</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 bg-gray-800/30 rounded-lg p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
-                      <Zap className="h-6 w-6 text-blue-400 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Diagnóstico Inteligente</span>
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/30 rounded-lg p-3 sm:p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
+                      <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-400 group-hover:scale-110 group-hover:text-blue-300 transition-all duration-300" />
+                      <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors duration-300">Diagnóstico Inteligente</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 bg-gray-800/30 rounded-lg p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group">
-                      <BarChart3 className="h-6 w-6 text-purple-400 group-hover:scale-110 group-hover:text-purple-300 transition-all duration-300" />
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">Sistema de Ordens</span>
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 bg-gray-800/30 rounded-lg p-3 sm:p-4 hover:bg-gray-700/50 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-500 hover:-translate-y-1 group sm:col-span-2 md:col-span-1">
+                      <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-purple-400 group-hover:scale-110 group-hover:text-purple-300 transition-all duration-300" />
+                      <span className="text-sm sm:text-base text-gray-300 group-hover:text-white transition-colors duration-300">Sistema de Ordens de Serviço</span>
                     </div>
                   </div>
 
                   {/* CTA Principal - Animado */}
-                  <div className="flex justify-center lg:justify-start mb-8">
-                    <Button onClick={scrollToPricing} className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-12 py-6 text-xl shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse">
+                  <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
+                    <Button onClick={scrollToPricing} className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-6 text-sm sm:text-base md:text-lg lg:text-xl shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse w-full sm:w-auto whitespace-normal break-words">
                       QUERO AUMENTAR MEU FATURAMENTO
-                      <ArrowRight className="ml-2 h-6 w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300" />
+                      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0" />
                     </Button>
                   </div>
 
                   {/* Trust Indicators - Animados */}
-                  <div className="flex items-center justify-center lg:justify-start gap-8 text-gray-400">
+                  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 md:gap-8 text-gray-400">
                     <div className="flex items-center gap-2 hover:text-white transition-all duration-300 hover:scale-105 group">
-                      <Shield className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-sm">100% Seguro</span>
+                      <Shield className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs sm:text-sm">100% Seguro</span>
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-all duration-300 hover:scale-105 group">
-                      <Download className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-sm">Download Imediato</span>
+                      <Download className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs sm:text-sm">Download Imediato</span>
                     </div>
                     <div className="flex items-center gap-2 hover:text-white transition-all duration-300 hover:scale-105 group">
-                      <Users className="h-5 w-5 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="text-sm">+500 Técnicos</span>
+                      <Users className="h-4 w-4 sm:h-5 sm:w-5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-xs sm:text-sm">7136 Técnicos</span>
                     </div>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ export default function TechUnionSolutionsPageVariant() {
                     {/* Video Container */}
                     <div className="relative rounded-xl overflow-hidden bg-black hover:scale-105 transition-all duration-500">
                       <video
-                        className="w-full h-64 object-cover hover:scale-110 transition-all duration-700"
+                        className="w-full h-48 sm:h-56 md:h-64 object-cover hover:scale-110 transition-all duration-700"
                         autoPlay
                         loop
                         muted={isMuted}
@@ -263,7 +263,7 @@ export default function TechUnionSolutionsPageVariant() {
                         onPlay={() => setIsVideoPlaying(true)}
                         onPause={() => setIsVideoPlaying(false)}
                       >
-                        <source src="/videos/VídeoMartech.mp4" type="video/mp4" />
+                        <source src="/videos/video-martech.mp4" type="video/mp4" />
                         Seu navegador não suporta vídeos.
                       </video>
                       
@@ -388,7 +388,7 @@ export default function TechUnionSolutionsPageVariant() {
         {/* Benefits Section - Com Animações */}
         <section className="py-20 bg-black relative">
           <div className="container relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-6xl mx-auto">
               {/* Left Column - Benefits */}
               <div 
                 ref={(el) => sectionRefs.current['benefits-left'] = el}
@@ -398,7 +398,7 @@ export default function TechUnionSolutionsPageVariant() {
                     : 'opacity-0 -translate-x-20'
                 }`}
               >
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 hover:scale-105 transition-all duration-500">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 hover:scale-105 transition-all duration-500">
                   Aumente seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 animate-gradient">faturamento</span> e <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-gradient">produção</span>
                 </h2>
                 
@@ -610,12 +610,12 @@ export default function TechUnionSolutionsPageVariant() {
                       </p>
                     </div>
 
-                    {/* CTA Button - adjusted for mobile */}
-                    <a href="https://hotm.art/2P86wnmD" target="_blank" rel="noopener noreferrer" className="block w-full">
-                      <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-base md:text-lg py-4 md:py-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] mb-4">
-                        QUERO GARANTIR MINHA LICENÇA AGORA
-                      </Button>
-                    </a>
+                                         {/* CTA Button - adjusted for mobile */}
+                     <a href="https://hotm.art/2P86wnmD" target="_blank" rel="noopener noreferrer" className="block w-full">
+                       <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-sm sm:text-base md:text-lg py-4 md:py-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] mb-4 whitespace-normal break-words">
+                         QUERO GARANTIR MINHA LICENÇA AGORA
+                       </Button>
+                     </a>
 
                     {/* Footer info - simplified for mobile */}
                     <div className="flex items-center justify-center gap-2 md:gap-4 mt-auto">
