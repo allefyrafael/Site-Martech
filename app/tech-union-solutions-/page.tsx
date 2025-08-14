@@ -20,6 +20,7 @@ export default function TechUnionSolutionsPageVariant() {
   const [isMuted, setIsMuted] = useState(true)
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set())
   const sectionRefs = useRef<{ [key: string]: HTMLDivElement | null }>({})
+  const videoRef = useRef<HTMLVideoElement | null>(null)
 
   // Effect for countdown timer
   useEffect(() => {
@@ -72,6 +73,40 @@ export default function TechUnionSolutionsPageVariant() {
 
   // Helper function to check if element is visible
   const isElementVisible = (key: string) => visibleElements.has(key)
+
+  // Unmute on first user interaction
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    let handled = false
+    const tryUnmute = () => {
+      if (handled) return
+      handled = true
+      try {
+        setIsMuted(false)
+        video.muted = false
+        const maybe = video.play()
+        if (maybe && typeof (maybe as any).catch === 'function') {
+          ;(maybe as Promise<void>).catch(() => {})
+        }
+      } catch {}
+      remove()
+    }
+
+    const events = ['click', 'touchend', 'pointerdown', 'keydown', 'scroll', 'wheel', 'touchmove']
+    const remove = () => events.forEach(evt => window.removeEventListener(evt as any, tryUnmute as any))
+    events.forEach(evt => window.addEventListener(evt as any, tryUnmute as any, { passive: true } as any))
+    return remove
+  }, [])
+
+  // Scroll to pricing section
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('precos')
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
 
   return (
     <div className="flex min-h-screen flex-col" key="TechUnionSolutionsVariant">
@@ -180,7 +215,7 @@ export default function TechUnionSolutionsPageVariant() {
 
                   {/* CTA Principal - Animado */}
                   <div className="flex justify-center lg:justify-start mb-8">
-                    <Button className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-12 py-6 text-xl shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse">
+                    <Button onClick={scrollToPricing} className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-12 py-6 text-xl shadow-lg transform hover:scale-105 hover:-translate-y-1 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/50 animate-glow hover:animate-pulse">
                       QUERO AUMENTAR MEU FATURAMENTO
                       <ArrowRight className="ml-2 h-6 w-6 animate-bounce-x group-hover:translate-x-1 transition-transform duration-300" />
                     </Button>
@@ -221,11 +256,14 @@ export default function TechUnionSolutionsPageVariant() {
                         autoPlay
                         loop
                         muted={isMuted}
+                        playsInline
+                        preload="auto"
+                        controls
+                        ref={videoRef}
                         onPlay={() => setIsVideoPlaying(true)}
                         onPause={() => setIsVideoPlaying(false)}
                       >
-                        <source src="/videos/tech-union-solutions.mp4" type="video/mp4" />
-                        <source src="/videos/tech-union-solutions.webm" type="video/webm" />
+                        <source src="/videos/VídeoMartech.mp4" type="video/mp4" />
                         Seu navegador não suporta vídeos.
                       </video>
                       
@@ -448,7 +486,7 @@ export default function TechUnionSolutionsPageVariant() {
         </section>
 
         {/* Pricing Section - Teste A/B */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
+        <section id="precos" className="py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden">
           {/* Animated background elements */}
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
           <div
@@ -573,9 +611,11 @@ export default function TechUnionSolutionsPageVariant() {
                     </div>
 
                     {/* CTA Button - adjusted for mobile */}
-                    <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-base md:text-lg py-4 md:py-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] mb-4">
-                      QUERO GARANTIR MINHA LICENÇA AGORA
-                    </Button>
+                    <a href="https://hotm.art/2P86wnmD" target="_blank" rel="noopener noreferrer" className="block w-full">
+                      <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-base md:text-lg py-4 md:py-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] mb-4">
+                        QUERO GARANTIR MINHA LICENÇA AGORA
+                      </Button>
+                    </a>
 
                     {/* Footer info - simplified for mobile */}
                     <div className="flex items-center justify-center gap-2 md:gap-4 mt-auto">
