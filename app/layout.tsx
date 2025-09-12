@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/layout/ScrollToTop"
 import type { Metadata } from "next"
 import { Suspense } from "react"
 import FacebookPixelWrapper from "@/components/facebook-pixel-wrapper"
+import GoogleTagManager, { GoogleTagManagerNoScript } from "@/components/google-tag-manager"
 
 // Import hero section styles
 import "../styles/hero-section.css"
@@ -94,6 +95,9 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" href="/favicon.png" />
 
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId="GTM-N58975RN" />
+
         <noscript>
           <img
             height="1"
@@ -105,6 +109,9 @@ export default function RootLayout({
         </noscript>
       </head>
       <body className={inter.className}>
+        {/* Google Tag Manager (noscript) */}
+        <GoogleTagManagerNoScript gtmId="GTM-N58975RN" />
+        
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Suspense fallback={null}>
             <FacebookPixelWrapper />
