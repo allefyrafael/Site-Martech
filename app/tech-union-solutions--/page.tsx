@@ -161,18 +161,26 @@ export default function TechUnionSolutionsPageVariant2() {
           
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 bg-blue-400/30 rounded-full animate-float hover:bg-blue-400/60 transition-all duration-500"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 3}s`,
-                  animationDuration: `${3 + Math.random() * 4}s`
-                }}
-              />
-            ))}
+            {[...Array(20)].map((_, i) => {
+              // Usar índice para valores determinísticos durante SSR
+              const left = (i * 7.3) % 100
+              const top = (i * 11.7) % 100
+              const delay = (i * 0.15) % 3
+              const duration = 3 + (i * 0.2) % 4
+              
+              return (
+                <div
+                  key={i}
+                  className="absolute w-2 h-2 bg-blue-400/30 rounded-full animate-float hover:bg-blue-400/60 transition-all duration-500"
+                  style={{
+                    left: `${left}%`,
+                    top: `${top}%`,
+                    animationDelay: `${delay}s`,
+                    animationDuration: `${duration}s`
+                  }}
+                />
+              )
+            })}
           </div>
 
           <div className="container relative z-10 px-4 py-20">
@@ -358,6 +366,9 @@ export default function TechUnionSolutionsPageVariant2() {
                 }
               ].map((feature, index) => {
                 const IconComponent = feature.icon
+                if (!IconComponent || typeof IconComponent !== 'function') {
+                  return null
+                }
                 return (
                   <Card 
                     key={index} 
@@ -421,6 +432,9 @@ export default function TechUnionSolutionsPageVariant2() {
                     }
                   ].map((benefit, index) => {
                     const BenefitIcon = benefit.icon
+                    if (!BenefitIcon || typeof BenefitIcon !== 'function') {
+                      return null
+                    }
                     return (
                       <div 
                         key={index} 
@@ -464,6 +478,9 @@ export default function TechUnionSolutionsPageVariant2() {
                     { number: "100%", label: "Compatibilidade", icon: Shield }
                   ].map((stat, index) => {
                     const StatIcon = stat.icon
+                    if (!StatIcon || typeof StatIcon !== 'function') {
+                      return null
+                    }
                     return (
                       <div 
                         key={index} 
