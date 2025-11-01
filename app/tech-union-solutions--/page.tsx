@@ -356,25 +356,28 @@ export default function TechUnionSolutionsPageVariant2() {
                   description: "Gerencie suas ordens de serviço de forma organizada e profissional, aumentando a produtividade.",
                   color: "from-purple-500 to-pink-500"
                 }
-              ].map((feature, index) => (
-                <Card 
-                  key={index} 
-                  className={`bg-gradient-to-b from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 hover:bg-gray-800/70 transition-all duration-700 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-3 group ${
-                    isElementVisible('features-grid') 
-                      ? 'opacity-100 translate-y-0' 
-                      : 'opacity-0 translate-y-20'
-                  }`}
-                  style={{transitionDelay: `${0.5 + index * 0.2}s`}}
-                >
-                  <div className="p-8">
-                    <div className={`w-20 h-20 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg`}>
-                      <feature.icon className="h-10 w-10 text-white group-hover:scale-110 transition-transform duration-300" />
+              ].map((feature, index) => {
+                const IconComponent = feature.icon
+                return (
+                  <Card 
+                    key={index} 
+                    className={`bg-gradient-to-b from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 hover:bg-gray-800/70 transition-all duration-700 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-3 group ${
+                      isElementVisible('features-grid') 
+                        ? 'opacity-100 translate-y-0' 
+                        : 'opacity-0 translate-y-20'
+                    }`}
+                    style={{transitionDelay: `${0.5 + index * 0.2}s`}}
+                  >
+                    <div className="p-8">
+                      <div className={`w-20 h-20 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg`}>
+                        <IconComponent className="h-10 w-10 text-white group-hover:scale-110 transition-transform duration-300" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">{feature.title}</h3>
+                      <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">{feature.title}</h3>
-                    <p className="text-gray-300 leading-relaxed text-lg group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
-                  </div>
-                </Card>
-              ))}
+                  </Card>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -416,25 +419,28 @@ export default function TechUnionSolutionsPageVariant2() {
                       description: "Atenda 3x mais clientes com a mesma estrutura e tempo.",
                       color: "text-purple-400"
                     }
-                  ].map((benefit, index) => (
-                    <div 
-                      key={index} 
-                      className={`flex gap-4 hover:bg-gray-800/30 p-4 rounded-lg transition-all duration-500 hover:scale-105 hover:-translate-y-1 group ${
-                        isElementVisible('benefits-left') 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-10'
-                      }`}
-                      style={{transitionDelay: `${0.3 + index * 0.2}s`}}
-                    >
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-gray-800 to-gray-700 flex items-center justify-center flex-shrink-0 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
-                        <benefit.icon className={`h-6 w-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                  ].map((benefit, index) => {
+                    const BenefitIcon = benefit.icon
+                    return (
+                      <div 
+                        key={index} 
+                        className={`flex gap-4 hover:bg-gray-800/30 p-4 rounded-lg transition-all duration-500 hover:scale-105 hover:-translate-y-1 group ${
+                          isElementVisible('benefits-left') 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-10'
+                        }`}
+                        style={{transitionDelay: `${0.3 + index * 0.2}s`}}
+                      >
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-gray-800 to-gray-700 flex items-center justify-center flex-shrink-0 hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
+                          <BenefitIcon className={`h-6 w-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">{benefit.title}</h3>
+                          <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{benefit.description}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-300">{benefit.title}</h3>
-                        <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors duration-300">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
 
@@ -456,23 +462,26 @@ export default function TechUnionSolutionsPageVariant2() {
                     { number: "3x", label: "Mais clientes", icon: Users },
                     { number: "1.700+", label: "Soluções", icon: Database },
                     { number: "100%", label: "Compatibilidade", icon: Shield }
-                  ].map((stat, index) => (
-                    <div 
-                      key={index} 
-                      className={`text-center hover:scale-110 hover:-translate-y-2 transition-all duration-500 group ${
-                        isElementVisible('benefits-right') 
-                          ? 'opacity-100 translate-y-0' 
-                          : 'opacity-0 translate-y-10'
-                      }`}
-                      style={{transitionDelay: `${0.7 + index * 0.1}s`}}
-                    >
-                      <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
-                        <stat.icon className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-300" />
+                  ].map((stat, index) => {
+                    const StatIcon = stat.icon
+                    return (
+                      <div 
+                        key={index} 
+                        className={`text-center hover:scale-110 hover:-translate-y-2 transition-all duration-500 group ${
+                          isElementVisible('benefits-right') 
+                            ? 'opacity-100 translate-y-0' 
+                            : 'opacity-0 translate-y-10'
+                        }`}
+                        style={{transitionDelay: `${0.7 + index * 0.1}s`}}
+                      >
+                        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 hover:rotate-3 transition-all duration-500 group-hover:shadow-lg">
+                          <StatIcon className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-300" />
+                        </div>
+                        <div className="text-3xl font-bold text-white mb-2 animate-count-up group-hover:text-blue-300 transition-colors duration-300">{stat.number}</div>
+                        <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors duration-300">{stat.label}</p>
                       </div>
-                      <div className="text-3xl font-bold text-white mb-2 animate-count-up group-hover:text-blue-300 transition-colors duration-300">{stat.number}</div>
-                      <p className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors duration-300">{stat.label}</p>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             </div>
