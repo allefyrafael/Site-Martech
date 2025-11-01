@@ -3,11 +3,18 @@
 import { useState, useEffect } from 'react'
 
 export default function CountdownTimer() {
-  const [timeRemaining, setTimeRemaining] = useState({
+  const [timeRemaining, setTimeRemaining] = useState<{
+    days: number
+    hours: number
+    minutes: number
+    seconds: number
+    isCalculated: boolean
+  }>({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
+    isCalculated: false
   })
 
   useEffect(() => {
@@ -24,7 +31,8 @@ export default function CountdownTimer() {
           days: 0,
           hours: 0,
           minutes: 0,
-          seconds: 0
+          seconds: 0,
+          isCalculated: true
         })
         return
       }
@@ -34,7 +42,7 @@ export default function CountdownTimer() {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
       const seconds = Math.floor((distance % (1000 * 60)) / 1000)
       
-      setTimeRemaining({ days, hours, minutes, seconds })
+      setTimeRemaining({ days, hours, minutes, seconds, isCalculated: true })
     }
     
     // Calcular imediatamente
@@ -66,19 +74,27 @@ export default function CountdownTimer() {
       {/* Timer */}
       <div className="countdown-grid">
         <div className="time-box">
-          <span className="time-value">{timeRemaining.days}</span>
+          <span className="time-value" style={{ opacity: timeRemaining.isCalculated ? 1 : 0.5 }}>
+            {String(timeRemaining.days).padStart(2, '0')}
+          </span>
           <span className="time-label">DIAS</span>
         </div>
         <div className="time-box">
-          <span className="time-value">{timeRemaining.hours}</span>
+          <span className="time-value" style={{ opacity: timeRemaining.isCalculated ? 1 : 0.5 }}>
+            {String(timeRemaining.hours).padStart(2, '0')}
+          </span>
           <span className="time-label">HORAS</span>
         </div>
         <div className="time-box">
-          <span className="time-value">{timeRemaining.minutes}</span>
+          <span className="time-value" style={{ opacity: timeRemaining.isCalculated ? 1 : 0.5 }}>
+            {String(timeRemaining.minutes).padStart(2, '0')}
+          </span>
           <span className="time-label">MIN</span>
         </div>
         <div className="time-box">
-          <span className="time-value">{timeRemaining.seconds}</span>
+          <span className="time-value" style={{ opacity: timeRemaining.isCalculated ? 1 : 0.5 }}>
+            {String(timeRemaining.seconds).padStart(2, '0')}
+          </span>
           <span className="time-label">SEG</span>
         </div>
       </div>
@@ -89,9 +105,15 @@ export default function CountdownTimer() {
           <path d="M9.32 14.33L10.66 15.67L14.66 11.67" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M4 6c-1.25 1.67-2 3.75-2 6 0 5.52 4.48 10 10 10s10-4.48 10-10S17.52 2 12 2c-1.43 0-2.8.3-4.03.85" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
-        <span>
-          Mais de <span className="highlight-red">70% OFF</span> -{' '}
-          <span className="highlight-blue">Tecnologia</span> avançada ao seu alcance!
+        <span className="countdown-footer-text-content">
+          <span className="hidden sm:inline">
+            Mais de <span className="highlight-red">70% OFF</span> -{' '}
+            <span className="highlight-blue">Tecnologia</span> avançada ao seu alcance!
+          </span>
+          <span className="sm:hidden">
+            Mais de <span className="highlight-red">70% OFF</span><br />
+            <span className="highlight-blue">Tecnologia</span> avançada ao seu alcance!
+          </span>
         </span>
       </div>
     </section>

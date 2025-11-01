@@ -65,7 +65,6 @@ export default function CursoVIPPage() {
           videoTitle="APRESENTAÇÃO CURSO VIP DO BÁSICO AO AVANÇADO"
           features={[
             "🌐 Acesso direto aos melhores servidores",
-            "🛠️ Suporte VIP até Dezembro de 2025",
             "👥 Comunidade VIP exclusiva",
             "⚡ Procedimentos via JTAG & EMMC",
           ]}
@@ -136,10 +135,6 @@ export default function CursoVIPPage() {
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300 font-medium">Suporte VIP até dezembro de 2025</span>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 mr-3 flex-shrink-0" />
                       <span className="text-gray-300 font-medium">Acesso a todos os módulos</span>
                     </div>
                     <div className="flex items-start">
@@ -163,9 +158,14 @@ export default function CursoVIPPage() {
                     className="block w-full relative group"
                   >
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-700 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
-                    <Button className="relative w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold py-4 text-lg shadow-lg">
-                      🔥 GARANTIR OFERTA BLACK NOVEMBER
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                    <Button className="relative w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold py-3 sm:py-4 text-[11px] sm:text-sm md:text-lg shadow-lg px-2 sm:px-4 flex items-center justify-center gap-1.5 sm:gap-2">
+                      <span className="text-center leading-tight">
+                        <span className="hidden sm:inline">🔥 GARANTIR OFERTA BLACK NOVEMBER</span>
+                        <span className="sm:hidden block">
+                          🔥 GARANTIR<br />OFERTA BLACK NOVEMBER
+                        </span>
+                      </span>
+                      <ArrowRight className="ml-0.5 sm:ml-2 h-3.5 w-3.5 sm:h-5 sm:w-5 flex-shrink-0" />
                     </Button>
                   </a>
                 </div>
@@ -270,7 +270,7 @@ export default function CursoVIPPage() {
             {/* CTA Button */}
             <div className="mt-12 text-center">
               <a
-                href="https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32"
+                href="https://pay.hotmart.com/A99132064J?checkoutMode=6&off=g9xkf18r&offDiscount=BLACKNOVEMBER"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-block group"
@@ -346,12 +346,6 @@ export default function CursoVIPPage() {
                 description="Amplie consideravelmente o faturamento da sua empresa com novos serviços."
               />
 
-              {/* Advantage Card 6 */}
-              <AdvantageCard
-                icon="👥"
-                title="Suporte VIP"
-                description="Acesso ao grupo exclusivo com suporte e lives semanais até Dez/2025."
-              />
             </div>
 
             {/* Stats section */}
@@ -420,10 +414,10 @@ export default function CursoVIPPage() {
                   <div className="md:ml-12">
                     <ModuleCard
                       number="01"
-                      title="ACESSO AO SUPORTE"
+                      title="INTRODUÇÃO"
                       lessons={[
                         "SUPER IMPORTANTE | ASSISTA ESSE VÍDEO ANTES DE INICIAR SUAS AULAS",
-                        "INTRODUÇÃO E ACESSO AO SUPORTE!",
+                        "INTRODUÇÃO AO CURSO",
                       ]}
                     />
                   </div>
@@ -533,7 +527,7 @@ export default function CursoVIPPage() {
             {/* CTA Button */}
             <div className="mt-12 text-center">
               <a
-                href="https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32"
+                href="https://pay.hotmart.com/A99132064J?checkoutMode=6&off=g9xkf18r&offDiscount=BLACKNOVEMBER"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative inline-block group"
@@ -605,61 +599,6 @@ export default function CursoVIPPage() {
 
         {/* Bonus Section */}
         <BonusSection />
-
-        {/* Final CTA Section */}
-        <section className="py-16 bg-black relative">
-          {/* Adicionar elementos de fundo característicos */}
-          <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-martech-darkgray to-transparent"></div>
-          <div className="absolute -top-20 left-1/4 w-72 h-72 bg-yellow-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/3 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-400"></div>
-
-          <div className="container relative z-10">
-            <div className="max-w-4xl mx-auto bg-gradient-to-b from-yellow-900/30 to-black border border-yellow-500/30 rounded-xl p-8 md:p-12 text-center">
-              <Badge className="bg-gradient-to-r from-yellow-500 to-amber-500 text-black font-bold mb-6 px-4 py-1.5">
-                OFERTA POR TEMPO LIMITADO
-              </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">NÃO PERCA ESSA OPORTUNIDADE</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Transforme sua carreira e aumente seus ganhos dominando as técnicas mais avançadas do mercado
-              </p>
-
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <div className="text-center">
-                  <p className="text-gray-400 text-sm">
-                    De <span className="line-through">R$ 5.000,00</span> por apenas:
-                  </p>
-                  <div className="text-4xl font-bold text-white">R$ 800,00</div>
-                </div>
-                <a
-                  href="https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative group"
-                >
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 to-amber-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
-                  <Button className="relative bg-gradient-to-r from-yellow-500 to-amber-500 hover:from-amber-500 hover:to-yellow-500 text-black font-bold px-8 py-6 text-lg shadow-lg transition-all duration-300">
-                    GARANTIR MINHA VAGA AGORA
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </a>
-              </div>
-
-              <p className="text-gray-400 text-sm">
-                Pagamento 100% seguro via Hotmart • Acesso imediato após a confirmação
-              </p>
-            </div>
-          </div>
-
-          {/* Adicionar divisor de seção característico */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-            <div className="relative h-12">
-              <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent"></div>
-              <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 w-1/2 h-12 bg-gradient-to-b from-yellow-500/10 to-transparent blur-xl"></div>
-            </div>
-          </div>
-        </section>
 
         {/* Contact Section */}
         <ContactSection />

@@ -269,53 +269,58 @@ export default function FeaturesSection({ courseType = "mdm" }: FeaturesSectionP
                   </div>
 
                   <div className="group h-full flex">
-                    <div className="bg-gradient-to-br from-black to-martech-darkgray p-5 rounded-xl border border-yellow-500/20 w-full transform transition-all duration-300 group-hover:border-yellow-500/50 group-hover:shadow-[0_0_15px_rgba(255,255,0,0.1)] flex flex-col">
-                      <div className="flex items-center mb-3">
-                        <div className="min-w-[2.5rem] min-h-[2.5rem] w-10 h-10 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3 transition-all duration-300 group-hover:bg-yellow-500/30 group-hover:scale-110">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 text-yellow-400 transition-colors duration-300 group-hover:text-yellow-400"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                            />
-                          </svg>
+                    <div className="bg-gradient-to-br from-red-900/40 to-black/80 p-5 rounded-xl border border-red-500/50 w-full transform transition-all duration-300 group-hover:border-red-500/70 group-hover:shadow-[0_0_25px_rgba(239,68,68,0.4)] flex flex-col relative overflow-hidden">
+                      {/* Efeito de brilho animado */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-600/20 to-red-600/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                      
+                      <div className="relative z-10 flex flex-col h-full">
+                        <div className="flex items-center mb-3">
+                          <div className="min-w-[2.5rem] min-h-[2.5rem] w-10 h-10 rounded-full bg-red-600/40 flex items-center justify-center mr-3 transition-all duration-300 group-hover:bg-red-600/60 group-hover:scale-110 animate-pulse">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5 text-red-400 transition-colors duration-300 group-hover:text-red-300"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                          </div>
+                          <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-red-300 transition-colors duration-300">
+                            🔥 BLACK NOVEMBER
+                          </h4>
                         </div>
-                        <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-white/90 transition-colors duration-300">
-                          Suporte Exclusivo
-                        </h4>
-                      </div>
-                      <div className="pl-2 border-l-2 border-yellow-500/30 flex-grow flex flex-col">
-                        <ul className="space-y-2 text-gray-300 flex-grow">
-                          <li className="flex items-start">
-                            <span className="text-yellow-400 mr-2">•</span>
-                            <span>Lives semanais exclusivas</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="text-yellow-400 mr-2">•</span>
-                            <span>Comunidade VIP até 2025</span>
-                          </li>
-                          <li className="flex items-start">
-                            <span className="text-yellow-400 mr-2">•</span>
-                            <span>Atualizações constantes</span>
-                          </li>
-                          {/* Itens invisíveis para manter alinhamento */}
-                          <li className="flex items-start invisible">
-                            <span className="text-yellow-400 mr-2">•</span>
-                            <span>Espaçador</span>
-                          </li>
-                          <li className="flex items-start invisible">
-                            <span className="text-yellow-400 mr-2">•</span>
-                            <span>Espaçador</span>
-                          </li>
-                        </ul>
-                        <div className="mt-3 text-xs text-gray-500">+20 lives exclusivas gravadas</div>
+                        <div className="pl-2 border-l-2 border-red-500/50 flex-grow flex flex-col">
+                          <ul className="space-y-2 text-gray-300 flex-grow">
+                            <li className="flex items-start">
+                              <span className="text-red-400 mr-2">•</span>
+                              <span>Oferta válida até 31 de dezembro</span>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-red-400 mr-2">•</span>
+                              <span>Desconto de 70% - Economia de R$ 703,00</span>
+                            </li>
+                            <li className="flex items-start">
+                              <span className="text-red-400 mr-2">•</span>
+                              <span>Acesso completo ao conteúdo premium</span>
+                            </li>
+                            {/* Itens invisíveis para manter alinhamento */}
+                            <li className="flex items-start invisible">
+                              <span className="text-red-400 mr-2">•</span>
+                              <span>Espaçador</span>
+                            </li>
+                            <li className="flex items-start invisible">
+                              <span className="text-red-400 mr-2">•</span>
+                              <span>Espaçador</span>
+                            </li>
+                          </ul>
+                          <div className="mt-3 text-xs text-red-400 font-bold animate-pulse">⏰ PROMOÇÃO POR TEMPO LIMITADO</div>
+                        </div>
                       </div>
                     </div>
                   </div>

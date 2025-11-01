@@ -30,9 +30,9 @@ export const features = [
     items: ["Bypass sem perda de dados", "Remoção via servidores", "Técnicas avançadas de desbloqueio"],
   },
   {
-    icon: "Users",
-    title: "Comunidade VIP",
-    description: "Acesso à comunidade VIP de MDM, fechada e exclusiva de alunos e professores via Telegram.",
-    items: ["Suporte até Dez/2025", "Atualizações gratuitas", "Troca de experiências"],
+    icon: "Clock",
+    title: "🔥 BLACK NOVEMBER",
+    description: "Oferta por tempo limitado com desconto especial de 70% OFF válida até 31 de dezembro de 2024.",
+    items: ["Desconto de 70% - Economia de R$ 703,00", "Oferta válida até 31 de dezembro", "Acesso completo ao conteúdo premium"],
   },
 ]

@@ -425,7 +425,7 @@ export default function HeroSection({
         <div className="lg:col-span-6 content-fade-in" style={{ animationDelay: "0.3s" }}>
           <div className="relative">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-blue to-martech-orange rounded-lg blur opacity-75 transition-opacity duration-1000"></div>
-            <div className="relative bg-martech-black bg-martech-gradient rounded-lg py-8 px-6 border border-martech-blue transition-all duration-700 min-h-[420px] flex flex-col justify-center">
+            <div className="relative bg-martech-black bg-martech-gradient rounded-lg py-4 px-4 sm:py-6 sm:px-6 md:py-8 md:px-6 border border-martech-blue transition-all duration-700 min-h-[240px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px] flex flex-col justify-center">
               {/* Course video */}
               {videoUrl && <CourseVideo videoUrl={videoUrl} videoTitle={videoTitle} />}
 

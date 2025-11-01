@@ -79,11 +79,11 @@ export default function FeaturedCoursesSection() {
         </div>
 
         {/* Container de Cards Otimizado */}
-        <div className="card-container grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto px-8">
+        <div className="card-container grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
           {/* Card 1: MDM Avançado */}
           <CourseCard
             title="MDM DO BÁSICO AO AVANÇADO"
-            description="Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC, UFS e microsoldagem."
+            description="Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC e UFS."
             imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MDM%20B%20a%20A-AY9BspbxjLfwz1SGaNF50fKDmNMBc8.webp"
             imageAlt="MDM do Básico ao Avançado"
             badge={{ text: "BLACK NOVEMBER", color: "bg-gradient-to-r from-red-600 to-red-700" }}
@@ -151,7 +151,7 @@ export default function FeaturedCoursesSection() {
               </div>
               <div className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-orange to-martech-yellow opacity-75 rounded-lg blur group-hover:opacity-100 transition duration-200"></div>
-                <a href="https://wa.link/u5r4ah" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.link/wdit9o" target="_blank" rel="noopener noreferrer">
                   <Button className="relative bg-gradient-to-r from-martech-orange to-martech-yellow hover:from-martech-yellow hover:to-martech-orange text-black font-bold px-6 sm:px-8 py-3 sm:py-6 text-sm sm:text-base whitespace-nowrap w-full sm:w-auto shadow-lg transition-all duration-300 transform group-hover:-translate-y-0.5">
                     Falar com um consultor
                     <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transition-transform group-hover:translate-x-1" />
@@ -187,14 +187,14 @@ function CourseCard({
   plans,
 }) {
   return (
-    <Card className={`card-wrapper bg-gradient-to-b from-martech-darkgray to-black ${borderColor} text-white overflow-visible group ${shadowColor} transition-all duration-300 min-h-[600px] w-full`}>
+    <Card className={`card-wrapper bg-gradient-to-b from-martech-darkgray to-black ${borderColor} text-white overflow-hidden group ${shadowColor} transition-all duration-300 min-h-[600px] w-full`}>
       {/* Badge BLACK NOVEMBER - Position Absolute (não interfere no fluxo) */}
       <div className={`absolute top-4 right-4 z-20 ${badge.color} text-white text-xs font-bold py-1 px-3 rounded shadow-lg`}>
         {badge.text}
       </div>
 
       {/* Card Content - Área principal com padding superior */}
-      <div className="card-content px-6 pt-12 pb-8 flex flex-col justify-between h-full">
+      <div className="card-content px-4 sm:px-6 pt-12 pb-8 flex flex-col justify-between h-full">
         {/* Área de imagem - 180px sem cortes */}
         <div className="card-image-container mb-6">
           <div className="relative w-full h-[180px] bg-martech-darkgray/50 rounded-lg flex items-center justify-center p-4">
@@ -247,15 +247,15 @@ function CourseCard({
           )}
 
           {/* Botões de ação - Altura fixa 48px com espaçamento adequado */}
-          <div className="flex gap-4 pb-2">
-            <Link href={plans[0]?.learnMoreLink || "#"} className="flex-1">
-              <Button variant="outline" className={`${buttonColor} hover:text-white text-sm h-[48px] w-full`}>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pb-2">
+            <Link href={plans[0]?.learnMoreLink || "#"} className="flex-1 min-w-0">
+              <Button variant="outline" className={`${buttonColor} hover:text-white text-xs sm:text-sm h-[44px] sm:h-[48px] w-full`}>
                 Saiba mais
               </Button>
             </Link>
             <Link
               href={plans[0]?.buyLink || "#"}
-              className="flex-1"
+              className="flex-1 min-w-0"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -264,10 +264,10 @@ function CourseCard({
                   title === "MDM DO BÁSICO AO AVANÇADO"
                     ? "from-purple-600 to-indigo-600 hover:from-indigo-600 hover:to-purple-600 text-white"
                     : ctaColor
-                } font-bold text-sm h-[48px] w-full`}
+                } font-bold text-xs sm:text-sm h-[44px] sm:h-[48px] w-full whitespace-nowrap`}
               >
                 Comprar agora
-                <ChevronRight className="ml-2 h-4 w-4" />
+                <ChevronRight className="ml-1.5 sm:ml-2 h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </Button>
             </Link>
           </div>

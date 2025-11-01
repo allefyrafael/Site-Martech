@@ -80,7 +80,7 @@ export default function Footer() {
                 <div>
                   <button
                     onClick={() => {
-                      navigator.clipboard.writeText("6198574902")
+                      navigator.clipboard.writeText("61999556921")
                       const toast = document.createElement("div")
                       toast.className =
                         "fixed bottom-4 right-4 bg-martech-blue text-white px-4 py-2 rounded-md shadow-lg z-50 flex items-center transform transition-all duration-300 translate-y-0 opacity-100"
@@ -109,7 +109,7 @@ export default function Footer() {
                     }}
                     className="text-gray-300 hover:text-martech-yellow text-sm transition-colors cursor-pointer"
                   >
-                    (61) 9857-4902
+                    (61) 99955-6921
                   </button>
                   <p className="text-gray-400 text-xs">Seg-Sex, 9h-18h</p>
                 </div>

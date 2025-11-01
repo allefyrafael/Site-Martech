@@ -20,7 +20,7 @@ export default function MDMAdvancedSection() {
 
             <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-4xl mx-auto text-center">
               Você vai aprender ABSOLUTAMENTE TUDO sobre as remoções MDM, desde conceitos básicos até técnicas avançadas
-              de EMMC, UFS e microsoldagem. Curso 100% ATUALIZADO com as melhores ferramentas físicas/digitais e
+              de EMMC e UFS. Curso 100% ATUALIZADO com as melhores ferramentas físicas/digitais e
               servidores do mercado mundial.
             </p>
 
@@ -33,11 +33,6 @@ export default function MDMAdvancedSection() {
               <Badge className="bg-gradient-to-r from-martech-yellow to-amber-500 text-black px-4 py-2 text-base shadow-lg transform transition-transform hover:scale-105">
                 <span className="flex items-center">
                   <span className="mr-1">🔧</span> EMMC & UFS
-                </span>
-              </Badge>
-              <Badge className="bg-gradient-to-r from-martech-blue to-blue-700 text-white px-4 py-2 text-base shadow-lg transform transition-transform hover:scale-105">
-                <span className="flex items-center">
-                  <span className="mr-1">🔬</span> MICROSOLDAGEM
                 </span>
               </Badge>
             </div>
@@ -210,48 +205,58 @@ export default function MDMAdvancedSection() {
                     </ul>
                   </div>
 
-                  <div className="bg-gradient-to-br from-black/80 to-indigo-950/20 p-5 rounded-xl border border-indigo-500/40 shadow-lg transform transition-all duration-300 hover:shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:-translate-y-1 group">
-                    <div className="flex items-center mb-3">
-                      <div className="w-10 h-10 rounded-full bg-indigo-600/30 flex items-center justify-center mr-3 group-hover:bg-indigo-600/50 transition-all duration-300">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5 text-indigo-400"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                          />
-                        </svg>
+                  <div className="bg-gradient-to-br from-red-900/40 to-black/80 p-5 rounded-xl border border-red-500/50 shadow-lg transform transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.5)] hover:-translate-y-1 group relative overflow-hidden">
+                    {/* Efeito de brilho animado */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-600/0 via-red-600/20 to-red-600/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center mb-3">
+                        <div className="w-10 h-10 rounded-full bg-red-600/40 flex items-center justify-center mr-3 group-hover:bg-red-600/60 transition-all duration-300 animate-pulse">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5 text-red-400"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            />
+                          </svg>
+                        </div>
+                        <h6 className="font-bold text-white text-lg group-hover:text-red-300 transition-colors duration-300">
+                          🔥 BLACK NOVEMBER
+                        </h6>
                       </div>
-                      <h6 className="font-bold text-white text-lg group-hover:text-indigo-300 transition-colors duration-300">
-                        Suporte Exclusivo
-                      </h6>
+                      <ul className="text-gray-300 text-sm space-y-2 pl-2 border-l-2 border-red-500/50">
+                        <li className="flex items-start">
+                          <span className="text-red-400 mr-2">✔️</span>
+                          <span className="group-hover:text-white transition-colors duration-300">
+                            Oferta válida apenas até 31 de dezembro
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-red-400 mr-2">✔️</span>
+                          <span className="group-hover:text-white transition-colors duration-300">
+                            Desconto de 70% - Economia de R$ 703,00
+                          </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-red-400 mr-2">✔️</span>
+                          <span className="group-hover:text-white transition-colors duration-300">
+                            Acesso completo ao conteúdo premium
+                          </span>
+                        </li>
+                      </ul>
+                      <div className="mt-4 pt-3 border-t border-red-500/30">
+                        <p className="text-red-400 text-xs font-bold animate-pulse">
+                          ⏰ PROMOÇÃO POR TEMPO LIMITADO
+                        </p>
+                      </div>
                     </div>
-                    <ul className="text-gray-300 text-sm space-y-2 pl-2 border-l-2 border-indigo-500/30">
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-2">✔️</span>
-                        <span className="group-hover:text-white transition-colors duration-300">
-                          Pagar serviços diretamente na fonte
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-2">✔️</span>
-                        <span className="group-hover:text-white transition-colors duration-300">
-                          Suporte em grupo VIP até Dezembro 2025
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-indigo-400 mr-2">✔️</span>
-                        <span className="group-hover:text-white transition-colors duration-300">
-                          Acesso à Comunidade MDM exclusiva
-                        </span>
-                      </li>
-                    </ul>
                   </div>
                 </div>
 

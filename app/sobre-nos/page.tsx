@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import SocialConnectSection from "@/components/sections/SocialConnectSection"
 import AboutPage from "@/components/sections/about/AboutPage"
+import BlackNovemberBanner from "@/components/sections/BlackNovemberBanner"
 
 // Component to handle scrolling to sections
 function ScrollToSection() {
@@ -51,6 +52,9 @@ function ScrollToSection() {
 export default function SobreNosPage() {
   return (
     <div className="flex min-h-screen flex-col" key="MartechTeam-sobre-nos">
+      {/* Black November Banner */}
+      <BlackNovemberBanner />
+      
       {/* Add the scroll handler */}
       <ScrollToSection />
 

@@ -1389,9 +1389,10 @@
       radial-gradient(ellipse at bottom, rgba(127, 29, 29, 0.15), transparent 60%);
     border-radius: 18px;
     padding: 2.5rem 2rem;
+    overflow: hidden;
+    max-width: 100%;
     margin: 3rem 0;
     position: relative;
-    overflow: hidden;
     /* Borda vermelha animada */
     border: 3px solid #DC2626;
     box-shadow: 
@@ -1853,7 +1854,9 @@
     font-weight: 900;
     line-height: 1;
     margin-bottom: 0.5rem;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
+    /* Garantir cor base sempre visível */
+    -webkit-text-fill-color: #FFFFFF;
     /* Efeito 3D profundo - vermelho */
     text-shadow: 
       0 1px 0 #DC2626,
@@ -1863,6 +1866,9 @@
       0 5px 0 #6B1818,
       0 8px 16px rgba(0, 0, 0, 0.7),
       0 0 25px rgba(220, 38, 38, 0.5);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: opacity 0.3s ease;
   }
 
   /* Labels (DIAS, HORAS, MIN, SEG) - efeito 3D azul */
@@ -1891,7 +1897,7 @@
     font-weight: 700;
     color: #E5E7EB;
     text-align: center;
-    padding: 1.25rem;
+    padding: 1rem 1.25rem;
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
     border-radius: 12px;
     border: 1px solid rgba(127, 29, 29, 0.3);
@@ -1901,6 +1907,14 @@
       0 4px 8px rgba(0, 0, 0, 0.4),
       inset 0 -1px 0 rgba(0, 0, 0, 0.3),
       inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .countdown-footer-text-content {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
 
   /* Ícone dourado com brilho */
@@ -2458,9 +2472,19 @@
     }
     
     .countdown-footer {
-      font-size: 1rem;
+      font-size: 0.875rem;
       flex-direction: column;
       gap: 0.5rem;
+      padding: 0.875rem 1rem;
+    }
+
+    .countdown-footer-text-content {
+      line-height: 1.4;
+    }
+
+    .footer-icon {
+      width: 20px;
+      height: 20px;
     }
   }
 

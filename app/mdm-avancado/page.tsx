@@ -64,13 +64,12 @@ export default function MDMAdvancedCoursePage() {
         {/* Hero Section */}
         <HeroSection
           title="MDM DO BÁSICO AO <span class='text-gradient bg-gradient-to-r from-red-400 via-martech-orange to-martech-yellow bg-clip-text text-transparent'>AVANÇADO</span>"
-          description="🔥 Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC, UFS e microsoldagem. Tecnologia de ponta ao seu alcance!"
+          description="🔥 Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC e UFS. Tecnologia de ponta ao seu alcance!"
           badge="🚀 BLACK NOVEMBER - 70% OFF 🚀"
           videoUrl="https://player.vimeo.com/video/1064525054?h=e05849844a&autoplay=1&loop=1&muted=1"
           videoTitle="APRESENTAÇÃO CURSO MDM AVANÇADO"
           features={[
             "🌐 Acesso direto aos melhores servidores",
-            "🛠️ Suporte técnico até Dezembro de 2025",
             "👥 Comunidade VIP exclusiva",
             "🎁 3 bônus especiais inclusos",
           ]}
@@ -141,10 +140,6 @@ export default function MDMAdvancedCoursePage() {
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300 font-medium">Suporte até dezembro de 2025</span>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 mr-3 flex-shrink-0" />
                       <span className="text-gray-300 font-medium">Acesso a todos os módulos</span>
                     </div>
                     <div className="flex items-start">
@@ -168,9 +163,14 @@ export default function MDMAdvancedCoursePage() {
                     className="block w-full relative group"
                   >
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-700 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200"></div>
-                    <Button className="relative w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold py-4 text-lg shadow-lg">
-                      🔥 GARANTIR OFERTA BLACK NOVEMBER
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                    <Button className="relative w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-600 text-white font-bold py-3 sm:py-4 text-[11px] sm:text-sm md:text-lg shadow-lg px-2 sm:px-4 flex items-center justify-center gap-1.5 sm:gap-2">
+                      <span className="text-center leading-tight">
+                        <span className="hidden sm:inline">🔥 GARANTIR OFERTA BLACK NOVEMBER</span>
+                        <span className="sm:hidden block">
+                          🔥 GARANTIR<br />OFERTA BLACK NOVEMBER
+                        </span>
+                      </span>
+                      <ArrowRight className="ml-0.5 sm:ml-2 h-3.5 w-3.5 sm:h-5 sm:w-5 flex-shrink-0" />
                     </Button>
                   </a>
                 </div>

@@ -292,7 +292,7 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">Marcos Roberto</h3>
-                    <p className="text-martech-blue">Fundador & Instrutor</p>
+                    <p className="text-martech-blue">Instrutor</p>
                   </div>
                 </div>
 

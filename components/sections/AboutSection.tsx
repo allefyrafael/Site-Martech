@@ -144,7 +144,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <p className="font-bold text-white">Marcos Roberto</p>
-                  <p className="text-martech-blue text-xs">Fundador & Instrutor Principal</p>
+                  <p className="text-martech-blue text-xs">Instrutor</p>
                 </div>
               </div>
             </div>

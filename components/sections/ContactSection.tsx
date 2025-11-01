@@ -1,11 +1,9 @@
 import type React from "react"
-import { CheckCircle, Award, Users, Zap } from "lucide-react"
+import { CheckCircle, Award, Users, Zap, GraduationCap } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 import { Clock, Instagram } from "lucide-react"
-import Link from "next/link"
 
 export default function ContactSection() {
   return (
@@ -69,9 +67,9 @@ export default function ContactSection() {
               />
 
               <AdvantageCard
-                icon={<Users className="h-6 w-6 text-martech-blue" />}
-                title="Comunidade VIP"
-                description="Grupo exclusivo no Telegram com suporte direto dos professores e troca de experiências."
+                icon={<GraduationCap className="h-6 w-6 text-martech-blue" />}
+                title="Certificado Reconhecido"
+                description="Receba um certificado digital de conclusão reconhecido pelo mercado que valida sua expertise profissional."
                 color="from-martech-blue/10 to-martech-blue/5"
                 borderColor="border-martech-blue/30"
                 hoverColor="hover:bg-martech-blue/20"
@@ -125,33 +123,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* CTA button visível apenas em telas menores */}
-            <div className="flex justify-center lg:hidden mt-8">
-              <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-orange to-martech-yellow opacity-75 rounded-lg blur group-hover:opacity-100 transition duration-200"></div>
-                <Link href="/?section=nossos-cursos">
-                  <Button className="relative bg-gradient-to-r from-martech-orange to-martech-yellow hover:from-martech-yellow hover:to-martech-orange text-black font-bold px-8 py-3 text-base shadow-lg transition-all duration-300 transform group-hover:-translate-y-0.5">
-                    Ver Nossos Cursos
-                  </Button>
-                </Link>
-              </div>
-            </div>
           </div>
 
           {/* Coluna direita - Professores com CTA acima em telas grandes */}
           <div className="lg:col-span-5">
-            {/* CTA button acima da seção de professores em telas grandes */}
-            <div className="hidden lg:flex justify-center mb-8">
-              <div className="relative group">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-orange to-martech-yellow opacity-75 rounded-lg blur group-hover:opacity-100 transition duration-200"></div>
-                <Link href="/?section=nossos-cursos">
-                  <Button className="relative bg-gradient-to-r from-martech-orange to-martech-yellow hover:from-martech-yellow hover:to-martech-orange text-black font-bold px-8 py-3 text-base shadow-lg transition-all duration-300 transform group-hover:-translate-y-0.5">
-                    Ver Nossos Cursos
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
             <div className="floating-card-container relative transform transition-all duration-500 hover:-translate-y-2">
               {/* Efeito de brilho sutil */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-blue/20 to-martech-orange/20 rounded-xl blur-md"></div>

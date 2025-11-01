@@ -69,39 +69,42 @@ export default function BlackNovemberBanner() {
   }
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-[45] black-november-banner-red-gold text-white shadow-lg border-b border-yellow-600/30 transform transition-transform duration-500 ${isAnimating ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className="container mx-auto px-4 py-2.5 sm:py-3 flex items-center justify-between gap-2 min-h-[40px] sm:min-h-[48px]">
-        <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
-          <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-            <Zap className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 animate-pulse" />
-            <Gift className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-500 animate-bounce" />
+    <div className={`fixed top-0 left-0 right-0 z-[40] black-november-banner-red-gold text-white shadow-lg border-b border-yellow-600/30 transform transition-transform duration-500 ${isAnimating ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className="w-full mx-auto px-2 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-1 sm:gap-2 min-h-[44px] sm:min-h-[48px] max-w-full">
+        <div className="flex items-center gap-1 sm:gap-2 flex-1 min-w-0 overflow-hidden">
+          <div className="flex items-center gap-1 sm:gap-1 flex-shrink-0">
+            <Zap className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-yellow-400 animate-pulse" />
+            <Gift className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 text-yellow-500 animate-bounce" />
           </div>
           
-          <div className="flex-1 min-w-0">
-            <span className="font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
-              BLACK NOVEMBER:
-            </span>
-            <span className="text-xs sm:text-sm md:text-base ml-1 sm:ml-2 break-words">
-              Mais de 70% OFF nos cursos! Válido até 01/12/2025
-            </span>
+          <div className="flex-1 min-w-0 overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-0">
+              <span className="font-bold text-[10px] sm:text-xs md:text-sm lg:text-base whitespace-nowrap flex-shrink-0">
+                BLACK NOVEMBER:
+              </span>
+              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base leading-tight sm:leading-normal sm:ml-1 md:ml-2 truncate">
+                <span className="hidden sm:inline">Mais de 70% OFF nos cursos! Válido até 01/12/2025</span>
+                <span className="sm:hidden">70% OFF!</span>
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+        <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
           <Button
             onClick={scrollToCourses}
             size="sm"
-            className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-bold text-xs sm:text-sm px-2 sm:px-3 py-1 h-7 sm:h-8 shadow-lg whitespace-nowrap"
+            className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-black hover:from-yellow-400 hover:to-yellow-500 font-bold text-[10px] sm:text-xs md:text-sm px-2 sm:px-2.5 md:px-3 py-1 sm:py-1 h-6 sm:h-7 md:h-8 shadow-lg whitespace-nowrap flex-shrink-0"
           >
             Ver Ofertas
           </Button>
           
           <button
             onClick={() => setIsVisible(false)}
-            className="text-white hover:text-gray-200 transition-colors flex-shrink-0"
+            className="text-white hover:text-gray-200 transition-colors flex-shrink-0 p-1 sm:p-1"
             aria-label="Fechar banner"
           >
-            <X className="h-4 w-4" />
+            <X className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
           </button>
         </div>
       </div>

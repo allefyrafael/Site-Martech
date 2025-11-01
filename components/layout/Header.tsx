@@ -10,6 +10,7 @@ export default function Header() {
   const [coursesOpen, setCoursesOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileCourseOpen, setMobileCourseOpen] = useState(false)
+  const [bannerVisible, setBannerVisible] = useState(true)
 
   // Close mobile menu when clicking outside
   const mobileMenuRef = useRef<HTMLDivElement>(null)
@@ -45,6 +46,23 @@ export default function Header() {
     }
   }, [])
 
+  // Detectar se o banner está visível
+  useEffect(() => {
+    const checkBannerVisibility = () => {
+      const banner = document.querySelector('.black-november-banner-red-gold')
+      setBannerVisible(!!banner)
+    }
+
+    // Verificar inicialmente
+    checkBannerVisibility()
+
+    // Observar mudanças no DOM
+    const observer = new MutationObserver(checkBannerVisibility)
+    observer.observe(document.body, { childList: true, subtree: true })
+
+    return () => observer.disconnect()
+  }, [])
+
   // Close mobile menu when screen size changes to desktop
   useEffect(() => {
     function handleResize() {
@@ -61,7 +79,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-[44px] sm:top-[48px] z-40 w-full border-b border-martech-blue bg-black">
+    <header className="sticky top-[44px] sm:top-[48px] z-[50] w-full border-b border-martech-blue bg-black">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -155,22 +173,22 @@ export default function Header() {
           {mobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
         </Button>
 
-        {/* CTA Button - Desktop Only */}
-        <Link href="" className="hidden md:block">
-          <Button className="bg-martech-blue hover:bg-blue-700">Acessar Cursos</Button>
-        </Link>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden fixed top-[104px] sm:top-[112px] left-0 right-0 bg-black border-b border-martech-blue/30 shadow-lg z-[60]"
+          className={`md:hidden fixed left-0 right-0 bg-black border-b border-martech-blue/30 shadow-lg z-[60] overflow-y-auto ${
+            bannerVisible 
+              ? 'top-[104px] sm:top-[112px] max-h-[calc(100vh-104px)] sm:max-h-[calc(100vh-112px)]'
+              : 'top-[60px] sm:top-[64px] max-h-[calc(100vh-60px)] sm:max-h-[calc(100vh-64px)]'
+          }`}
         >
-          <div className="container py-4 space-y-4">
+          <div className="w-full py-4 space-y-4 px-4 max-w-full box-border overflow-x-hidden">
             <Link
               href="/"
-              className="block px-4 py-2 text-gray-300 hover:text-white transition-colors hover:bg-martech-darkgray rounded-md"
+              className="block py-2 text-gray-300 hover:text-white transition-colors hover:bg-martech-darkgray rounded-md"
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
@@ -179,59 +197,56 @@ export default function Header() {
             {/* Mobile Cursos Dropdown */}
             <div>
               <button
-                className="flex items-center justify-between w-full px-4 py-2 text-gray-300 hover:text-white transition-colors hover:bg-martech-darkgray rounded-md"
+                className="flex items-center justify-between w-full py-2 text-gray-300 hover:text-white transition-colors hover:bg-martech-darkgray rounded-md"
                 onClick={() => setMobileCourseOpen(!mobileCourseOpen)}
               >
                 <span>Cursos</span>
                 <ChevronDown
-                  className="h-4 w-4 transition-transform duration-200"
+                  className="h-4 w-4 transition-transform duration-200 flex-shrink-0"
                   style={{ transform: mobileCourseOpen ? "rotate(180deg)" : "rotate(0)" }}
                 />
               </button>
 
               {/* Mobile Dropdown Content */}
               <div
-                className={`mt-1 ml-4 pl-4 border-l border-martech-blue/30 space-y-2 ${mobileCourseOpen ? "block" : "hidden"}`}
+                className={`mt-1 ml-2 pl-3 border-l border-martech-blue/30 space-y-2 ${mobileCourseOpen ? "block" : "hidden"}`}
               >
                 <Link
                   href="/mdm-avancado"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md"
+                  className="flex items-center justify-between py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md pr-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-purple-500 mr-2"></div>
-                    MDM do básico ao avançado
+                  <div className="flex items-center flex-1 min-w-0">
+                    <div className="w-2 h-2 rounded-full bg-purple-500 mr-2 flex-shrink-0"></div>
+                    <span className="truncate">MDM do básico ao avançado</span>
                   </div>
-                  <ChevronRight className="h-4 w-4 text-purple-500" />
+                  <ChevronRight className="h-4 w-4 text-purple-500 flex-shrink-0 ml-1" />
                 </Link>
                 <Link
                   href="/curso-vip"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md"
+                  className="flex items-start justify-between py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md pr-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2"></div>
-                    CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)
+                  <div className="flex items-start flex-1 min-w-0">
+                    <div className="w-2 h-2 rounded-full bg-yellow-500 mr-2 mt-1.5 flex-shrink-0"></div>
+                    <span className="break-words leading-tight">
+                      <span className="hidden sm:inline">CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)</span>
+                      <span className="sm:hidden">CURSO VIP<br />JTAG & EMMC</span>
+                    </span>
                   </div>
-                  <ChevronRight className="h-4 w-4 text-yellow-500" />
+                  <ChevronRight className="h-4 w-4 text-yellow-500 flex-shrink-0 mt-0.5 ml-1" />
                 </Link>
               </div>
             </div>
 
             <Link
               href="/sobre-nos"
-              className="block px-4 py-2 text-gray-300 hover:text-white transition-colors hover:bg-martech-darkgray rounded-md"
+              className="block py-2 text-gray-300 hover:text-white transition-colors hover:bg-martech-darkgray rounded-md"
               onClick={() => setMobileMenuOpen(false)}
             >
               Sobre nós
             </Link>
 
-            {/* Mobile CTA Button */}
-            <div className="pt-2 px-4">
-              <Link href="/#nossos-cursos" className="block w-full" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="bg-martech-blue hover:bg-blue-700 w-full">Acessar Cursos</Button>
-              </Link>
-            </div>
           </div>
         </div>
       )}
