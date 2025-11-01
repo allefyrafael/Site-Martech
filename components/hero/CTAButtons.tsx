@@ -77,19 +77,23 @@ export default function CTAButtons({ page }: CTAButtonsProps) {
         </>
       ) : (
         <>
-          <Button
-            className="bg-gradient-to-r from-martech-blue to-blue-700 hover:from-blue-700 hover:to-martech-blue text-white font-bold px-6 py-3 rounded-xl text-base transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,160,233,0.4)]"
-            onClick={() => scrollToSection("nossos-cursos")}
-          >
-            <span className="relative z-10 flex items-center">
-              Ver nossos cursos
-              <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
-          </Button>
+          {/* Wrapper do botão com badge compacto */}
+          <div className="btn-wrapper-compact">
+            <Button
+              className="btn-primary-compact bg-gradient-to-r from-martech-blue to-blue-700 hover:from-blue-700 hover:to-martech-blue text-white font-bold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(0,160,233,0.4)]"
+              onClick={() => scrollToSection("nossos-cursos")}
+            >
+              <span className="relative z-10 flex items-center">
+                Ver nossos cursos
+                <ChevronRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </Button>
+            <span className="btn-badge-compact">-70%</span>
+          </div>
           <Link href="/sobre-nos">
             <Button
               variant="outline"
-              className="border-martech-blue text-martech-blue hover:bg-martech-blue hover:text-white transition-all duration-300 px-6 py-3 rounded-xl text-base w-full sm:w-auto"
+              className="btn-secondary-compact border-martech-blue text-martech-blue hover:bg-martech-blue hover:text-white transition-all duration-300 w-full sm:w-auto"
             >
               Sobre nós
             </Button>

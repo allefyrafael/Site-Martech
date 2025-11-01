@@ -6,102 +6,87 @@ import { ChevronRight, Clock, Users, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import CountdownTimer from "./CountdownTimer"
+import BlackNovemberEffects from "./BlackNovemberEffects"
 
 export default function FeaturedCoursesSection() {
   return (
-    <section id="nossos-cursos" className="py-12 sm:py-16 bg-gradient-to-b from-black to-martech-darkgray relative">
-      {/* Transição suave superior */}
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/80 to-transparent"></div>
+    <section id="nossos-cursos" className="courses-section-enhanced relative overflow-hidden">
+      {/* Background com profundidade e referências Martech */}
+      <div className="courses-bg-layer-1"></div>
+      <div className="courses-bg-layer-2"></div>
+      <div className="courses-bg-layer-3"></div>
+      
+      {/* Elementos tecnológicos flutuantes */}
+      <div className="tech-floating-elements">
+        <div className="tech-element tech-circuit-1"></div>
+        <div className="tech-element tech-circuit-2"></div>
+        <div className="tech-element tech-circuit-3"></div>
+        <div className="tech-element tech-hexagon-1"></div>
+        <div className="tech-element tech-hexagon-2"></div>
+        <div className="tech-element tech-data-flow"></div>
+      </div>
+      
+      {/* Efeitos visuais Black November */}
+      <BlackNovemberEffects />
+      
+      {/* Grid tecnológico de fundo */}
+      <div className="tech-grid-overlay"></div>
 
-      <div className="container relative z-10 px-2 sm:px-4 md:px-6 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-block relative mb-3 sm:mb-4 transform hover:scale-105 transition-transform duration-300">
-            <Badge className="bg-gradient-to-r from-martech-blue to-blue-700 text-white hover:from-blue-700 hover:to-martech-blue mb-1 shadow-lg px-4 py-1.5">
-              NOSSOS CURSOS
-            </Badge>
-            <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-martech-blue to-transparent"></div>
+      <div className="container relative z-20 px-4 max-w-7xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-12">
+          {/* Badge principal com efeito tecnológico */}
+          <div className="courses-header-badge-wrapper">
+            <div className="courses-header-badge">
+              <span className="badge-tech-icon">⚡</span>
+              <span className="badge-text">NOSSOS CURSOS</span>
+              <div className="badge-tech-lines"></div>
+            </div>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
-            <span className="relative inline-block">
-              ESCOLHA SEU <span className="text-martech-yellow">CURSO</span>
-              <span className="absolute -bottom-2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-martech-yellow to-transparent opacity-50"></span>
-            </span>
-          </h2>
-          <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
-            Selecione o curso e o plano que melhor atende às suas necessidades e transforme sua carreira
-          </p>
+          
+          {/* Título principal com profundidade */}
+          <div className="courses-title-container">
+            <h2 className="courses-main-title">
+              <span className="title-line-1">ESCOLHA SEU</span>
+              <span className="title-line-2">
+                <span className="title-highlight">CURSO</span>
+                <span className="title-tech-accent">TECH</span>
+              </span>
+            </h2>
+            <div className="title-depth-effect"></div>
+          </div>
+          
+          {/* Descrição com destaque Black November */}
+          <div className="courses-description-enhanced">
+            <div className="black-november-highlight">
+              <div className="bn-icon-wrapper">
+                <div className="bn-fire-icon">🔥</div>
+              </div>
+              <div className="bn-content">
+                <span className="bn-title">BLACK NOVEMBER</span>
+                <span className="bn-subtitle">Mais de 70% OFF nos treinamentos avançados</span>
+              </div>
+              <div className="bn-validity">
+                <span className="validity-text">Válido até 01/12/2025</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {/* Card 1: Curso MDM */}
-          <CourseCard
-            title="CURSO MDM NÍVEL 1"
-            description="Aprenda a utilizar as melhores ferramentas e servidores existentes no mundo, e solucionar mais de 90% dos aparelhos do mercado."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Curso%20MDM-ctm2yiWLj6Xv92CLd7qNcbpZFSrUky.webp"
-            imageAlt="Curso MDM Nível 1"
-            badge={{ text: "MAIS POPULAR", color: "bg-martech-blue" }}
-            borderColor="border-martech-blue"
-            accentColor="text-martech-yellow"
-            iconColor="text-martech-yellow"
-            buttonColor="border-martech-blue text-martech-blue hover:bg-martech-blue"
-            ctaColor="from-martech-blue to-blue-700 hover:from-blue-700 hover:to-martech-blue text-white"
-            shadowColor="hover:shadow-[0_0_25px_rgba(0,160,233,0.4)]"
-            plans={[
-              {
-                name: "Acesso Completo",
-                price: "490,00",
-                features: ["5 anos de acesso", "Suporte até dezembro de 2025"],
-                learnMoreLink: "/mdm",
-                buyLink: "https://pay.hotmart.com/O92848631P?off=ixvzw9oj", // Link específico para Acesso Completo
-              },
-              {
-                name: "Acesso Básico",
-                price: "280,00",
-                features: ["1 ano de acesso", "2 meses de suporte"],
-                learnMoreLink: "/mdm",
-                buyLink: "https://pay.hotmart.com/O92848631P?off=7qz9ygqz", // Link específico para Acesso Básico
-              },
-            ]}
-          />
+        {/* Contador Regressivo Black November */}
+        <div className="mb-8 sm:mb-12">
+          <CountdownTimer />
+        </div>
 
-          {/* Card 2: Curso FRP */}
-          <CourseCard
-            title="CURSO DE REMOÇÃO DE ICLOUD E FRP ANDROID"
-            description="Aprenda técnicas avançadas de desbloqueio, incluindo servidores e UnlockTool para os principais modelos de smartphones do mercado."
-            imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Curso%20FRP-dtw7hfyapIjkplcX83T8nrD2CjWnoN.webp"
-            imageAlt="Curso FRP e iCloud"
-            badge={{ text: "COMPLETO", color: "bg-gradient-to-r from-green-500 to-emerald-500" }}
-            borderColor="border-green-500"
-            accentColor="text-green-400"
-            iconColor="text-green-400"
-            buttonColor="border-green-500 text-green-500 hover:bg-green-500"
-            ctaColor="from-green-500 to-emerald-500 hover:from-emerald-500 hover:to-green-500 text-white"
-            shadowColor="hover:shadow-[0_0_25px_rgba(34,197,94,0.4)]"
-            plans={[
-              {
-                name: "Acesso Completo",
-                price: "490,00",
-                features: ["5 anos de acesso", "Suporte até dezembro de 2025"],
-                learnMoreLink: "/frp",
-                buyLink: "https://pay.hotmart.com/T92848631P?off=ixvzw9oj", // Link específico para Acesso Completo
-              },
-              {
-                name: "Acesso Básico",
-                price: "280,00",
-                features: ["1 ano de acesso", "2 meses de suporte"],
-                learnMoreLink: "/frp",
-                buyLink: "https://pay.hotmart.com/T92848631P?off=7qz9ygqz", // Link específico para Acesso Básico
-              },
-            ]}
-          />
-
-          {/* Card 3: MDM Avançado */}
+        {/* Container de Cards Otimizado */}
+        <div className="card-container grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-5xl mx-auto px-8">
+          {/* Card 1: MDM Avançado */}
           <CourseCard
             title="MDM DO BÁSICO AO AVANÇADO"
             description="Aprenda absolutamente tudo sobre remoções MDM, desde conceitos básicos até técnicas avançadas de EMMC, UFS e microsoldagem."
             imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MDM%20B%20a%20A-AY9BspbxjLfwz1SGaNF50fKDmNMBc8.webp"
             imageAlt="MDM do Básico ao Avançado"
-            badge={{ text: "VIP", color: "bg-gradient-to-r from-amber-500 to-yellow-500" }}
+            badge={{ text: "BLACK NOVEMBER", color: "bg-gradient-to-r from-red-600 to-red-700" }}
             borderColor="border-purple-500/50"
             accentColor="text-purple-400"
             iconColor="text-purple-400"
@@ -109,36 +94,26 @@ export default function FeaturedCoursesSection() {
             ctaColor="from-purple-600 to-indigo-600 hover:from-indigo-600 hover:to-purple-600 text-white"
             shadowColor="hover:shadow-[0_0_25px_rgba(147,51,234,0.4)]"
             imageOpacity="opacity-70"
-            singlePlan={false}
+            singlePlan={true}
             plans={[
               {
                 name: "Acesso Completo",
-                price: "800,00",
-                originalPrice: "700,00",
-                features: ["5 anos de acesso", "Suporte até dezembro de 2025", "Acesso a todos os módulos"],
+                price: "297,00",
+                originalPrice: "1000,00",
+                features: [],
                 learnMoreLink: "/mdm-avancado",
-                buyLink:
-                  "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318",
-              },
-              {
-                name: "Acesso Básico",
-                price: "500,00",
-                originalPrice: "700,00",
-                features: ["1 ano de acesso", "2 meses de suporte", "Acesso a todos os módulos"],
-                learnMoreLink: "/mdm-avancado",
-                buyLink:
-                  "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788",
+                buyLink: "https://pay.hotmart.com/F87621340K?checkoutMode=6&off=swo1f3w6&offDiscount=BLACKNOVEMBER",
               },
             ]}
           />
 
-          {/* Card 4: CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC) */}
+          {/* Card 2: CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC) */}
           <CourseCard
             title="CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)"
             description="Aprenda absolutamente tudo sobre remoções FRP, Screen Lock, Servidores, Unlock Tool e iCloud com procedimentos via JTAG & EMMC."
             imageSrc="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/600X600martEch2-MZu5cQ2SAzZ9oBfuK0xIDddhwWjPSM.webp"
             imageAlt="Curso VIP JTAG & EMMC"
-            badge={{ text: "VIP", color: "bg-gradient-to-r from-amber-500 to-yellow-500" }}
+            badge={{ text: "BLACK NOVEMBER", color: "bg-gradient-to-r from-red-600 to-red-700" }}
             borderColor="border-amber-500/50"
             accentColor="text-amber-400"
             iconColor="text-amber-400"
@@ -146,25 +121,15 @@ export default function FeaturedCoursesSection() {
             ctaColor="from-amber-500 to-yellow-500 hover:from-yellow-500 hover:to-amber-500 text-black font-bold"
             shadowColor="hover:shadow-[0_0_25px_rgba(245,158,11,0.4)]"
             imageOpacity="opacity-90"
-            singlePlan={false}
+            singlePlan={true}
             plans={[
               {
-                name: "Acesso Premium",
-                price: "800,00",
-                originalPrice: "5000,00",
-                features: ["5 anos de acesso", "Suporte VIP até dezembro de 2025", "Lives semanais exclusivas"],
+                name: "Acesso Completo",
+                price: "297,00",
+                originalPrice: "1000,00",
+                features: [],
                 learnMoreLink: "/curso-vip",
-                buyLink:
-                  "https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32&_gl=1*13okbs*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODY3MC42MC4wLjA.&bid=1746138701905",
-              },
-              {
-                name: "Acesso Standard",
-                price: "500,00",
-                originalPrice: "4000,00",
-                features: ["1 ano de acesso", "3 meses de suporte VIP", "Acesso a todos os módulos"],
-                learnMoreLink: "/curso-vip",
-                buyLink:
-                  "https://pay.hotmart.com/H99211424I?sck=HOTMART_MEM_CA&off=wl2bqj0f&offDiscount=cna-50.00-3g2khe20&hotfeature=32&_gl=1*1ne1gm7*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&bid=1746138670487",
+                buyLink: "https://pay.hotmart.com/A99132064J?checkoutMode=6&off=g9xkf18r&offDiscount=BLACKNOVEMBER",
               },
             ]}
           />
@@ -204,7 +169,7 @@ export default function FeaturedCoursesSection() {
   )
 }
 
-// Componente de card de curso reutilizável para garantir consistência
+// Componente de card de curso otimizado
 function CourseCard({
   title,
   description,
@@ -221,164 +186,90 @@ function CourseCard({
   singlePlan = false,
   plans,
 }) {
-  // Use state to track the active plan
-  const [activePlan, setActivePlan] = useState(0)
-
-  // Function to handle plan selection
-  const handlePlanSelect = (index) => {
-    setActivePlan(index)
-  }
-
-  // Verificar se é o curso VIP
-
   return (
-    <Card
-      className={`bg-gradient-to-b from-martech-darkgray to-black ${borderColor} text-white overflow-hidden group ${shadowColor} transition-all duration-300 flex flex-col h-full`}
-    >
-      <div className="relative">
-        <div className={`absolute top-0 right-0 z-10 ${badge.color} text-white text-xs font-bold py-1 px-3`}>
-          {badge.text}
-        </div>
-        <div className="relative h-48 bg-martech-darkgray overflow-hidden">
-          <Image
-            src={imageSrc || "/placeholder.svg"}
-            alt={imageAlt}
-            fill
-            className={`object-cover transition-transform duration-500 group-hover:scale-110 ${imageOpacity}`}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-        </div>
+    <Card className={`card-wrapper bg-gradient-to-b from-martech-darkgray to-black ${borderColor} text-white overflow-visible group ${shadowColor} transition-all duration-300 min-h-[600px] w-full`}>
+      {/* Badge BLACK NOVEMBER - Position Absolute (não interfere no fluxo) */}
+      <div className={`absolute top-4 right-4 z-20 ${badge.color} text-white text-xs font-bold py-1 px-3 rounded shadow-lg`}>
+        {badge.text}
       </div>
 
-      <div className="p-4 sm:p-5 flex flex-col h-full">
-        {/* Título e descrição com altura fixa */}
+      {/* Card Content - Área principal com padding superior */}
+      <div className="card-content px-6 pt-12 pb-8 flex flex-col justify-between h-full">
+        {/* Área de imagem - 180px sem cortes */}
+        <div className="card-image-container mb-6">
+          <div className="relative w-full h-[180px] bg-martech-darkgray/50 rounded-lg flex items-center justify-center p-4">
+            <Image
+              src={imageSrc || "/placeholder.svg"}
+              alt={imageAlt}
+              fill
+              className={`object-contain object-center transition-transform duration-500 group-hover:scale-105 ${imageOpacity}`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        </div>
+        {/* Título e descrição */}
         <div className="mb-4">
-          <h3 className="text-lg sm:text-xl font-bold text-white h-14 sm:h-16 flex items-start">{title}</h3>
-          <p className="text-gray-300 text-xs sm:text-sm h-16 sm:h-20 mb-2">{description}</p>
+          <h3 className="text-xl font-bold text-white mb-3 line-clamp-2 leading-tight">{title}</h3>
+          <p className="text-gray-300 text-sm line-clamp-3 leading-relaxed mb-4">{description}</p>
         </div>
 
-        {/* Conteúdo condicional: mostrar planos para cursos normais, mostrar mensagem de "em breve" para o curso VIP */}
+        {/* Conteúdo do plano otimizado */}
+        <div className="flex flex-col flex-grow">
+          {/* Espaço vazio removido - features e badge foram removidos */}
+        </div>
 
-        {/* Todos os cursos agora mostram os planos disponíveis */}
-        <div className="w-full flex-grow">
-          {/* Custom tabs */}
-          <div className="flex w-full mb-3 rounded-lg overflow-hidden border border-gray-700/30">
-            {plans.map((plan, index) => (
-              <button
-                key={index}
-                onClick={() => handlePlanSelect(index)}
-                className={`flex-1 py-2 px-1 text-xs sm:text-sm transition-all duration-300 ${
-                  index === 0 ? "rounded-l-lg" : index === plans.length - 1 ? "rounded-r-lg" : ""
-                } ${
-                  activePlan === index
-                    ? title === "MDM DO BÁSICO AO AVANÇADO"
-                      ? "bg-gradient-to-r from-purple-600 to-indigo-600"
-                      : badge.color.includes("gradient")
-                        ? badge.color
-                        : badge.color
-                    : "bg-transparent hover:bg-gray-800"
-                } ${activePlan === index ? "text-white" : "text-gray-400"}`}
-              >
-                {plan.name}
-              </button>
-            ))}
+        {/* Card Footer - Preços e Botões */}
+        <div className="card-footer mt-auto pt-6 border-t border-gray-700/30">
+          {/* Área de preços - Layout horizontal compacto */}
+          <div className="flex items-baseline justify-center gap-3 mb-4">
+            {plans[0]?.originalPrice && (
+              <span className="text-red-600 text-base font-semibold line-through decoration-2 decoration-red-600">R$ {plans[0].originalPrice}</span>
+            )}
+            <span className={`${accentColor} font-bold text-2xl`}>R$ {plans[0]?.price}</span>
           </div>
+          
+          {/* Badge de economia destacado com vermelho, dourado e preto */}
+          {plans[0]?.originalPrice && (
+            <div className="text-center mb-6">
+              <Badge className="relative overflow-hidden bg-gradient-to-r from-red-900 via-yellow-600 to-red-900 text-white border-2 border-yellow-500/50 text-xs font-bold px-4 py-2 shadow-lg">
+                <span className="relative z-10 flex items-center gap-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-300">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                  <span className="text-yellow-200">ECONOMIA DE MAIS DE 70%</span>
+                </span>
+                {/* Efeito de brilho animado */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent" style={{ animation: 'shimmer 2s ease-in-out infinite' }}></div>
+                {/* Efeito de sombra dourada */}
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-red-900/40 blur-sm"></div>
+              </Badge>
+            </div>
+          )}
 
-          {/* Content area */}
-          <div className="relative h-[200px]">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-opacity duration-300 ${
-                  activePlan === index ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
-                }`}
+          {/* Botões de ação - Altura fixa 48px com espaçamento adequado */}
+          <div className="flex gap-4 pb-2">
+            <Link href={plans[0]?.learnMoreLink || "#"} className="flex-1">
+              <Button variant="outline" className={`${buttonColor} hover:text-white text-sm h-[48px] w-full`}>
+                Saiba mais
+              </Button>
+            </Link>
+            <Link
+              href={plans[0]?.buyLink || "#"}
+              className="flex-1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                className={`bg-gradient-to-r ${
+                  title === "MDM DO BÁSICO AO AVANÇADO"
+                    ? "from-purple-600 to-indigo-600 hover:from-indigo-600 hover:to-purple-600 text-white"
+                    : ctaColor
+                } font-bold text-sm h-[48px] w-full`}
               >
-                <div className="flex flex-col h-full">
-                  {/* Features section with fixed height */}
-                  <div className="space-y-2 h-[120px]">
-                    {plan.features.map((feature, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        {i === 0 ? (
-                          <Clock className={`h-4 w-4 ${iconColor}`} />
-                        ) : i === 1 ? (
-                          <Users className={`h-4 w-4 ${iconColor}`} />
-                        ) : (
-                          <CheckCircle className={`h-4 w-4 ${iconColor}`} />
-                        )}
-                        <span className="text-gray-300 text-xs sm:text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Área de preço e botões - posição fixa na parte inferior */}
-                  <div className="pt-2 mt-auto border-t border-gray-700/30">
-                    {/* Área de preço */}
-                    <div className="mb-2">
-                      <p className="text-gray-400 text-xs">
-                        {plan.originalPrice ? "Preço com 20% OFF" : "Investimento"}
-                      </p>
-                      <div className="flex items-center gap-2">
-                        {plan.originalPrice && (
-                          <span className="text-gray-500 text-xs line-through">R$ {plan.originalPrice}</span>
-                        )}
-                        <p className={`${accentColor} font-bold text-lg`}>R$ {plan.price}</p>
-                      </div>
-                    </div>
-
-                    {/* Área de botões */}
-                    <div className="grid grid-cols-2 gap-2">
-                      <Link href={plan.learnMoreLink} className="block">
-                        <Button variant="outline" className={`${buttonColor} hover:text-white text-xs h-9 w-full`}>
-                          Saiba mais
-                        </Button>
-                      </Link>
-                      <Link
-                        href={
-                          // Link específico para o acesso básico do curso MDM NÍVEL 1
-                          title === "CURSO MDM NÍVEL 1" && plan.name === "Acesso Básico"
-                            ? "https://pay.hotmart.com/I94355959M?sck=HOTMART_MEM_CA&off=6d6cocrz&offDiscount=cna-60.00-u0vgxl3s&hotfeature=32&_gl=1*171596c*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY0OTA5MS40My4wLjA.&bid=1741649097579"
-                            : title === "CURSO MDM NÍVEL 1" && plan.name === "Acesso Completo"
-                              ? "https://pay.hotmart.com/U94589271J?sck=HOTMART_MEM_CA&off=9nq1zfj8&offDiscount=cna-30.00-ysg574mf&hotfeature=32&_gl=1*iruucb*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS.4LjEuMTc0MTY0OTE2Mi42MC4wLjA.&bid=1741649164793"
-                              : title === "CURSO DE REMOÇÃO DE ICLOUD E FRP ANDROID" && plan.name === "Acesso Básico"
-                                ? "https://pay.hotmart.com/W95189620X?sck=HOTMART_MEM_CA&off=wretdivk&offDiscount=cna-60.00-3anuljqq&hotfeature=32&_gl=1*jv4vma*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0MTY0OTA1NC4xNy4xLjE3NDE2NDk3OTUuNDYuMC4w&bid=1741649815251"
-                                : title === "CURSO DE REMOÇÃO DE ICLOUD E FRP ANDROID" &&
-                                    plan.name === "Acesso Completo"
-                                  ? "https://pay.hotmart.com/I92740095I?sck=HOTMART_MEM_CA&off=kzkum1js&offDiscount=cna-30.00-dtz8oi2y&hotfeature=32&_gl=1*1kw2nd7*_gcl_au*MTA4MTQ5MDg0My4xNzQxNjQ5MDk3*_ga*MTExMzM1MTEyMS4xNzQxMzU0Mjk4*_ga_GQH2V1F11Q*MTc0MTY0ODg3NS44LjEuMTc0MTY1MDIxMy41Ny4wLjA.&bid=1741650216222"
-                                  : title === "MDM DO BÁSICO AO AVANÇADO" && plan.name === "Acesso Completo"
-                                    ? "https://pay.hotmart.com/F87621340K?sck=HOTMART_MEM_CA&off=swo1f3w6&offDiscount=cna-20.00-ue1ok6dn&hotfeature=32&_gl=1*1r1jimo*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQwODQuNTkuMC4w&bid=1745274100318"
-                                    : title === "MDM DO BÁSICO AO AVANÇADO" && plan.name === "Acesso Básico"
-                                      ? "https://pay.hotmart.com/S99204912U?sck=HOTMART_MEM_CA&off=yrsnj2bb&offDiscount=cna-50.00-rxcs6mfc&hotfeature=32&_gl=1*7zgaij*_gcl_au*MTk4MTc0ODI1MS4xNzQwOTUzNzcz*_ga*MjE0Mzc5NDE3OC4xNzQwOTUzNzcz*_ga_GQH2V1F11Q*MTc0NTI3MjkzMS4zOS.xLjE3NDUyNzQxMDcuMzYuMC4w&bid=1745274108788"
-                                      : title === "CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)" &&
-                                          plan.name === "Acesso Premium"
-                                        ? "https://pay.hotmart.com/A99132064J?sck=HOTMART_MEM_CA&off=g9xkf18r&offDiscount=cna-20.00-wrp70n9h&hotfeature=32&_gl=1*13okbs*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODY3MC42MC4wLjA.&bid=1746138701905"
-                                        : title === "CURSO VIP DO BÁSICO AO AVANÇADO (JTAG & EMMC)" &&
-                                            plan.name === "Acesso Standard"
-                                          ? "https://pay.hotmart.com/H99211424I?sck=HOTMART_MEM_CA&off=wl2bqj0f&offDiscount=cna-50.00-3g2khe20&hotfeature=32&_gl=1*1ne1gm7*_gcl_au*MTM2ODQwNjQ2Ny4xNzQ1MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&MjczNTg4*_ga*Njg4NzkyNjQwLjE3NDI3Mjk5NTE.*_ga_GQH2V1F11Q*MTc0NjEzODAzNi41LjEuMTc0NjEzODU0OS42MC4wLjA.&bid=1746138670487"
-                                          : plan.buyLink
-                        }
-                        className="block"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Button
-                          className={`bg-gradient-to-r ${
-                            // Special case for MDM basic course and MDM Advanced course
-                            title === "CURSO MDM NÍVEL 1"
-                              ? "from-martech-blue to-blue-700 hover:from-blue-700 hover:to-martech-blue text-white"
-                              : title === "MDM DO BÁSICO AO AVANÇADO"
-                                ? "from-purple-600 to-indigo-600 hover:from-indigo-600 hover:to-purple-600 text-white"
-                                : ctaColor
-                          } font-bold text-xs h-9 w-full`}
-                        >
-                          Comprar
-                          <ChevronRight className="ml-1 h-3 w-3" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+                Comprar agora
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

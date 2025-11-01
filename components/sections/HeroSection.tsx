@@ -467,20 +467,79 @@ export default function HeroSection({
       )
     } else {
       return (
-        <div className="lg:col-span-6 content-fade-in" style={{ animationDelay: "0.3s" }}>
-          <div className="relative">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-martech-blue to-martech-orange rounded-lg blur opacity-75 transition-opacity duration-1000"></div>
-            <div className="relative bg-martech-black bg-martech-gradient rounded-lg py-12 px-8 border border-martech-blue transition-all duration-700 min-h-[450px] flex flex-col justify-center">
-              <div className="flex flex-col items-center justify-center h-full">
-                {/* Title above animation */}
-                <h3 className="text-center mb-5 text-2xl font-extrabold tracking-wide text-white uppercase relative">
-                  Martech Um Planeta de Soluções
-                  <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-martech-blue"></span>
-                </h3>
-
-                {/* Tech Sphere Animation */}
+        <div className="lg:col-span-6 content-fade-in" style={{ animationDelay: "0.3s", overflow: 'visible' }}>
+          <div className="relative" style={{ overflow: 'visible' }}>
+            <div className="martech-card-clean">
+              {/* Badge PROMOÇÃO - sem sobreposição */}
+              <span className="martech-badge-promo">PROMOÇÃO</span>
+              
+              {/* Título compacto com "PROMOÇÕES" animado */}
+              <div className="martech-header-compact">
+                <h2 className="martech-title-optimized">
+                  MARTECH UM PLANETA DE{' '}
+                  <span className="old-text">SOLUÇÕES</span>
+                  <span className="promo-text-animated">PROMOÇÕES</span>
+                </h2>
+                <div className="title-shine-line"></div>
+              </div>
+              
+              {/* Seção orbital */}
+              <div className="martech-orbital-container">
                 <div className="scale-90">{showTechSphere && <TechSphere />}</div>
               </div>
+              
+              {/* Divisor */}
+              <div className="section-divider"></div>
+              
+              {/* Informações promocionais */}
+              <div className="promo-info-section">
+                <div className="promo-details">
+                  {/* Desconto */}
+                  <div className="info-block info-discount">
+                    <div className="discount-circle">
+                      <span className="discount-number">70%</span>
+                      <span className="discount-label">OFF</span>
+                    </div>
+                    <div className="discount-text">
+                      <p className="discount-title">Black November</p>
+                      <p className="discount-subtitle">Desconto máximo</p>
+                    </div>
+                  </div>
+                  
+                  {/* Divisor */}
+                  <div className="info-divider"></div>
+                  
+                  {/* Validade */}
+                  <div className="info-block info-validity">
+                    <div className="validity-icon">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 2v3M16 2v3M3.5 9.09h17M21 8.5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M15.695 13.7h.009M15.695 16.7h.009M11.995 13.7h.01M11.995 16.7h.01M8.294 13.7h.01M8.294 16.7h.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                    <div className="validity-text">
+                      <p className="validity-title">Válido até</p>
+                      <p className="validity-date">01/12/2025</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Botão CTA */}
+              <button 
+                className="cta-button-main"
+                onClick={() => {
+                  const cursosSection = document.getElementById('nossos-cursos')
+                  if (cursosSection) {
+                    cursosSection.scrollIntoView({ behavior: 'smooth' })
+                  }
+                }}
+              >
+                <span className="cta-text">GARANTA SUA VAGA</span>
+                <svg className="cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83" stroke="currentColor" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
         </div>
@@ -489,7 +548,7 @@ export default function HeroSection({
   }
 
   return (
-    <section className="hero-section">
+    <section className="hero-section relative">
       {/* Background */}
       <BackgroundAnimation
         primaryColor={primaryColor}
@@ -499,50 +558,165 @@ export default function HeroSection({
         variant={backgroundVariant}
       />
 
+      {/* Elementos flutuantes removidos para evitar sobreposições */}
+
       <div className="container relative z-10 overflow-hidden">
         {/* Subtle animated gradient overlay for content */}
         <div className="hero-bg-gradient"></div>
 
         <div className="grid lg:grid-cols-12 gap-8 items-center">
           {/* Left content column */}
-          <div className="lg:col-span-6 space-y-6 content-fade-in" style={{ animationDelay: "0.1s" }}>
-            {/* Badge with animation */}
-            <div className="relative inline-block">
-              <Badge
-                className={`bg-gradient-to-r ${
-                  page === "mdm"
-                    ? "from-martech-orange to-martech-yellow text-black"
-                    : "from-martech-blue to-martech-blue/80 text-white"
-                } hover:from-martech-blue hover:to-martech-blue px-4 py-1.5 text-sm uppercase tracking-wider`}
-              >
-                {badge}
-              </Badge>
-              <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-martech-blue to-transparent"></span>
-            </div>
-
-            {/* Title with gradient text */}
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
-              dangerouslySetInnerHTML={{ __html: title }}
-            ></h1>
-
-            {/* Description with subtle animation */}
-            <p className="text-lg text-gray-300 max-w-xl">{description}</p>
-
-            {/* Features list for MDM page */}
-            {features.length > 0 && page === "mdm" && (
-              <div className="space-y-2 mt-4">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-martech-blue mr-2 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300">{feature}</span>
+          <div className="lg:col-span-6 content-fade-in relative" style={{ animationDelay: "0.1s" }}>
+            {page === "home" ? (
+              <div className="hero-left-balanced">
+                {/* Badge único com efeitos */}
+                <div className="hero-badges-container-clean">
+                  <div className="cursos-atualizados-badge">
+                    CURSOS ATUALIZADOS
                   </div>
-                ))}
+                </div>
+
+                {/* Título balanceado e proporcional */}
+                <h1 className="hero-title-balanced">
+                  CURSOS DE <span className="highlight-yellow">SOFTWARE</span><br/>
+                  PARA <span className="highlight-blue">CELULARES</span>
+                </h1>
+
+                {/* Descrição proporcional */}
+                <p className="hero-description-balanced">
+                  Aprenda técnicas avançadas de reparo de software para celulares e transforme sua carreira.
+                </p>
+
+                {/* Botões com efeitos aprimorados */}
+                <div className="hero-buttons-balanced">
+                  <button 
+                    className="btn-primary-enhanced"
+                    onClick={() => {
+                      const cursosSection = document.getElementById('nossos-cursos')
+                      if (cursosSection) {
+                        cursosSection.scrollIntoView({ behavior: 'smooth' })
+                      }
+                    }}
+                  >
+                    Ver nossos cursos
+                  </button>
+                  <button 
+                    className="btn-secondary-enhanced"
+                    onClick={() => {
+                      window.location.href = '/sobre-nos'
+                    }}
+                  >
+                    Sobre nós
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                {/* Badge Black November com ícones e efeitos especiais para curso-vip */}
+                <div className="relative inline-block">
+                  {page === "course" ? (
+                    <>
+                      <Badge className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white hover:from-red-700 hover:to-red-600 px-6 py-2.5 text-sm uppercase tracking-wider font-bold relative overflow-hidden group animate-pulse">
+                        <span className="relative z-10 flex items-center gap-2">
+                          {/* Ícone de raio */}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="animate-pulse">
+                            <path d="M13 2L3 14h8l-2 8 10-12h-8l2-8z"/>
+                          </svg>
+                          BLACK NOVEMBER - 70% OFF
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="animate-pulse">
+                            <path d="M13 2L3 14h8l-2 8 10-12h-8l2-8z"/>
+                          </svg>
+                        </span>
+                        {/* Efeito de brilho animado */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                      </Badge>
+                      {/* Linha decorativa vermelha animada */}
+                      <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-500 to-transparent animate-pulse"></span>
+                      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-red-600/50 blur-sm animate-pulse"></span>
+                    </>
+                  ) : (
+                    <>
+                      <Badge
+                        className={`bg-gradient-to-r ${
+                          page === "mdm"
+                            ? "from-martech-orange to-martech-yellow text-black"
+                            : "from-martech-blue to-martech-blue/80 text-white"
+                        } hover:from-martech-blue hover:to-martech-blue px-4 py-1.5 text-sm uppercase tracking-wider`}
+                      >
+                        {badge}
+                      </Badge>
+                      <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-transparent via-martech-blue to-transparent"></span>
+                    </>
+                  )}
+                </div>
+
+                {/* Título com efeitos especiais para Black November */}
+                {page === "course" ? (
+                  <div className="space-y-3">
+                    <h1
+                      className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
+                      dangerouslySetInnerHTML={{ __html: title }}
+                    ></h1>
+                    {/* Badge adicional de desconto */}
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-red-900/40 to-red-800/40 border border-red-500/50 rounded-full text-red-300 text-sm font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        ECONOMIA DE R$ 703,00
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-red-900/40 to-red-800/40 border border-red-500/50 rounded-full text-red-300 text-sm font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="10"/>
+                          <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        VÁLIDO ATÉ 01/12/2024
+                      </span>
+                    </div>
+                  </div>
+                ) : (
+                  <h1
+                    className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight"
+                    dangerouslySetInnerHTML={{ __html: title }}
+                  ></h1>
+                )}
+
+                {/* Descrição com ícones para curso-vip */}
+                {page === "course" ? (
+                  <div className="space-y-3">
+                    <p className="text-lg text-gray-300 max-w-xl leading-relaxed">{description}</p>
+                    {/* Destaques visuais */}
+                    <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-red-950/30 via-red-900/20 to-red-950/30 border-l-4 border-red-600 rounded-r-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-400 flex-shrink-0 mt-0.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                      </svg>
+                      <div>
+                        <p className="text-red-200 font-semibold mb-1">OFERTA EXCLUSIVA BLACK NOVEMBER</p>
+                        <p className="text-gray-300 text-sm">Aproveite agora: Mais de 70% de desconto válido até 01/12/2024!</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-lg text-gray-300 max-w-xl">{description}</p>
+                )}
+
+                {/* Features list for MDM page */}
+                {features.length > 0 && page === "mdm" && (
+                  <div className="space-y-2 mt-4">
+                    {features.map((feature, index) => (
+                      <div key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-martech-blue mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* CTA buttons with enhanced styling */}
+                <CTAButtons page={page} />
               </div>
             )}
-
-            {/* CTA buttons with enhanced styling */}
-            <CTAButtons page={page} />
           </div>
 
           {/* Right content column - conditionally rendered */}

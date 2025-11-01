@@ -7,6 +7,9 @@ import FeaturedCoursesSection from "@/components/sections/FeaturedCoursesSection
 import AboutSection from "@/components/sections/AboutSection"
 import ContactSection from "@/components/sections/ContactSection"
 import CertificationPartnersSection from "@/components/sections/CertificationPartnersSection"
+import BlackNovemberBanner from "@/components/sections/BlackNovemberBanner"
+import FloatingElements from "@/components/sections/FloatingElements"
+import UrgencyBanner from "@/components/sections/UrgencyBanner"
 import { useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 
@@ -33,6 +36,15 @@ function ScrollToSection() {
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col" key="MartechTeam-home">
+      {/* Elementos flutuantes */}
+      <FloatingElements />
+      
+      {/* Banner de urgência */}
+      <UrgencyBanner />
+      
+      {/* Black November Banner */}
+      <BlackNovemberBanner />
+      
       {/* Add the scroll handler */}
       <ScrollToSection />
 

@@ -61,7 +61,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-martech-blue bg-black">
+    <header className="sticky top-[44px] sm:top-[48px] z-40 w-full border-b border-martech-blue bg-black">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -104,34 +104,6 @@ export default function Header() {
               }`}
             >
               <div className="py-1">
-                <Link
-                  href="/mdm"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    setCoursesOpen(false)
-                  }}
-                >
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-martech-blue mr-2"></div>
-                    Curso MDM Nível I
-                  </div>
-                  <ChevronRight className="h-4 w-4 text-martech-blue" />
-                </Link>
-                <Link
-                  href="/frp"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    setCoursesOpen(false)
-                  }}
-                >
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                    REMOÇÃO DE ICLOUD E FRP ANDROID
-                  </div>
-                  <ChevronRight className="h-4 w-4 text-green-500" />
-                </Link>
                 <Link
                   href="/mdm-avancado"
                   className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:bg-martech-blue/10 hover:text-white"
@@ -193,7 +165,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div
           ref={mobileMenuRef}
-          className="md:hidden absolute top-16 left-0 right-0 bg-black border-b border-martech-blue/30 shadow-lg z-50"
+          className="md:hidden fixed top-[104px] sm:top-[112px] left-0 right-0 bg-black border-b border-martech-blue/30 shadow-lg z-[60]"
         >
           <div className="container py-4 space-y-4">
             <Link
@@ -221,28 +193,6 @@ export default function Header() {
               <div
                 className={`mt-1 ml-4 pl-4 border-l border-martech-blue/30 space-y-2 ${mobileCourseOpen ? "block" : "hidden"}`}
               >
-                <Link
-                  href="/mdm"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-martech-blue mr-2"></div>
-                    Curso MDM Nível I
-                  </div>
-                  <ChevronRight className="h-4 w-4 text-martech-blue" />
-                </Link>
-                <Link
-                  href="/frp"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                    REMOÇÃO DE ICLOUD E FRP ANDROID
-                  </div>
-                  <ChevronRight className="h-4 w-4 text-green-500" />
-                </Link>
                 <Link
                   href="/mdm-avancado"
                   className="flex items-center justify-between px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-martech-darkgray rounded-md"

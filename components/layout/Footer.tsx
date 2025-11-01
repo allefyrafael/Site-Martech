@@ -57,14 +57,11 @@ export default function Footer() {
               <Link href="/" className="text-gray-300 hover:text-martech-yellow text-sm transition-colors">
                 Home
               </Link>
-              <Link href="/mdm" className="text-gray-300 hover:text-martech-yellow text-sm transition-colors">
-                Curso MDM Nível I
-              </Link>
-              <Link href="/frp" className="text-gray-300 hover:text-martech-yellow text-sm transition-colors">
-                Curso FRP e iCloud
-              </Link>
               <Link href="/mdm-avancado" className="text-gray-300 hover:text-martech-yellow text-sm transition-colors">
                 MDM do básico ao avançado
+              </Link>
+              <Link href="/curso-vip" className="text-gray-300 hover:text-martech-yellow text-sm transition-colors">
+                Curso VIP JTAG & EMMC
               </Link>
               <Link href="/sobre-nos" className="text-gray-300 hover:text-martech-yellow text-sm transition-colors">
                 Sobre Nós
