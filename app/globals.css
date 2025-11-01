@@ -357,7 +357,7 @@
     border-radius: 20px;
     padding: 1.25rem 1.5rem 1rem 1.5rem;
     position: relative;
-    max-width: 650px;
+    max-width: 750px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -367,6 +367,15 @@
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
     overflow: visible;
+    box-sizing: border-box;
+  }
+  
+  /* Em desktop, garantir espaço suficiente */
+  @media (min-width: 641px) {
+    .martech-card-clean {
+      overflow-x: visible;
+      overflow-y: visible;
+    }
   }
 
   /* Hover suave sem cortes */
@@ -385,6 +394,16 @@
   .hero-right,
   div[class*="lg:col-span-6"] {
     overflow: visible !important;
+  }
+  
+  /* Em mobile, forçar overflow hidden para evitar cortes */
+  @media (max-width: 640px) {
+    .hero-section,
+    .hero-section-optimized,
+    .hero-right,
+    div[class*="lg:col-span-6"] {
+      overflow-x: hidden !important;
+    }
   }
 
   /* Garantir que badge não seja cortado */
@@ -560,6 +579,19 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 0.875rem;
+    max-width: none;
+    overflow-x: visible;
+    overflow-y: visible;
+    box-sizing: border-box;
+  }
+  
+  /* Em desktop, dar mais espaço para a animação */
+  @media (min-width: 641px) {
+    .martech-orbital-container {
+      padding: 1rem 2rem;
+      width: auto;
+      min-width: 22rem;
+    }
   }
 
   .martech-orbital-container .scale-90 {
@@ -1475,6 +1507,8 @@
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    max-width: calc(100vw - 2rem);
+    word-wrap: break-word;
   }
 
   /* Efeito de brilho no badge */
@@ -2283,17 +2317,28 @@
     .hero-left-balanced {
       min-height: auto;
       padding: 1.5rem 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
     
     .hero-title-balanced {
       font-size: 2.75rem;
       margin: 0 0 1.5rem 0;
+      padding-right: 0.5rem;
+      line-height: 1.1;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
     }
     
     .hero-description-balanced {
       font-size: 1rem;
       margin: 0 0 2rem 0;
       max-width: 100%;
+      padding-right: 0.5rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
     
     .hero-buttons-balanced {
@@ -2307,6 +2352,28 @@
       text-align: center;
     }
     
+    .cursos-atualizados-badge {
+      font-size: 0.75rem;
+      padding: 0.625rem 1rem;
+      max-width: calc(100vw - 2rem);
+      margin-left: 0;
+      margin-right: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    .hero-buttons-balanced {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
+    .btn-primary-enhanced,
+    .btn-secondary-enhanced {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
     .martech-title-optimized {
       font-size: 1.35rem;
     }
@@ -2318,27 +2385,40 @@
     /* Card MARTECH - Responsividade Mobile */
     .martech-card-clean {
       max-width: 100%;
-      padding: 1.25rem 1rem;
-      margin: 0 auto;
+      width: 100%;
+      padding: 1rem 0.5rem;
+      margin: 0;
+      overflow-x: visible;
+      overflow-y: visible;
+      box-sizing: border-box;
+      position: relative;
     }
     
     .martech-badge-promo {
-      font-size: 0.7rem;
-      padding: 0.375rem 0.875rem;
-      top: 12px;
-      right: 12px;
+      display: none; /* Esconder badge em mobile para não sobrepor título */
     }
     
     .martech-header-compact {
-      padding: 0 0.5rem;
-      padding-right: 60px;
+      padding: 0 0.25rem;
+      padding-right: 0;
       margin-bottom: 1rem;
+      max-width: 100%;
+      overflow-x: hidden;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     
     .martech-title-optimized {
       font-size: 1.25rem;
       line-height: 1.3;
       letter-spacing: 0.5px;
+      word-break: break-word;
+      overflow-wrap: break-word;
+      max-width: 100%;
+      text-align: center;
+      margin: 0 auto;
     }
     
     .old-text {
@@ -2358,8 +2438,14 @@
     
     /* Orbital - Reduzir em mobile */
     .martech-orbital-container {
-      padding: 0.75rem 0;
+      padding: 1rem 0;
       margin-bottom: 1rem;
+      max-width: 100%;
+      overflow-x: visible;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .martech-orbital-container .scale-90 {
@@ -2375,8 +2461,11 @@
     .promo-details {
       flex-direction: column;
       gap: 1rem;
-      padding: 1rem;
+      padding: 0.75rem;
       margin-bottom: 1rem;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
     }
     
     .info-block {
@@ -2431,8 +2520,16 @@
     /* Botão CTA - Mobile */
     .cta-button-main {
       font-size: 0.875rem;
-      padding: 0.875rem 1.25rem;
+      padding: 0.875rem 1rem;
       gap: 0.5rem;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .promo-info-section {
+      max-width: 100%;
+      overflow-x: hidden;
+      box-sizing: border-box;
     }
     
     .cta-text {

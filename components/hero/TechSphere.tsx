@@ -171,7 +171,7 @@ export default function TechSphere() {
         </div>
       </div>
 
-      <div className="tech-sphere-icon tech-sphere-icon-3" style={{ bottom: "20%", left: "-5.5rem" }}>
+      <div className="tech-sphere-icon tech-sphere-icon-3" style={{ bottom: "20%", left: "clamp(-2rem, -5.5rem, 0)" }}>
         <div className="flex items-center">
           <div className="w-3 h-3 rounded-full bg-green-500 mr-1.5"></div>
           <div className="text-green-400 font-bold">SCREEN LOCK</div>

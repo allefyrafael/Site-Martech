@@ -364,9 +364,10 @@
 /* Tech Sphere Styles */
 .tech-sphere {
   position: relative;
-  width: 13rem;
-  height: 13rem;
+  width: 18rem;
+  height: 18rem;
   margin: 0 auto;
+  min-width: 18rem;
 }
 
 .tech-sphere-orbit {
@@ -442,7 +443,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
 
 .tech-sphere-logo-container {
   position: relative;
@@ -485,6 +488,86 @@
   animation: floatIcon5 7.5s ease-in-out infinite;
 }
 
+/* Correção para mobile - centralizar e tornar responsivo */
+@media (max-width: 640px) {
+  .martech-orbital-container {
+    overflow: visible;
+    max-width: 100%;
+    padding: 1rem 0;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tech-sphere {
+    overflow: visible;
+    max-width: 100%;
+    width: 12rem !important;
+    height: 12rem !important;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  /* Reposicionar ícones para mobile de forma mais compacta */
+  .tech-sphere-icon-1 {
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tech-sphere-icon-2 {
+    top: 20%;
+    left: -0.5rem;
+  }
+  
+  .tech-sphere-icon-3 {
+    bottom: 20%;
+    left: -0.5rem;
+  }
+  
+  .tech-sphere-icon-4 {
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .tech-sphere-icon-5 {
+    top: 20%;
+    right: -0.5rem;
+  }
+  
+  .tech-sphere-icon-6 {
+    bottom: 20%;
+    right: -0.5rem;
+  }
+  
+  /* Ajustar texto dos ícones para mobile */
+  .tech-sphere-icon {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .tech-sphere-icon .w-3 {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  
+  .tech-sphere-center {
+    padding: 0.5rem;
+    overflow: visible;
+  }
+  
+  .tech-sphere-logo-container {
+    transform: scale(0.8);
+  }
+  
+  /* Ajustar pontos orbitais */
+  .tech-sphere-center [class*="w-2"][class*="rounded-full"] {
+    transform: scale(0.8);
+  }
+}
+
 .tech-sphere-icon-4 {
   bottom: 0;
   left: 0;
@@ -506,6 +589,42 @@
   right: -3rem;
   border-color: rgba(236, 72, 153, 0.3);
   animation: floatIcon3 8.8s ease-in-out infinite;
+}
+
+/* Garantir que tech-sphere não cause overflow no desktop */
+@media (min-width: 641px) {
+  .tech-sphere {
+    overflow: visible;
+    max-width: none;
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+  }
+  
+  .martech-orbital-container {
+    overflow-x: visible;
+    overflow-y: visible;
+    width: auto;
+    min-width: 20rem;
+    padding: 1rem 2rem;
+  }
+  
+  /* Restaurar posicionamento original dos ícones com mais espaço */
+  .tech-sphere-icon-5 {
+    right: -3rem;
+  }
+  
+  .tech-sphere-icon-6 {
+    right: -2.5rem;
+  }
+  
+  .tech-sphere-icon-2 {
+    left: -3rem;
+  }
+  
+  .tech-sphere-icon-3 {
+    left: -4rem;
+  }
 }
 
 /* Course Video Styles */

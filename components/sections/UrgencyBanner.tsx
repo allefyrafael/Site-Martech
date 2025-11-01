@@ -16,8 +16,8 @@ export default function UrgencyBanner() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 max-w-sm animate-bounce">
-      <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-4 shadow-2xl border border-red-500/50 relative overflow-hidden">
+    <div className="fixed bottom-4 right-4 z-50 max-w-sm animate-bounce mx-4 sm:mx-0">
+      <div className="bg-gradient-to-r from-red-600 to-red-700 rounded-lg p-4 shadow-2xl border border-red-500/50 relative overflow-hidden max-w-[calc(100vw-2rem)] sm:max-w-sm">
         {/* Efeito de brilho */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
         

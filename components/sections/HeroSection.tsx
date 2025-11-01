@@ -467,8 +467,8 @@ export default function HeroSection({
       )
     } else {
       return (
-        <div className="lg:col-span-6 content-fade-in" style={{ animationDelay: "0.3s", overflow: 'visible' }}>
-          <div className="relative" style={{ overflow: 'visible' }}>
+        <div className="lg:col-span-6 content-fade-in overflow-x-visible" style={{ animationDelay: "0.3s" }}>
+          <div className="relative overflow-x-visible">
             <div className="martech-card-clean">
               {/* Badge PROMOÇÃO - sem sobreposição */}
               <span className="martech-badge-promo">PROMOÇÃO</span>
@@ -548,7 +548,7 @@ export default function HeroSection({
   }
 
   return (
-    <section className="hero-section relative">
+    <section className="hero-section relative overflow-x-hidden w-full">
       {/* Background */}
       <BackgroundAnimation
         primaryColor={primaryColor}
@@ -560,13 +560,13 @@ export default function HeroSection({
 
       {/* Elementos flutuantes removidos para evitar sobreposições */}
 
-      <div className="container relative z-10 overflow-hidden">
+      <div className="w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10 overflow-x-hidden">
         {/* Subtle animated gradient overlay for content */}
         <div className="hero-bg-gradient"></div>
 
-        <div className="grid lg:grid-cols-12 gap-8 items-center">
+        <div className="grid lg:grid-cols-12 gap-4 sm:gap-8 items-center">
           {/* Left content column */}
-          <div className="lg:col-span-6 content-fade-in relative" style={{ animationDelay: "0.1s" }}>
+          <div className="lg:col-span-6 content-fade-in relative overflow-x-hidden" style={{ animationDelay: "0.1s" }}>
             {page === "home" ? (
               <div className="hero-left-balanced">
                 {/* Badge único com efeitos */}
